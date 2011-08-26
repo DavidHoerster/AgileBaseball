@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgileWays.Baseball.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AgileWaysBaseballModelStoreContainer">
+    <EntitySet Name="All Time HR Leaders" EntityType="AgileWays.Baseball.Model.Store.All Time HR Leaders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Allstar" EntityType="AgileWays.Baseball.Model.Store.Allstar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Batting" EntityType="AgileWays.Baseball.Model.Store.Batting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Birthday Buddies" EntityType="AgileWays.Baseball.Model.Store.Birthday Buddies" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HallOfFame" EntityType="AgileWays.Baseball.Model.Store.HallOfFame" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pitching" EntityType="AgileWays.Baseball.Model.Store.Pitching" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Salaries" EntityType="AgileWays.Baseball.Model.Store.Salaries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teams" EntityType="AgileWays.Baseball.Model.Store.Teams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TeamsFranchises" EntityType="AgileWays.Baseball.Model.Store.TeamsFranchises" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AllstarWithName" EntityType="AgileWays.Baseball.Model.Store.AllstarWithName" store:Type="Views" store:Schema="dbo" store:Name="AllstarWithName">
+      <DefiningQuery>SELECT 
+      [AllstarWithName].[playerID] AS [playerID], 
+      [AllstarWithName].[nameFirst] AS [nameFirst], 
+      [AllstarWithName].[nameLast] AS [nameLast], 
+      [AllstarWithName].[yearID] AS [yearID], 
+      [AllstarWithName].[lgID] AS [lgID]
+      FROM [dbo].[AllstarWithName] AS [AllstarWithName]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BatterDetail" EntityType="AgileWays.Baseball.Model.Store.BatterDetail" store:Type="Views" store:Schema="dbo" store:Name="BatterDetail">
+      <DefiningQuery>SELECT 
+      [BatterDetail].[playerID] AS [playerID], 
+      [BatterDetail].[nameFirst] AS [nameFirst], 
+      [BatterDetail].[nameLast] AS [nameLast], 
+      [BatterDetail].[yearID] AS [yearID], 
+      [BatterDetail].[teamID] AS [teamID], 
+      [BatterDetail].[TeamName] AS [TeamName], 
+      [BatterDetail].[salary] AS [salary], 
+      [BatterDetail].[G] AS [G], 
+      [BatterDetail].[AB] AS [AB], 
+      [BatterDetail].[R] AS [R], 
+      [BatterDetail].[H] AS [H], 
+      [BatterDetail].[2B] AS [2B], 
+      [BatterDetail].[3B] AS [3B], 
+      [BatterDetail].[HR] AS [HR], 
+      [BatterDetail].[RBI] AS [RBI], 
+      [BatterDetail].[SB] AS [SB], 
+      [BatterDetail].[BB] AS [BB]
+      FROM [dbo].[BatterDetail] AS [BatterDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="PitcherDetail" EntityType="AgileWays.Baseball.Model.Store.PitcherDetail" store:Type="Views" store:Schema="dbo" store:Name="PitcherDetail">
+      <DefiningQuery>SELECT 
+      [PitcherDetail].[playerID] AS [playerID], 
+      [PitcherDetail].[nameFirst] AS [nameFirst], 
+      [PitcherDetail].[nameLast] AS [nameLast], 
+      [PitcherDetail].[yearID] AS [yearID], 
+      [PitcherDetail].[teamID] AS [teamID], 
+      [PitcherDetail].[TeamName] AS [TeamName], 
+      [PitcherDetail].[salary] AS [salary], 
+      [PitcherDetail].[G] AS [G], 
+      [PitcherDetail].[IP] AS [IP], 
+      [PitcherDetail].[W] AS [W], 
+      [PitcherDetail].[L] AS [L], 
+      [PitcherDetail].[SV] AS [SV], 
+      [PitcherDetail].[CG] AS [CG], 
+      [PitcherDetail].[SO] AS [SO], 
+      [PitcherDetail].[SHO] AS [SHO], 
+      [PitcherDetail].[BB] AS [BB], 
+      [PitcherDetail].[ERA] AS [ERA]
+      FROM [dbo].[PitcherDetail] AS [PitcherDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwPlayers" EntityType="AgileWays.Baseball.Model.Store.vwPlayers" store:Type="Views" store:Schema="dbo" store:Name="vwPlayers">
+      <DefiningQuery>SELECT 
+      [vwPlayers].[bbrefID] AS [bbrefID], 
+      [vwPlayers].[holtzID] AS [holtzID], 
+      [vwPlayers].[retroID] AS [retroID], 
+      [vwPlayers].[lahman45ID] AS [lahman45ID], 
+      [vwPlayers].[lahman40ID] AS [lahman40ID], 
+      [vwPlayers].[college] AS [college], 
+      [vwPlayers].[finalGame] AS [finalGame], 
+      [vwPlayers].[debut] AS [debut], 
+      [vwPlayers].[throws] AS [throws], 
+      [vwPlayers].[bats] AS [bats], 
+      [vwPlayers].[height] AS [height], 
+      [vwPlayers].[weight] AS [weight], 
+      [vwPlayers].[nameNick] AS [nameNick], 
+      [vwPlayers].[nameGiven] AS [nameGiven], 
+      [vwPlayers].[nameNote] AS [nameNote], 
+      [vwPlayers].[nameLast] AS [nameLast], 
+      [vwPlayers].[nameFirst] AS [nameFirst], 
+      [vwPlayers].[deathCity] AS [deathCity], 
+      [vwPlayers].[deathState] AS [deathState], 
+      [vwPlayers].[deathCountry] AS [deathCountry], 
+      [vwPlayers].[deathDay] AS [deathDay], 
+      [vwPlayers].[deathMonth] AS [deathMonth], 
+      [vwPlayers].[deathYear] AS [deathYear], 
+      [vwPlayers].[birthCity] AS [birthCity], 
+      [vwPlayers].[birthState] AS [birthState], 
+      [vwPlayers].[birthCountry] AS [birthCountry], 
+      [vwPlayers].[birthDay] AS [birthDay], 
+      [vwPlayers].[birthMonth] AS [birthMonth], 
+      [vwPlayers].[birthYear] AS [birthYear], 
+      [vwPlayers].[hofID] AS [hofID], 
+      [vwPlayers].[playerID] AS [playerID], 
+      [vwPlayers].[lahmanID] AS [lahmanID]
+      FROM [dbo].[vwPlayers] AS [vwPlayers]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Salaries_Teams" Association="AgileWays.Baseball.Model.Store.FK_Salaries_Teams">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Salaries" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teams_TeamsFranchises" Association="AgileWays.Baseball.Model.Store.FK_Teams_TeamsFranchises">
+      <End Role="TeamsFranchises" EntitySet="TeamsFranchises" />
+      <End Role="Teams" EntitySet="Teams" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="All Time HR Leaders">
+    <Key>
+      <PropertyRef Name="nameFirst" />
+      <PropertyRef Name="nameLast" />
+    </Key>
+    <Property Name="nameFirst" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="nameLast" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SumOfHR" Type="float" />
+    <Property Name="MaxOfyearID" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Allstar">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="lgID" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Batting">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="stint" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="stint" Type="smallint" Nullable="false" />
+    <Property Name="teamID" Type="nvarchar" MaxLength="3" />
+    <Property Name="lgID" Type="nvarchar" MaxLength="2" />
+    <Property Name="G" Type="smallint" />
+    <Property Name="G_batting" Type="smallint" />
+    <Property Name="AB" Type="smallint" />
+    <Property Name="R" Type="smallint" />
+    <Property Name="H" Type="smallint" />
+    <Property Name="2B" Type="smallint" />
+    <Property Name="3B" Type="smallint" />
+    <Property Name="HR" Type="smallint" />
+    <Property Name="RBI" Type="smallint" />
+    <Property Name="SB" Type="smallint" />
+    <Property Name="CS" Type="smallint" />
+    <Property Name="BB" Type="smallint" />
+    <Property Name="SO" Type="smallint" />
+    <Property Name="IBB" Type="smallint" />
+    <Property Name="HBP" Type="smallint" />
+    <Property Name="SH" Type="smallint" />
+    <Property Name="SF" Type="smallint" />
+    <Property Name="GIDP" Type="smallint" />
+    <Property Name="G_old" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Birthday Buddies">
+    <Key>
+      <PropertyRef Name="birthYear" />
+      <PropertyRef Name="birthMonth" />
+      <PropertyRef Name="birthDay" />
+      <PropertyRef Name="nameFirst" />
+      <PropertyRef Name="nameLast" />
+    </Key>
+    <Property Name="birthYear" Type="smallint" Nullable="false" />
+    <Property Name="birthMonth" Type="smallint" Nullable="false" />
+    <Property Name="birthDay" Type="smallint" Nullable="false" />
+    <Property Name="nameFirst" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="nameLast" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HallOfFame">
+    <Key>
+      <PropertyRef Name="hofID" />
+      <PropertyRef Name="yearid" />
+    </Key>
+    <Property Name="hofID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="yearid" Type="smallint" Nullable="false" />
+    <Property Name="votedBy" Type="nvarchar" MaxLength="64" />
+    <Property Name="ballots" Type="smallint" />
+    <Property Name="needed" Type="smallint" />
+    <Property Name="votes" Type="smallint" />
+    <Property Name="inducted" Type="nvarchar" MaxLength="1" />
+    <Property Name="category" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Pitching">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="stint" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="stint" Type="smallint" Nullable="false" />
+    <Property Name="teamID" Type="nvarchar" MaxLength="3" />
+    <Property Name="lgID" Type="nvarchar" MaxLength="2" />
+    <Property Name="W" Type="smallint" />
+    <Property Name="L" Type="smallint" />
+    <Property Name="G" Type="smallint" />
+    <Property Name="GS" Type="smallint" />
+    <Property Name="CG" Type="smallint" />
+    <Property Name="SHO" Type="smallint" />
+    <Property Name="SV" Type="smallint" />
+    <Property Name="IPouts" Type="int" />
+    <Property Name="H" Type="smallint" />
+    <Property Name="ER" Type="smallint" />
+    <Property Name="HR" Type="smallint" />
+    <Property Name="BB" Type="smallint" />
+    <Property Name="SO" Type="smallint" />
+    <Property Name="BAOpp" Type="float" />
+    <Property Name="ERA" Type="float" />
+    <Property Name="IBB" Type="smallint" />
+    <Property Name="WP" Type="smallint" />
+    <Property Name="HBP" Type="smallint" />
+    <Property Name="BK" Type="smallint" />
+    <Property Name="BFP" Type="smallint" />
+    <Property Name="GF" Type="smallint" />
+    <Property Name="R" Type="smallint" />
+    <Property Name="SH" Type="smallint" />
+    <Property Name="SF" Type="smallint" />
+    <Property Name="GIDP" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Salaries">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="teamID" />
+      <PropertyRef Name="lgID" />
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="teamID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="lgID" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="playerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="salary" Type="float" />
+  </EntityType>
+  <EntityType Name="Teams">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="lgID" />
+      <PropertyRef Name="teamID" />
+    </Key>
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="lgID" Type="nvarchar" Nullable="false" MaxLength="2" />
+    <Property Name="teamID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="franchID" Type="nvarchar" MaxLength="3" />
+    <Property Name="divID" Type="nvarchar" MaxLength="1" />
+    <Property Name="Rank" Type="smallint" />
+    <Property Name="G" Type="smallint" />
+    <Property Name="Ghome" Type="smallint" />
+    <Property Name="W" Type="smallint" />
+    <Property Name="L" Type="smallint" />
+    <Property Name="DivWin" Type="nvarchar" MaxLength="1" />
+    <Property Name="WCWin" Type="nvarchar" MaxLength="1" />
+    <Property Name="LgWin" Type="nvarchar" MaxLength="1" />
+    <Property Name="WSWin" Type="nvarchar" MaxLength="1" />
+    <Property Name="R" Type="smallint" />
+    <Property Name="AB" Type="smallint" />
+    <Property Name="H" Type="smallint" />
+    <Property Name="2B" Type="smallint" />
+    <Property Name="3B" Type="smallint" />
+    <Property Name="HR" Type="smallint" />
+    <Property Name="BB" Type="smallint" />
+    <Property Name="SO" Type="smallint" />
+    <Property Name="SB" Type="smallint" />
+    <Property Name="CS" Type="smallint" />
+    <Property Name="HBP" Type="smallint" />
+    <Property Name="SF" Type="smallint" />
+    <Property Name="RA" Type="smallint" />
+    <Property Name="ER" Type="smallint" />
+    <Property Name="ERA" Type="float" />
+    <Property Name="CG" Type="smallint" />
+    <Property Name="SHO" Type="smallint" />
+    <Property Name="SV" Type="smallint" />
+    <Property Name="IPouts" Type="int" />
+    <Property Name="HA" Type="smallint" />
+    <Property Name="HRA" Type="smallint" />
+    <Property Name="BBA" Type="smallint" />
+    <Property Name="SOA" Type="smallint" />
+    <Property Name="E" Type="int" />
+    <Property Name="DP" Type="int" />
+    <Property Name="FP" Type="float" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="park" Type="nvarchar" MaxLength="255" />
+    <Property Name="attendance" Type="int" />
+    <Property Name="BPF" Type="int" />
+    <Property Name="PPF" Type="int" />
+    <Property Name="teamIDBR" Type="nvarchar" MaxLength="3" />
+    <Property Name="teamIDlahman45" Type="nvarchar" MaxLength="3" />
+    <Property Name="teamIDretro" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="TeamsFranchises">
+    <Key>
+      <PropertyRef Name="franchID" />
+    </Key>
+    <Property Name="franchID" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="franchName" Type="nvarchar" MaxLength="50" />
+    <Property Name="active" Type="nvarchar" MaxLength="2" />
+    <Property Name="NAassoc" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Lahman2009.dbo.AllstarWithName' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AllstarWithName">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="nameFirst" Type="nvarchar" MaxLength="50" />
+    <Property Name="nameLast" Type="nvarchar" MaxLength="50" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="lgID" Type="nvarchar" MaxLength="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Lahman2009.dbo.BatterDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="BatterDetail">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nameFirst" Type="nvarchar" MaxLength="50" />
+    <Property Name="nameLast" Type="nvarchar" MaxLength="50" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="teamID" Type="nvarchar" MaxLength="3" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="salary" Type="float" />
+    <Property Name="G" Type="smallint" />
+    <Property Name="AB" Type="smallint" />
+    <Property Name="R" Type="smallint" />
+    <Property Name="H" Type="smallint" />
+    <Property Name="2B" Type="smallint" />
+    <Property Name="3B" Type="smallint" />
+    <Property Name="HR" Type="smallint" />
+    <Property Name="RBI" Type="smallint" />
+    <Property Name="SB" Type="smallint" />
+    <Property Name="BB" Type="smallint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Lahman2009.dbo.PitcherDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="PitcherDetail">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="playerID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="nameFirst" Type="nvarchar" MaxLength="50" />
+    <Property Name="nameLast" Type="nvarchar" MaxLength="50" />
+    <Property Name="yearID" Type="smallint" Nullable="false" />
+    <Property Name="teamID" Type="nvarchar" MaxLength="3" />
+    <Property Name="TeamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="salary" Type="float" />
+    <Property Name="G" Type="smallint" />
+    <Property Name="IP" Type="int" />
+    <Property Name="W" Type="smallint" />
+    <Property Name="L" Type="smallint" />
+    <Property Name="SV" Type="smallint" />
+    <Property Name="CG" Type="smallint" />
+    <Property Name="SO" Type="smallint" />
+    <Property Name="SHO" Type="smallint" />
+    <Property Name="BB" Type="smallint" />
+    <Property Name="ERA" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'Lahman2009.dbo.vwPlayers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="vwPlayers">
+    <Key>
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="bbrefID" Type="nvarchar" MaxLength="9" />
+    <Property Name="holtzID" Type="nvarchar" MaxLength="9" />
+    <Property Name="retroID" Type="nvarchar" MaxLength="9" />
+    <Property Name="lahman45ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="lahman40ID" Type="nvarchar" MaxLength="9" />
+    <Property Name="college" Type="nvarchar" MaxLength="50" />
+    <Property Name="finalGame" Type="datetime" />
+    <Property Name="debut" Type="datetime" />
+    <Property Name="throws" Type="nvarchar" MaxLength="1" />
+    <Property Name="bats" Type="nvarchar" MaxLength="1" />
+    <Property Name="height" Type="float" />
+    <Property Name="weight" Type="smallint" />
+    <Property Name="nameNick" Type="nvarchar" MaxLength="255" />
+    <Property Name="nameGiven" Type="nvarchar" MaxLength="255" />
+    <Property Name="nameNote" Type="nvarchar" MaxLength="255" />
+    <Property Name="nameLast" Type="nvarchar" MaxLength="50" />
+    <Property Name="nameFirst" Type="nvarchar" MaxLength="50" />
+    <Property Name="deathCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="deathState" Type="nvarchar" MaxLength="2" />
+    <Property Name="deathCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="deathDay" Type="smallint" />
+    <Property Name="deathMonth" Type="smallint" />
+    <Property Name="deathYear" Type="smallint" />
+    <Property Name="birthCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="birthState" Type="nvarchar" MaxLength="2" />
+    <Property Name="birthCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="birthDay" Type="smallint" />
+    <Property Name="birthMonth" Type="smallint" />
+    <Property Name="birthYear" Type="smallint" />
+    <Property Name="hofID" Type="nvarchar" MaxLength="10" />
+    <Property Name="playerID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="lahmanID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Salaries_Teams">
+    <End Role="Teams" Type="AgileWays.Baseball.Model.Store.Teams" Multiplicity="1" />
+    <End Role="Salaries" Type="AgileWays.Baseball.Model.Store.Salaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="yearID" />
+        <PropertyRef Name="lgID" />
+        <PropertyRef Name="teamID" />
+      </Principal>
+      <Dependent Role="Salaries">
+        <PropertyRef Name="yearID" />
+        <PropertyRef Name="lgID" />
+        <PropertyRef Name="teamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teams_TeamsFranchises">
+    <End Role="TeamsFranchises" Type="AgileWays.Baseball.Model.Store.TeamsFranchises" Multiplicity="0..1" />
+    <End Role="Teams" Type="AgileWays.Baseball.Model.Store.Teams" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeamsFranchises">
+        <PropertyRef Name="franchID" />
+      </Principal>
+      <Dependent Role="Teams">
+        <PropertyRef Name="franchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

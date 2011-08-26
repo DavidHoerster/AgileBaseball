@@ -1,0 +1,68 @@
+﻿.ui-icon 
+{
+    float:left;
+    position: absolute;
+    padding: 0 0 0 0;
+}
+.commentHolder
+{
+    border-style: dotted;
+}
+.searchItem
+{
+    margin: 0 4px 0px 4px;
+}
+.searchButton 
+{
+    width: 85px;
+    margin: 0 0 0 4px;
+    position: relative;
+}
+.searchContainer 
+{
+    margin: 0 0 10px 0;
+}
+.listButton
+{
+    font-size: 0.6em;
+    margin: 0px 2px 0px 2px;
+    border-style: none;
+}
+.listButton-Batting
+{
+    background-color: Red;
+    color: White;
+}
+.listButton-Pitching
+{
+    background-color: Blue;
+    color: White;
+}
+.listButton-HOF
+{
+    background-color: Green;
+    color: Yellow;
+}
+.listButton-AllStar 
+{
+    background-color: Gray;
+    color: Blue;
+}
+thead
+{
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: thin;
+}
+td
+{
+    border-style: solid;
+    border-width: thin;
+}
+table
+{
+    border-style: dashed;
+    border-color: Gray;
+    border-width: thin;
+}

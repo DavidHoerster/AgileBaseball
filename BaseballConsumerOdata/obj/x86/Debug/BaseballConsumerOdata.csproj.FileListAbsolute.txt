@@ -1,0 +1,14 @@
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\bin\Debug\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\bin\Debug\BaseballConsumerOdata.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\obj\x86\Debug\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\obj\x86\Debug\BaseballConsumerOdata.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\obj\x86\Debug\Decl\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball2\BaseballConsumerOdata\obj\x86\Debug\Decl\BaseballConsumerOdata.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\obj\x86\Debug\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\obj\x86\Debug\BaseballConsumerOdata.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\bin\Debug\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\bin\Debug\BaseballConsumerOdata.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\obj\x86\Debug\Decl\BaseballConsumerOdata.exe
+C:\Code4X\AgileWays\AgileWays.Baseball3\BaseballConsumerOdata\obj\x86\Debug\Decl\BaseballConsumerOdata.pdb

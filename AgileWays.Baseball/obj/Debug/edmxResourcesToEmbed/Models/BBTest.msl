@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Lahman2009ModelStoreContainer" CdmEntityContainer="BBTestContext">
+    <EntitySetMapping Name="BatterDetails">
+      <EntityTypeMapping TypeName="TestModel.BatterDetail">
+        <MappingFragment StoreEntitySet="BatterDetail">
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="AB" ColumnName="AB" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="H" ColumnName="H" />
+          <ScalarProperty Name="C2B" ColumnName="2B" />
+          <ScalarProperty Name="C3B" ColumnName="3B" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="RBI" ColumnName="RBI" />
+          <ScalarProperty Name="SB" ColumnName="SB" />
+          <ScalarProperty Name="BB" ColumnName="BB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

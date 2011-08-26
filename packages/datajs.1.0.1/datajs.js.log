@@ -1,0 +1,3572 @@
+Microsoft Ajax Minifier - JavaScript and CSS minification and verification utility
+Copyright (c) 2002-2010 by Microsoft Corp. All rights reserved.
+
+
+Minifying file 'datajs.js'...
+Global Objects
+
+Function Expression anonymous_0 - starts at line 16, col 1 [0 references] 
+  undefined [argument] [58 references renamed to a]
+  window [argument] [50 references renamed to b]
+  ado [local var] [5 references renamed to cb]
+  adoDs [local var] [4 references renamed to rb]
+  appXmlNs [local var] [5 references renamed to ab]
+  atomAcceptTypes [local var] [2 references renamed to Jc]
+  atomMediaType [local var] [2 references renamed to Zc]
+  atomXmlNs [local var] [18 references renamed to f]
+  batchMediaType [local var] [5 references renamed to Z]
+  CACHE_STATE_DESTROY [local var] [4 references renamed to hb]
+  CACHE_STATE_IDLE [local var] [7 references renamed to D]
+  CACHE_STATE_INIT [local var] [2 references renamed to Bc]
+  CACHE_STATE_PREFETCH [local var] [3 references renamed to Ab]
+  CACHE_STATE_READ [local var] [3 references renamed to Ib]
+  CACHE_STATE_WRITE [local var] [3 references renamed to Gb]
+  customizationAttributes [local var] [2 references renamed to ec]
+  datajs [local var] [5 references renamed to bb]
+  DESTROY_STATE_CLEAR [local var] [2 references renamed to sc]
+  edmNs [local var] [1 references renamed to Hf]
+  edmNs2 [local var] [1 references renamed to Ff]
+  edmNs3 [local var] [1 references renamed to Gf]
+  edmxNs [local var] [2 references renamed to wd]
+  handlers [local var] [2 references renamed to ud]
+  http [local var] [2 references renamed to yd]
+  IDBKeyRange [local var] [2 references renamed to md]
+  IDBTransaction [local var] [8 references renamed to z]
+  inlineTag [local var] [1 references renamed to vf]
+  isFeedCustomizationNameRE [local var] [1 references renamed to Hd]
+  jsonDateRE [local var] [1 references renamed to qf]
+  jsonMediaType [local var] [3 references renamed to Qb]
+  knownCustomizationPaths [local var] [1 references renamed to Ld]
+  localStorage [local var] [11 references renamed to p]
+  mechanisms [local var] [1 references renamed to sf]
+  mozIndexedDB [local var] [2 references renamed to gd]
+  nonExtensionNamepaces [local var] [1 references renamed to Rd]
+  normalHeaders [local var] [1 references renamed to Ue]
+  odata [local var] [32 references renamed to c]
+  odataMetaXmlNs [local var] [16 references renamed to i]
+  odataRelatedPrefix [local var] [3 references renamed to Fb]
+  odataScheme [local var] [2 references renamed to nd]
+  odataXmlNs [local var] [9 references renamed to v]
+  OPERATION_STATE_CANCEL [local var] [5 references renamed to U]
+  OPERATION_STATE_END [local var] [8 references renamed to x]
+  OPERATION_STATE_ERROR [local var] [3 references renamed to zb]
+  OPERATION_STATE_START [local var] [7 references renamed to C]
+  OPERATION_STATE_WAIT [local var] [2 references renamed to oc]
+  parseDateTimeRE [local var] [1 references renamed to He]
+  parseTimeRE [local var] [1 references renamed to mf]
+  PAYLOADTYPE_BATCH [local var] [2 references renamed to xc]
+  PAYLOADTYPE_COMPLEXTYPE [local var] [4 references renamed to db]
+  PAYLOADTYPE_ENTRY [local var] [5 references renamed to W]
+  PAYLOADTYPE_FEEDORLINKS [local var] [4 references renamed to eb]
+  PAYLOADTYPE_NONE [local var] [2 references renamed to Fc]
+  PAYLOADTYPE_PRIMITIVETYPE [local var] [3 references renamed to xb]
+  PAYLOADTYPE_SVCDOC [local var] [2 references renamed to uc]
+  PAYLOADTYPE_UNKNOWN [local var] [1 references renamed to ge]
+  pctEncodingRegEx [local var] [1 references renamed to ze]
+  propertiesTag [local var] [1 references renamed to We]
+  PROPERTYKIND_COMPLEX [local var] [4 references renamed to gb]
+  PROPERTYKIND_DEFERRED [local var] [1 references renamed to Sd]
+  PROPERTYKIND_INLINE [local var] [3 references renamed to Cb]
+  PROPERTYKIND_NONE [local var] [2 references renamed to yc]
+  PROPERTYKIND_PRIMITIVE [local var] [3 references renamed to yb]
+  propertyNullAttribute [local var] [1 references renamed to Td]
+  propertyTypeAttribute [local var] [1 references renamed to Ud]
+  propertyTypeConverters [local var] [2 references renamed to jc]
+  propertyTypeFormatters [local var] [1 references renamed to Nd]
+  READ_STATE_DONE [local var] [5 references renamed to Y]
+  READ_STATE_LOCAL [local var] [5 references renamed to X]
+  READ_STATE_SAVE [local var] [2 references renamed to Nc]
+  READ_STATE_SOURCE [local var] [2 references renamed to zc]
+  responseHeaderRegex [local var] [1 references renamed to ie]
+  responseStatusRegex [local var] [1 references renamed to je]
+  schema [local var] [12 references renamed to o]
+  ticks [local var] [4 references renamed to sb]
+  uriAuthorityRegEx [local var] [1 references renamed to ue]
+  uriPartNames [local var] [2 references renamed to jd]
+  uriRegEx [local var] [1 references renamed to Df]
+  versionRE [local var] [1 references renamed to zf]
+  w3org [local var] [4 references renamed to tb]
+  xmlMediaType [local var] [4 references renamed to ob]
+  xmlNS [local var] [4 references renamed to ub]
+  xmlnsNS [local var] [6 references renamed to P]
+  appendAsXml [local function] [1 references renamed to gf]
+  appendPage [local function] [1 references renamed to nf]
+  appendQueryOption [local function] [1 references renamed to pe]
+  appendSegment [local function] [1 references renamed to Re]
+  applyEntryCustomizationToEntry [local function] [2 references renamed to Wb]
+  applyEntryCustomizationToObject [local function] [2 references renamed to Vb]
+  applyMetadataToEntry [local function] [1 references renamed to Xd]
+  applyMetadataToObject [local function] [1 references renamed to Qd]
+  assigned [local function] [8 references renamed to A]
+  atomParser [local function] [1 references renamed to of]
+  atomSerializer [local function] [1 references renamed to Ke]
+  batchParser [local function] [1 references renamed to hf]
+  batchSerializer [local function] [1 references renamed to De]
+  buildODataRequest [local function] [2 references renamed to wc]
+  canUseJSONP [local function] [1 references renamed to jf]
+  checkParserErrorElement [local function] [1 references renamed to Kd]
+  checkUndefinedGreaterThanZero [local function] [1 references renamed to Dd]
+  checkUndefinedOrNumber [local function] [2 references renamed to gc]
+  checkZeroGreater [local function] [2 references renamed to Cc]
+  contains [local function] [2 references renamed to td]
+  contentType [local function] [6 references renamed to L]
+  contentTypeToString [local function] [1 references renamed to ee]
+  convertFromAtomPropertyText [local function] [2 references renamed to Xb]
+  convertToAtomPropertyText [local function] [2 references renamed to Zb]
+  createAttributeExtension [local function] [2 references renamed to ac]
+  createBoundary [local function] [2 references renamed to Pc]
+  createDeferred [local function] [4 references renamed to lb]
+  createDomParser [local function] [2 references renamed to Kc]
+  createElementExtension [local function] [2 references renamed to hc]
+  createIFrame [local function] [1 references renamed to Ze]
+  createReadWriteContext [local function] [2 references renamed to ic]
+  createXmlHttpRequest [local function] [1 references renamed to Yd]
+  currentBoundary [local function] [2 references renamed to Lc]
+  DataCache [local function] [1 references renamed to uf]
+  DataCacheOperation [local function] [6 references renamed to G]
+  defined [local function] [8 references renamed to B]
+  delay [local function] [24 references renamed to d]
+  dispatchHandler [local function] [2 references renamed to Mc]
+  DjsDeferred [local function] [6 references renamed to M]
+  DomStore [local function] [17 references renamed to g]
+  domStoreDateToJSON [local function] [1 references renamed to ke]
+  domStoreJSONToDate [local function] [1 references renamed to le]
+  estimateSize [local function] [2 references renamed to fd]
+  expandCustomizationPath [local function] [2 references renamed to fc]
+  extend [local function] [7 references renamed to F]
+  findQueryOptionStart [local function] [0 references renamed to Jf]
+  fixDataServiceVersion [local function] [0 references renamed to If]
+  fixRequestHeader [local function] [2 references renamed to Dc]
+  forEachSchema [local function] [3 references renamed to Pb]
+  formatDateTimeOffset [local function] [3 references renamed to Bb]
+  formatDuration [local function] [2 references renamed to Qc]
+  formatNumberWidth [local function] [14 references renamed to j]
+  formatToString [local function] [12 references renamed to m]
+  forwardCall [local function] [1 references renamed to kf]
+  getCanonicalTimezone [local function] [2 references renamed to lc]
+  getChildSchema [local function] [1 references renamed to Le]
+  getContentType [local function] [2 references renamed to Rc]
+  getDataServiceVersion [local function] [2 references renamed to kc]
+  getElementText [local function] [2 references renamed to Sc]
+  getError [local function] [10 references renamed to r]
+  getObjectValueByPath [local function] [2 references renamed to mc]
+  getRequestOrResponseHeader [local function] [2 references renamed to Yb]
+  getSingleElementByTagNameNS [local function] [9 references renamed to s]
+  getURIFromInfo [local function] [2 references renamed to Tc]
+  getURIInfo [local function] [3 references renamed to Tb]
+  getXmlPathValue [local function] [1 references renamed to Ee]
+  handler [local function] [6 references renamed to O]
+  handlerAccepts [local function] [2 references renamed to Uc]
+  handlerRead [local function] [1 references renamed to lf]
+  handlerWrite [local function] [1 references renamed to af]
+  hasLeadingOrTrailingWhitespace [local function] [1 references renamed to Bd]
+  hex16 [local function] [3 references renamed to Ub]
+  IndexedDBStore [local function] [16 references renamed to h]
+  intersectRanges [local function] [1 references renamed to Fe]
+  invokeRequest [local function] [1 references renamed to Se]
+  isAbsoluteUrl [local function] [1 references renamed to Te]
+  isArray [local function] [9 references renamed to w]
+  isDate [local function] [2 references renamed to xd]
+  isDateTimeOffset [local function] [2 references renamed to Ec]
+  isEdmNamespace [local function] [2 references renamed to Vc]
+  isElementEmpty [local function] [1 references renamed to Me]
+  isExtensionNs [local function] [4 references renamed to mb]
+  isLocalUrl [local function] [1 references renamed to pf]
+  isPrimitiveType [local function] [3 references renamed to Lb]
+  isWhitespace [local function] [1 references renamed to bf]
+  isWhitespacePreserveContext [local function] [1 references renamed to Fd]
+  jsonNormalizeData [local function] [1 references renamed to qe]
+  jsonParser [local function] [1 references renamed to rf]
+  jsonReplacer [local function] [1 references renamed to cf]
+  jsonSerializer [local function] [1 references renamed to Ne]
+  jsonUpdateDataFromVersion [local function] [1 references renamed to Id]
+  lookupComplexType [local function] [3 references renamed to Hb]
+  lookupEntityType [local function] [6 references renamed to H]
+  lookupProperty [local function] [3 references renamed to Nb]
+  lookupPropertyType [local function] [3 references renamed to Eb]
+  lookupTypeInMetadata [local function] [2 references renamed to nc]
+  lookupTypeInSchema [local function] [1 references renamed to me]
+  MemoryStore [local function] [7 references renamed to E]
+  mergeUriPathWithBase [local function] [1 references renamed to Zd]
+  metadataParser [local function] [1 references renamed to Oe]
+  minutesToOffset [local function] [1 references renamed to Ge]
+  normalizeHeaders [local function] [3 references renamed to Jb]
+  normalizeServiceDocument [local function] [1 references renamed to Jd]
+  normalizeURI [local function] [10 references renamed to q]
+  normalizeURICase [local function] [1 references renamed to xe]
+  ODataCacheSource [local function] [1 references renamed to ye]
+  openTransaction [local function] [8 references renamed to y]
+  parseBool [local function] [1 references renamed to wf]
+  parseConceptualModelElement [local function] [3 references renamed to wb]
+  parseDateTime [local function] [1 references renamed to Ve]
+  parseDateTimeMaybeOffset [local function] [2 references renamed to bc]
+  parseDateTimeOffset [local function] [1 references renamed to fe]
+  parseDuration [local function] [2 references renamed to ad]
+  parseInt10 [local function] [23 references renamed to e]
+  parseJsonDateString [local function] [2 references renamed to tc]
+  parseTimezone [local function] [2 references renamed to bd]
+  partHandler [local function] [2 references renamed to od]
+  payloadTypeOf [local function] [6 references renamed to I]
+  prepareRequest [local function] [2 references renamed to Wc]
+  propertyKindOf [local function] [1 references renamed to Pe]
+  propertyTypeDefaultConverter [local function] [5 references renamed to Q]
+  qualifyDomStoreKey [local function] [4 references renamed to ib]
+  queryForData [local function] [1 references renamed to df]
+  queryForDataInternal [local function] [2 references renamed to pc]
+  readAtomDocument [local function] [2 references renamed to Gc]
+  readAtomEntry [local function] [2 references renamed to cd]
+  readAtomEntryContent [local function] [1 references renamed to ae]
+  readAtomEntryDeferredProperty [local function] [1 references renamed to Ed]
+  readAtomEntryEditMediaLink [local function] [1 references renamed to Gd]
+  readAtomEntryLink [local function] [1 references renamed to re]
+  readAtomEntryProperty [local function] [1 references renamed to Vd]
+  readAtomEntryStructuralObject [local function] [3 references renamed to vb]
+  readAtomEntryType [local function] [1 references renamed to se]
+  readAtomExtensionAttribute [local function] [5 references renamed to S]
+  readAtomExtensionAttributes [local function] [5 references renamed to R]
+  readAtomExtensionElement [local function] [5 references renamed to T]
+  readAtomFeed [local function] [1 references renamed to ef]
+  readAtomFeedLink [local function] [1 references renamed to Ae]
+  readAtomLink [local function] [2 references renamed to hd]
+  readAtomServiceDocument [local function] [1 references renamed to Md]
+  readAtomServiceDocumentCollection [local function] [1 references renamed to zd]
+  readAtomServiceDocumentWorkspace [local function] [1 references renamed to Ad]
+  readBatch [local function] [2 references renamed to sd]
+  readHeaders [local function] [2 references renamed to pd]
+  readLine [local function] [6 references renamed to N]
+  readLinks [local function] [1 references renamed to xf]
+  readODataXmlDocument [local function] [1 references renamed to be]
+  readResponse [local function] [2 references renamed to id]
+  readResponseHeaders [local function] [1 references renamed to he]
+  readTo [local function] [4 references renamed to qb]
+  readUri [local function] [2 references renamed to vd]
+  removeCallback [local function] [1 references renamed to Qe]
+  removeDotsFromPath [local function] [1 references renamed to ne]
+  removeFromArray [local function] [3 references renamed to Mb]
+  removeIFrame [local function] [3 references renamed to Rb]
+  removeNamespace [local function] [1 references renamed to Ie]
+  removeXmlProperty [local function] [1 references renamed to te]
+  safeSetProperty [local function] [4 references renamed to kb]
+  scriptCase [local function] [2 references renamed to qd]
+  setObjectValueByPath [local function] [1 references renamed to ce]
+  setXmlPathValue [local function] [1 references renamed to Je]
+  snapToPageBoundaries [local function] [2 references renamed to qc]
+  textParse [local function] [1 references renamed to yf]
+  textSerialize [local function] [1 references renamed to Xe]
+  throwErrorCallback [local function] [4 references renamed to jb]
+  traverse [local function] [1 references renamed to Cf]
+  traverseInternal [local function] [2 references renamed to Hc]
+  trimString [local function] [2 references renamed to rd]
+  undefinedDefault [local function] [3 references renamed to Kb]
+  unqualifyDomStoreKey [local function] [2 references renamed to rc]
+  writeAtomDocument [local function] [1 references renamed to ve]
+  writeAtomEntry [local function] [3 references renamed to Ob]
+  writeAtomEntryDeferredProperty [local function] [1 references renamed to Cd]
+  writeAtomEntryLink [local function] [1 references renamed to oe]
+  writeAtomEntryMetadata [local function] [1 references renamed to Od]
+  writeAtomEntryProperties [local function] [2 references renamed to cc]
+  writeAtomEntryProperty [local function] [1 references renamed to Pd]
+  writeAtomFeed [local function] [2 references renamed to dd]
+  writeAtomRoot [local function] [2 references renamed to ed]
+  writeBatch [local function] [1 references renamed to tf]
+  writeBatchPart [local function] [2 references renamed to Xc]
+  writeBatchPartDelimiter [local function] [4 references renamed to fb]
+  writeHtmlToIFrame [local function] [2 references renamed to Ac]
+  writeODataXmlDocument [local function] [1 references renamed to Wd]
+  writeODataXmlNode [local function] [1 references renamed to we]
+  writeRequest [local function] [1 references renamed to ff]
+  writeUri [local function] [1 references renamed to Ef]
+  xmlAddNamespaceAttribute [local function] [2 references renamed to dc]
+  xmlAppendPreserving [local function] [3 references renamed to Db]
+  xmlAttribute [local function] [6 references renamed to K]
+  xmlAttributeNode [local function] [1 references renamed to Be]
+  xmlAttributes [local function] [6 references renamed to J]
+  xmlChildElements [local function] [12 references renamed to l]
+  xmlFirstElement [local function] [2 references renamed to Oc]
+  xmlInnerText [local function] [12 references renamed to n]
+  xmlLocalName [local function] [2 references renamed to kd]
+  xmlNewAttribute [local function] [9 references renamed to t]
+  xmlNewDocument [local function] [2 references renamed to Yc]
+  xmlNewDomAttribute [local function] [2 references renamed to vc]
+  xmlNewDomElement [local function] [1 references renamed to Ce]
+  xmlNewElement [local function] [13 references renamed to k]
+  xmlParse [local function] [4 references renamed to pb]
+  xmlParser [local function] [1 references renamed to Af]
+  xmlQualifyXmlTagName [local function] [5 references renamed to V]
+  xmlSerialize [local function] [2 references renamed to ld]
+  xmlSerializeChildren [local function] [1 references renamed to de]
+  xmlSerializeNode [local function] [2 references renamed to Ic]
+  xmlSerializer [local function] [1 references renamed to Ye]
+  xml_attribute [local function] [4 references renamed to nb]
+  xml_baseURI [local function] [3 references renamed to Sb]
+  xml_parse [local function] [1 references renamed to Bf]
+  xml_wrapNode [local function] [9 references renamed to u]
+
+Function Expression "assigned" - starts at line 46, col 19  
+  value [argument] [2 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "contains" - starts at line 53, col 19  
+  arr [argument] [2 references renamed to b]
+  item [argument] [1 references renamed to d]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to c]
+
+Function Expression "defined" - starts at line 69, col 18  
+  a [argument] [2 references renamed to b]
+  b [argument] [1 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "delay" - starts at line 77, col 16  
+  callback [argument] [2 references renamed to a]
+  arguments [arguments array] 
+  args [local var] [1 references renamed to c]
+  window [outer var] [2 references renamed to b]
+
+Function Expression "setTimeout" - starts at line 86, col 26  
+  args [outer var] [1 references renamed to c]
+  callback [outer var] [1 references renamed to a]
+
+Function Expression "forEachSchema" - starts at line 92, col 24  
+  callback [argument] [3 references renamed to c]
+  metadata [argument] [7 references renamed to a]
+  i [local var] [4 references renamed to b]
+  len [local var] [2 references renamed to e]
+  result [local var] [3 references renamed to d]
+  forEachSchema [outer function] [2 references renamed to Pb]
+  isArray [outer function] [1 references renamed to w]
+
+Function Expression "isDateTimeOffset" - starts at line 123, col 27  
+  value [argument] [3 references renamed to a]
+
+Function Expression "formatDateTimeOffset" - starts at line 130, col 31  
+  value [argument] [16 references renamed to a]
+  hasOffset [local var] [2 references renamed to f]
+  hours [local var] [1 references renamed to i]
+  minutes [local var] [1 references renamed to h]
+  month [local var] [1 references renamed to k]
+  ms [local var] [5 references renamed to b]
+  offset [local var] [4 references renamed to d]
+  sign [local var] [2 references renamed to g]
+  timezone [local var] [4 references renamed to c]
+  year [local var] [4 references renamed to e]
+  formatNumberWidth [outer function] [7 references renamed to j]
+  getCanonicalTimezone [outer function] [1 references renamed to lc]
+  isDateTimeOffset [outer function] [1 references renamed to Ec]
+  parseTimezone [outer function] [1 references renamed to bd]
+
+Function Expression "formatDuration" - starts at line 182, col 25  
+  value [argument] [1 references renamed to g]
+  days [local var] [2 references renamed to e]
+  hours [local var] [2 references renamed to d]
+  minutes [local var] [2 references renamed to b]
+  ms [local var] [13 references renamed to a]
+  seconds [local var] [2 references renamed to c]
+  sign [local var] [2 references renamed to f]
+  formatNumberWidth [outer function] [5 references renamed to j]
+
+Function Expression "formatNumberWidth" - starts at line 211, col 28  
+  value [argument] [1 references renamed to b]
+  width [argument] [1 references renamed to c]
+  result [local var] [4 references renamed to a]
+
+Function Expression "getCanonicalTimezone" - starts at line 224, col 31  
+  timezone [argument] [5 references renamed to a]
+
+Function Expression "invokeRequest" - starts at line 232, col 24  
+  context [argument] [1 references renamed to e]
+  error [argument] [2 references renamed to c]
+  handler [argument] [1 references renamed to f]
+  httpClient [argument] [1 references renamed to d]
+  request [argument] [2 references renamed to b]
+  success [argument] [1 references renamed to g]
+
+Function Expression "request" - starts at line 240, col 43  
+  response [argument] [7 references renamed to d]
+  context [outer var] [1 references renamed to e]
+  handler [outer var] [1 references renamed to f]
+  success [outer var] [1 references renamed to g]
+  undefined [outer var] [3 references renamed to a]
+  normalizeHeaders [outer function] [1 references renamed to Jb]
+
+Catch Scope - starts at line 249, col 21 
+  err [argument] [5 references renamed to h]
+  error [outer var] [1 references renamed to c]
+  request [outer var] [1 references renamed to b]
+  response [outer var] [1 references renamed to d]
+  undefined [outer var] [2 references renamed to a]
+
+Function Expression "isArray" - starts at line 264, col 18  
+  value [argument] [1 references renamed to a]
+
+Function Expression "isDate" - starts at line 272, col 17  
+  value [argument] [1 references renamed to a]
+
+Function Expression "lookupProperty" - starts at line 280, col 25  
+  name [argument] [1 references renamed to d]
+  properties [argument] [4 references renamed to b]
+  i [local var] [5 references renamed to a]
+  len [local var] [2 references renamed to c]
+
+Function Expression "lookupTypeInMetadata" - starts at line 298, col 31  
+  kind [argument] [1 references renamed to c]
+  metadata [argument] [1 references renamed to b]
+  name [argument] [2 references renamed to a]
+  forEachSchema [outer function] [1 references renamed to Pb]
+
+Function Expression "forEachSchema" - starts at line 305, col 48  
+  schema [argument] [1 references renamed to b]
+  kind [outer var] [1 references renamed to c]
+  name [outer var] [1 references renamed to a]
+  lookupTypeInSchema [outer function] [1 references renamed to me]
+
+Function Expression "lookupComplexType" - starts at line 310, col 28  
+  metadata [argument] [1 references renamed to a]
+  name [argument] [1 references renamed to b]
+  lookupTypeInMetadata [outer function] [1 references renamed to nc]
+
+Function Expression "lookupEntityType" - starts at line 319, col 27  
+  metadata [argument] [1 references renamed to a]
+  name [argument] [1 references renamed to b]
+  lookupTypeInMetadata [outer function] [1 references renamed to nc]
+
+Function Expression "removeNamespace" - starts at line 360, col 26  
+  fullName [argument] [3 references renamed to a]
+  ns [argument] [3 references renamed to b]
+
+Function Expression "lookupTypeInSchema" - starts at line 373, col 29  
+  kind [argument] [1 references renamed to f]
+  metadata [argument] [3 references renamed to c]
+  name [argument] [1 references renamed to g]
+  i [local var] [5 references renamed to a]
+  len [local var] [2 references renamed to e]
+  nameOnly [local var] [2 references renamed to d]
+  types [local var] [4 references renamed to b]
+  removeNamespace [outer function] [1 references renamed to Ie]
+
+Function Expression "normalizeHeaders" - starts at line 407, col 27  
+  headers [argument] [4 references renamed to a]
+  lowerName [local var] [1 references renamed to d]
+  name [local var] [4 references renamed to b]
+  normalName [local var] [3 references renamed to c]
+  val [local var] [1 references renamed to e]
+  normalHeaders [outer var] [1 references renamed to Ue]
+
+Function Expression "undefinedDefault" - starts at line 422, col 27  
+  defaultValue [argument] [1 references renamed to c]
+  value [argument] [2 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "parseInt10" - starts at line 434, col 21  
+  value [argument] [1 references renamed to a]
+
+Function Expression "parseDuration" - starts at line 451, col 24  
+  duration [argument] [1 references renamed to c]
+  days [local var] [1 references renamed to j]
+  hours [local var] [1 references renamed to h]
+  minutes [local var] [1 references renamed to d]
+  months [local var] [1 references renamed to g]
+  ms [local var] [11 references renamed to a]
+  parts [local var] [9 references renamed to b]
+  seconds [local var] [1 references renamed to f]
+  years [local var] [1 references renamed to i]
+  parseTimeRE [outer var] [1 references renamed to mf]
+  parseInt10 [outer function] [4 references renamed to e]
+
+Function Expression "parseTimezone" - starts at line 499, col 24  
+  timezone [argument] [4 references renamed to a]
+  direction [local var] [3 references renamed to b]
+  offsetHours [local var] [1 references renamed to d]
+  offsetMinutes [local var] [1 references renamed to c]
+  parseInt10 [outer function] [2 references renamed to e]
+
+Function Expression "payloadTypeOf" - starts at line 515, col 24  
+  data [argument] [9 references renamed to b]
+  PAYLOADTYPE_BATCH [outer var] [1 references renamed to xc]
+  PAYLOADTYPE_COMPLEXTYPE [outer var] [1 references renamed to db]
+  PAYLOADTYPE_ENTRY [outer var] [1 references renamed to W]
+  PAYLOADTYPE_FEEDORLINKS [outer var] [1 references renamed to eb]
+  PAYLOADTYPE_NONE [outer var] [1 references renamed to Fc]
+  PAYLOADTYPE_PRIMITIVETYPE [outer var] [2 references renamed to xb]
+  PAYLOADTYPE_SVCDOC [outer var] [1 references renamed to uc]
+  PAYLOADTYPE_UNKNOWN [outer var] [1 references renamed to ge]
+  undefined [outer var] [1 references renamed to a]
+  isArray [outer function] [4 references renamed to w]
+  isDate [outer function] [1 references renamed to xd]
+
+Function Expression "prepareRequest" - starts at line 552, col 25  
+  context [argument] [1 references renamed to d]
+  handler [argument] [2 references renamed to c]
+  request [argument] [10 references renamed to b]
+  undefined [outer var] [2 references renamed to a]
+  assigned [outer function] [1 references renamed to A]
+  normalizeHeaders [outer function] [1 references renamed to Jb]
+
+Function Expression "propertyKindOf" - starts at line 578, col 25  
+  value [argument] [3 references renamed to a]
+  PAYLOADTYPE_COMPLEXTYPE [outer var] [1 references renamed to db]
+  PAYLOADTYPE_ENTRY [outer var] [1 references renamed to W]
+  PAYLOADTYPE_FEEDORLINKS [outer var] [1 references renamed to eb]
+  PAYLOADTYPE_PRIMITIVETYPE [outer var] [1 references renamed to xb]
+  PROPERTYKIND_COMPLEX [outer var] [1 references renamed to gb]
+  PROPERTYKIND_DEFERRED [outer var] [1 references renamed to Sd]
+  PROPERTYKIND_INLINE [outer var] [1 references renamed to Cb]
+  PROPERTYKIND_NONE [outer var] [1 references renamed to yc]
+  PROPERTYKIND_PRIMITIVE [outer var] [1 references renamed to yb]
+  payloadTypeOf [outer function] [1 references renamed to I]
+
+Function Expression "throwErrorCallback" - starts at line 601, col 29  
+  error [argument] [1 references renamed to a]
+
+Function Expression "trimString" - starts at line 607, col 21  
+  str [argument] [3 references renamed to a]
+
+Function Expression "getURIInfo" - starts at line 629, col 21  
+  uri [argument] [2 references renamed to e]
+  i [local var] [6 references renamed to a]
+  len [local var] [2 references renamed to d]
+  matches [local var] [3 references renamed to c]
+  result [local var] [4 references renamed to b]
+  uriPartNames [outer var] [2 references renamed to jd]
+  uriRegEx [outer var] [1 references renamed to Df]
+
+Function Expression "getURIFromInfo" - starts at line 656, col 25  
+  uriInfo [argument] [5 references renamed to a]
+
+Function Expression "normalizeURICase" - starts at line 679, col 27  
+  uri [argument] [3 references renamed to c]
+  authority [local var] [2 references renamed to d]
+  matches [local var] [6 references renamed to a]
+  scheme [local var] [2 references renamed to e]
+  uriInfo [local var] [5 references renamed to b]
+  pctEncodingRegEx [outer var] [1 references renamed to ze]
+  uriAuthorityRegEx [outer var] [1 references renamed to ue]
+  getURIFromInfo [outer function] [1 references renamed to Tc]
+  getURIInfo [outer function] [1 references renamed to Tb]
+
+Function Expression "replace" - starts at line 703, col 45  
+  str [argument] [1 references renamed to a]
+
+Function Expression "normalizeURI" - starts at line 708, col 23  
+  base [argument] [2 references renamed to f]
+  uri [argument] [3 references renamed to e]
+  baseInfo [local var] [5 references renamed to c]
+  normInfo [local var] [9 references renamed to b]
+  path [local var] [5 references renamed to d]
+  uriInfo [local var] [12 references renamed to a]
+  getURIFromInfo [outer function] [1 references renamed to Tc]
+  getURIInfo [outer function] [2 references renamed to Tb]
+  mergeUriPathWithBase [outer function] [1 references renamed to Zd]
+  removeDotsFromPath [outer function] [1 references renamed to ne]
+
+Function Expression "mergeUriPathWithBase" - starts at line 754, col 31  
+  basePath [argument] [3 references renamed to b]
+  uriPath [argument] [1 references renamed to d]
+  end [local var] [2 references renamed to c]
+  path [local var] [6 references renamed to a]
+
+Function Expression "removeDotsFromPath" - starts at line 775, col 29  
+  path [argument] [16 references renamed to a]
+  end [local var] [6 references renamed to c]
+  result [local var] [7 references renamed to b]
+  segment [local var] [4 references renamed to d]
+
+Function Expression "canUseJSONP" - starts at line 813, col 22  
+  request [argument] [2 references renamed to a]
+
+Function Expression "createIFrame" - starts at line 832, col 23  
+  url [argument] [1 references renamed to f]
+  attributeEncodedUrl [local var] [1 references renamed to c]
+  body [local var] [1 references renamed to d]
+  html [local var] [1 references renamed to e]
+  iframe [local var] [4 references renamed to a]
+  window [outer var] [2 references renamed to b]
+  writeHtmlToIFrame [outer function] [1 references renamed to Ac]
+
+Function Expression "createXmlHttpRequest" - starts at line 849, col 31  
+  exception [local var] [3 references renamed to a]
+  window [outer var] [5 references renamed to b]
+
+Catch Scope - starts at line 859, col 21 
+  _ [argument] [0 references renamed to d]
+  window [outer var] [1 references renamed to b]
+
+Catch Scope - starts at line 862, col 25 
+  e [argument] [1 references renamed to c]
+  exception [outer var] [1 references renamed to a]
+
+Function Expression "isAbsoluteUrl" - starts at line 872, col 24  
+  url [argument] [3 references renamed to a]
+
+Function Expression "isLocalUrl" - starts at line 882, col 21  
+  url [argument] [2 references renamed to c]
+  location [local var] [2 references renamed to a]
+  locationDomain [local var] [1 references renamed to d]
+  window [outer var] [1 references renamed to b]
+  isAbsoluteUrl [outer function] [1 references renamed to Te]
+
+Function Expression "removeCallback" - starts at line 897, col 25  
+  name [argument] [2 references renamed to c]
+  tick [argument] [1 references renamed to d]
+  window [outer var] [2 references renamed to b]
+
+Catch Scope - starts at line 903, col 17 
+  err [argument] [0 references renamed to e]
+  name [outer var] [1 references renamed to c]
+  tick [outer var] [1 references renamed to d]
+  ticks [outer var] [2 references renamed to sb]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [1 references renamed to b]
+
+Function Expression "removeIFrame" - starts at line 911, col 23  
+  iframe [argument] [4 references renamed to a]
+  writeHtmlToIFrame [outer function] [1 references renamed to Ac]
+
+Function Expression "readResponseHeaders" - starts at line 923, col 30  
+  headers [argument] [1 references renamed to e]
+  xhr [argument] [1 references renamed to f]
+  header [local var] [2 references renamed to c]
+  i [local var] [5 references renamed to a]
+  len [local var] [2 references renamed to d]
+  responseHeaders [local var] [3 references renamed to b]
+
+Function Expression "writeHtmlToIFrame" - starts at line 938, col 28  
+  html [argument] [1 references renamed to c]
+  iframe [argument] [3 references renamed to b]
+  frameDocument [local var] [3 references renamed to a]
+
+Function Expression "request" - starts at line 955, col 17  
+  error [argument] [3 references renamed to j]
+  request [argument] [17 references renamed to c]
+  success [argument] [2 references renamed to m]
+  callbackParameterName [local var] [1 references renamed to q]
+  done [local var] [6 references renamed to h]
+  enableJsonpCallback [local var] [1 references renamed to r]
+  formatQueryString [local var] [1 references renamed to s]
+  iframe [local var] [7 references renamed to f]
+  name [local var] [7 references renamed to g]
+  qIndex [local var] [2 references renamed to n]
+  queryStringParams [local var] [4 references renamed to i]
+  result [local var] [2 references renamed to o]
+  succeeded [local var] [1 references renamed to t]
+  tick [local var] [2 references renamed to p]
+  tickText [local var] [1 references renamed to v]
+  timeoutId [local var] [2 references renamed to l]
+  timeoutMS [local var] [1 references renamed to u]
+  url [local var] [12 references renamed to e]
+  xhr [local var] [18 references renamed to a]
+  handleTimeout [local function] [2 references renamed to k]
+  ticks [outer var] [2 references renamed to sb]
+  window [outer var] [7 references renamed to b]
+  canUseJSONP [outer function] [1 references renamed to jf]
+  createIFrame [outer function] [1 references renamed to Ze]
+  createXmlHttpRequest [outer function] [1 references renamed to Yd]
+  defined [outer function] [3 references renamed to B]
+  isLocalUrl [outer function] [1 references renamed to pf]
+
+Function Expression "abort" - starts at line 967, col 27  
+  done [outer var] [2 references renamed to h]
+  error [outer var] [1 references renamed to j]
+  iframe [outer var] [2 references renamed to f]
+  xhr [outer var] [3 references renamed to a]
+  removeIFrame [outer function] [1 references renamed to Rb]
+
+Function Expression "handleTimeout" - starts at line 982, col 32  
+  done [outer var] [2 references renamed to h]
+  error [outer var] [1 references renamed to j]
+  iframe [outer var] [2 references renamed to f]
+  xhr [outer var] [1 references renamed to a]
+  removeIFrame [outer function] [1 references renamed to Rb]
+
+Function Expression "onreadystatechange" - starts at line 999, col 41  
+  headers [local var] [2 references renamed to g]
+  response [local var] [2 references renamed to f]
+  statusCode [local var] [5 references renamed to b]
+  statusText [local var] [2 references renamed to d]
+  done [outer var] [1 references renamed to h]
+  error [outer var] [1 references renamed to j]
+  request [outer var] [1 references renamed to c]
+  success [outer var] [1 references renamed to m]
+  url [outer var] [1 references renamed to e]
+  xhr [outer var] [7 references renamed to a]
+  readResponseHeaders [outer function] [1 references renamed to he]
+
+Function Expression "window" - starts at line 1053, col 31  
+  data [argument] [3 references renamed to a]
+  done [outer var] [1 references renamed to h]
+  iframe [outer var] [2 references renamed to f]
+  name [outer var] [1 references renamed to g]
+  succeeded [outer var] [1 references renamed to t]
+  success [outer var] [1 references renamed to m]
+  tick [outer var] [1 references renamed to p]
+  timeoutId [outer var] [1 references renamed to l]
+  window [outer var] [5 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+  removeCallback [outer function] [1 references renamed to Qe]
+  removeIFrame [outer function] [1 references renamed to Rb]
+
+Function Expression "contentType" - starts at line 1098, col 22  
+  str [argument] [2 references renamed to f]
+  contentTypeParams [local var] [2 references renamed to c]
+  contentTypeParts [local var] [3 references renamed to b]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to e]
+  properties [local var] [2 references renamed to d]
+  trimString [outer function] [2 references renamed to rd]
+
+Function Expression "contentTypeToString" - starts at line 1119, col 30  
+  contentType [argument] [4 references renamed to b]
+  property [local var] [3 references renamed to c]
+  result [local var] [2 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "createReadWriteContext" - starts at line 1136, col 33  
+  contentType [argument] [1 references renamed to c]
+  context [argument] [3 references renamed to a]
+  dataServiceVersion [argument] [1 references renamed to b]
+  handler [argument] [1 references renamed to d]
+
+Function Expression "fixRequestHeader" - starts at line 1153, col 27  
+  name [argument] [2 references renamed to c]
+  request [argument] [2 references renamed to b]
+  value [argument] [1 references renamed to d]
+  headers [local var] [2 references renamed to a]
+
+Function Expression "fixDataServiceVersion" - starts at line 1168, col 32  
+  context [argument] [2 references renamed to a]
+  version [argument] [1 references renamed to b]
+
+Function Expression "getRequestOrResponseHeader" - starts at line 1182, col 37  
+  name [argument] [1 references renamed to d]
+  requestOrResponse [argument] [1 references renamed to c]
+  headers [local var] [2 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "getContentType" - starts at line 1192, col 25  
+  requestOrResponse [argument] [1 references renamed to a]
+  contentType [outer function] [1 references renamed to L]
+  getRequestOrResponseHeader [outer function] [1 references renamed to Yb]
+
+Function Expression "getDataServiceVersion" - starts at line 1201, col 32  
+  requestOrResponse [argument] [1 references renamed to c]
+  matches [local var] [3 references renamed to a]
+  value [local var] [2 references renamed to b]
+  versionRE [outer var] [1 references renamed to zf]
+  getRequestOrResponseHeader [outer function] [1 references renamed to Yb]
+
+Function Expression "handlerAccepts" - starts at line 1217, col 25  
+  cType [argument] [1 references renamed to b]
+  handler [argument] [1 references renamed to a]
+
+Function Expression "handlerRead" - starts at line 1228, col 22  
+  context [argument] [1 references renamed to h]
+  handler [argument] [3 references renamed to c]
+  parseCallback [argument] [1 references renamed to g]
+  response [argument] [8 references renamed to b]
+  body [local var] [2 references renamed to f]
+  cType [local var] [2 references renamed to e]
+  readContext [local var] [2 references renamed to d]
+  version [local var] [1 references renamed to i]
+  undefined [outer var] [1 references renamed to a]
+  assigned [outer function] [1 references renamed to A]
+  createReadWriteContext [outer function] [1 references renamed to ic]
+  getContentType [outer function] [1 references renamed to Rc]
+  getDataServiceVersion [outer function] [1 references renamed to kc]
+  handlerAccepts [outer function] [1 references renamed to Uc]
+
+Function Expression "handlerWrite" - starts at line 1258, col 23  
+  context [argument] [1 references renamed to g]
+  handler [argument] [3 references renamed to d]
+  request [argument] [10 references renamed to b]
+  serializeCallback [argument] [1 references renamed to f]
+  cType [local var] [3 references renamed to e]
+  version [local var] [1 references renamed to h]
+  writeContext [local var] [4 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+  contentTypeToString [outer function] [1 references renamed to ee]
+  createReadWriteContext [outer function] [1 references renamed to ic]
+  fixRequestHeader [outer function] [2 references renamed to Dc]
+  getContentType [outer function] [1 references renamed to Rc]
+  getDataServiceVersion [outer function] [1 references renamed to kc]
+  handlerAccepts [outer function] [1 references renamed to Uc]
+
+Function Expression "handler" - starts at line 1288, col 18  
+  accept [argument] [1 references renamed to d]
+  maxDataServiceVersion [argument] [1 references renamed to a]
+  parseCallback [argument] [1 references renamed to c]
+  serializeCallback [argument] [1 references renamed to b]
+
+Function Expression "read" - starts at line 1300, col 18  
+  context [argument] [1 references renamed to b]
+  response [argument] [1 references renamed to a]
+  parseCallback [outer var] [1 references renamed to c]
+  handlerRead [outer function] [1 references renamed to lf]
+
+Function Expression "write" - starts at line 1304, col 19  
+  context [argument] [1 references renamed to a]
+  request [argument] [1 references renamed to c]
+  serializeCallback [outer var] [1 references renamed to b]
+  handlerWrite [outer function] [1 references renamed to af]
+
+Function Expression "textParse" - starts at line 1310, col 20  
+  body [argument] [1 references renamed to a]
+  handler [argument] [0 references renamed to b]
+
+Function Expression "textSerialize" - starts at line 1314, col 24  
+  data [argument] [2 references renamed to b]
+  handler [argument] [0 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+  assigned [outer function] [1 references renamed to A]
+
+Function Expression "hasLeadingOrTrailingWhitespace" - starts at line 1347, col 41  
+  text [argument] [1 references renamed to a]
+  re [local var] [1 references renamed to b]
+
+Function Expression "appendAsXml" - starts at line 1356, col 22  
+  domNode [argument] [2 references renamed to c]
+  xmlAsText [argument] [1 references renamed to f]
+  doc [local var] [2 references renamed to e]
+  imported [local var] [2 references renamed to b]
+  importedChild [local var] [4 references renamed to a]
+  parsed [local var] [2 references renamed to d]
+  value [local var] [1 references renamed to g]
+  xmlParse [outer function] [1 references renamed to pb]
+
+Function Expression "safeSetProperty" - starts at line 1377, col 26  
+  name [argument] [1 references renamed to b]
+  obj [argument] [1 references renamed to c]
+  value [argument] [1 references renamed to a]
+
+Catch Scope - starts at line 1384, col 17 
+  _ [argument] [0 references renamed to d]
+
+Function Expression "createDomParser" - starts at line 1387, col 26  
+  exception [local var] [3 references renamed to c]
+  result [local var] [10 references renamed to a]
+  window [outer var] [3 references renamed to b]
+
+Catch Scope - starts at line 1398, col 21 
+  _ [argument] [0 references renamed to e]
+  result [outer var] [7 references renamed to a]
+  safeSetProperty [outer function] [4 references renamed to kb]
+
+Catch Scope - starts at line 1409, col 25 
+  e [argument] [1 references renamed to d]
+  exception [outer var] [1 references renamed to c]
+
+Function Expression "createAttributeExtension" - starts at line 1422, col 35  
+  wrappedNode [argument] [3 references renamed to a]
+
+Function Expression "createElementExtension" - starts at line 1434, col 33  
+  wrappedNode [argument] [5 references renamed to a]
+  result [local var] [3 references renamed to b]
+  getElementText [outer function] [1 references renamed to Sc]
+  xmlAttributes [outer function] [1 references renamed to J]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlAttributes" - starts at line 1447, col 35  
+  wrappedAttribute [argument] [2 references renamed to a]
+  result [outer var] [1 references renamed to b]
+  xmlnsNS [outer var] [1 references renamed to P]
+  createAttributeExtension [outer function] [1 references renamed to ac]
+
+Function Expression "xmlChildElements" - starts at line 1455, col 38  
+  wrappedElement [argument] [1 references renamed to a]
+  result [outer var] [1 references renamed to b]
+  createElementExtension [outer function] [1 references renamed to hc]
+
+Function Expression "isWhitespace" - starts at line 1462, col 23  
+  text [argument] [2 references renamed to a]
+  ws [local var] [1 references renamed to b]
+
+Function Expression "isWhitespacePreserveContext" - starts at line 1470, col 38  
+  domElement [argument] [5 references renamed to a]
+  val [local var] [2 references renamed to b]
+  xmlNS [outer var] [1 references renamed to ub]
+  xml_attribute [outer function] [1 references renamed to nb]
+
+Function Expression "getElementText" - starts at line 1488, col 25  
+  domElement [argument] [3 references renamed to f]
+  cursor [local var] [6 references renamed to b]
+  result [local var] [4 references renamed to c]
+  shouldInclude [local var] [3 references renamed to e]
+  text [local var] [3 references renamed to g]
+  whitespaceAlreadyRemoved [local var] [1 references renamed to h]
+  whitespacePreserveContext [local var] [3 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+  isWhitespace [outer function] [1 references renamed to bf]
+  isWhitespacePreserveContext [outer function] [1 references renamed to Fd]
+
+Function Expression "getSingleElementByTagNameNS" - starts at line 1536, col 38  
+  domNode [argument] [3 references renamed to b]
+  localName [argument] [2 references renamed to e]
+  namespaceURI [argument] [2 references renamed to d]
+  child [local var] [7 references renamed to a]
+  result [local var] [3 references renamed to c]
+  xmlLocalName [outer function] [1 references renamed to kd]
+
+Function Expression "checkParserErrorElement" - starts at line 1566, col 34  
+  element [argument] [4 references renamed to b]
+  text [argument] [2 references renamed to f]
+  parserErrorNS [local var] [2 references renamed to d]
+  reason [local var] [1 references renamed to h]
+  sourceTextElement [local var] [2 references renamed to c]
+  srcText [local var] [1 references renamed to g]
+  wrappedElement [local var] [5 references renamed to a]
+  xhtmlNS [local var] [2 references renamed to e]
+  getElementText [outer function] [1 references renamed to Sc]
+  getSingleElementByTagNameNS [outer function] [2 references renamed to s]
+  xmlInnerText [outer function] [1 references renamed to n]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlAddNamespaceAttribute" - starts at line 1596, col 35  
+  attributeNamespace [argument] [1 references renamed to e]
+  domNode [argument] [2 references renamed to c]
+  name [argument] [2 references renamed to d]
+  attribute [local var] [4 references renamed to a]
+  doc [local var] [3 references renamed to b]
+  xmlnsNS [outer var] [2 references renamed to P]
+
+Function Expression "xmlAppendPreserving" - starts at line 1614, col 30  
+  domNode [argument] [3 references renamed to a]
+  text [argument] [2 references renamed to b]
+  attr [local var] [1 references renamed to d]
+  textNode [local var] [1 references renamed to c]
+  xmlNS [outer var] [1 references renamed to ub]
+  hasLeadingOrTrailingWhitespace [outer function] [1 references renamed to Bd]
+  xmlNewDomAttribute [outer function] [1 references renamed to vc]
+
+Function Expression "xmlAttributes" - starts at line 1628, col 24  
+  element [argument] [1 references renamed to f]
+  onAttributeCallback [argument] [1 references renamed to e]
+  attribute [local var] [2 references renamed to b]
+  domNode [local var] [2 references renamed to c]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to d]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlAttribute" - starts at line 1642, col 23  
+  element [argument] [1 references renamed to b]
+  localName [argument] [1 references renamed to a]
+  nsURI [argument] [1 references renamed to c]
+  xml_attribute [outer function] [1 references renamed to nb]
+
+Function Expression "xmlAttributeNode" - starts at line 1647, col 27  
+  domNode [argument] [1 references renamed to d]
+  localName [argument] [2 references renamed to b]
+  nsURI [argument] [2 references renamed to c]
+  attributes [local var] [3 references renamed to a]
+
+Function Expression "xmlChildElements" - starts at line 1662, col 27  
+  element [argument] [2 references renamed to c]
+  onElementCallback [argument] [1 references renamed to d]
+  child [local var] [6 references renamed to a]
+  childBaseURI [local var] [2 references renamed to b]
+  normalizeURI [outer function] [1 references renamed to q]
+  xml_baseURI [outer function] [1 references renamed to Sb]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlFirstElement" - starts at line 1679, col 26  
+  element [argument] [2 references renamed to c]
+  child [local var] [6 references renamed to a]
+  childBaseURI [local var] [2 references renamed to b]
+  normalizeURI [outer function] [1 references renamed to q]
+  xml_baseURI [outer function] [1 references renamed to Sb]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlInnerText" - starts at line 1698, col 23  
+  domNode [argument] [4 references renamed to e]
+  cursor [local var] [12 references renamed to b]
+  next [local var] [5 references renamed to d]
+  result [local var] [5 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "xmlLocalName" - starts at line 1742, col 23  
+  node [argument] [3 references renamed to a]
+
+Function Expression "xmlNewDocument" - starts at line 1754, col 25  
+  name [argument] [2 references renamed to d]
+  nsURI [argument] [2 references renamed to c]
+  dom [local var] [5 references renamed to a]
+  window [outer var] [4 references renamed to b]
+  createDomParser [outer function] [1 references renamed to Kc]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlNewDomAttribute" - starts at line 1773, col 29  
+  domNode [argument] [3 references renamed to d]
+  localName [argument] [5 references renamed to c]
+  nsPrefix [argument] [2 references renamed to f]
+  nsURI [argument] [2 references renamed to g]
+  attribute [local var] [5 references renamed to b]
+  doc [local var] [3 references renamed to e]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "xmlNewDomElement" - starts at line 1795, col 27  
+  domNode [argument] [2 references renamed to f]
+  localName [argument] [5 references renamed to b]
+  nsPrefix [argument] [2 references renamed to e]
+  nsURI [argument] [2 references renamed to g]
+  doc [local var] [3 references renamed to d]
+  element [local var] [4 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "xmlNewElement" - starts at line 1816, col 24  
+  name [argument] [2 references renamed to g]
+  nsURI [argument] [2 references renamed to e]
+  parent [argument] [2 references renamed to d]
+  value [argument] [2 references renamed to f]
+  dom [local var] [3 references renamed to c]
+  element [local var] [5 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+  xmlAppendPreserving [outer function] [1 references renamed to Db]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlNewAttribute" - starts at line 1841, col 26  
+  element [argument] [3 references renamed to c]
+  name [argument] [2 references renamed to g]
+  nsURI [argument] [2 references renamed to e]
+  value [argument] [2 references renamed to f]
+  attribute [local var] [7 references renamed to b]
+  dom [local var] [3 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlQualifyXmlTagName" - starts at line 1865, col 31  
+  name [argument] [2 references renamed to b]
+  prefix [argument] [2 references renamed to a]
+
+Function Expression "xmlParse" - starts at line 1879, col 19  
+  baseURI [argument] [1 references renamed to c]
+  text [argument] [1 references renamed to d]
+  root [local var] [2 references renamed to a]
+  rootBaseURI [local var] [1 references renamed to b]
+  normalizeURI [outer function] [1 references renamed to q]
+  xml_baseURI [outer function] [1 references renamed to Sb]
+  xml_parse [outer function] [1 references renamed to Bf]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlSerialize" - starts at line 1890, col 23  
+  root [argument] [1 references renamed to a]
+  dom [local var] [1 references renamed to b]
+  xmlSerializeNode [outer function] [1 references renamed to Ic]
+
+Function Expression "xmlSerializeChildren" - starts at line 1901, col 31  
+  domNode [argument] [2 references renamed to d]
+  children [local var] [2 references renamed to b]
+  fragment [local var] [2 references renamed to c]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to e]
+  xmlSerializeNode [outer function] [1 references renamed to Ic]
+
+Function Expression "xmlSerializeNode" - starts at line 1920, col 27  
+  domNode [argument] [2 references renamed to c]
+  serializer [local var] [1 references renamed to e]
+  xml [local var] [2 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [2 references renamed to b]
+
+Function Expression "xml_attribute" - starts at line 1938, col 24  
+  domNode [argument] [3 references renamed to a]
+  localName [argument] [2 references renamed to b]
+  nsURI [argument] [2 references renamed to c]
+  node [local var] [2 references renamed to d]
+
+Function Expression "xml_baseURI" - starts at line 1958, col 22  
+  domNode [argument] [1 references renamed to a]
+  xmlNS [outer var] [1 references renamed to ub]
+  xml_attribute [outer function] [1 references renamed to nb]
+
+Function Expression "xml_parse" - starts at line 1966, col 20  
+  text [argument] [4 references renamed to b]
+  dom [local var] [9 references renamed to a]
+  checkParserErrorElement [outer function] [1 references renamed to Kd]
+  createDomParser [outer function] [1 references renamed to Kc]
+
+Function Expression "xml_wrapNode" - starts at line 1985, col 23  
+  baseURI [argument] [1 references renamed to d]
+  domNode [argument] [5 references renamed to a]
+  nodeName [local var] [2 references renamed to c]
+  nsURI [local var] [4 references renamed to b]
+  xmlnsNS [outer var] [1 references renamed to P]
+  xmlLocalName [outer function] [1 references renamed to kd]
+
+Function Expression "readODataXmlDocument" - starts at line 2014, col 31  
+  xmlRoot [argument] [4 references renamed to b]
+  odataXmlNs [outer var] [1 references renamed to v]
+  undefined [outer var] [1 references renamed to a]
+  readLinks [outer function] [1 references renamed to xf]
+  readUri [outer function] [1 references renamed to vd]
+
+Function Expression "readLinks" - starts at line 2030, col 20  
+  linksElement [argument] [1 references renamed to b]
+  uris [local var] [2 references renamed to a]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 2037, col 39  
+  child [argument] [3 references renamed to b]
+  uri [local var] [1 references renamed to c]
+  odataXmlNs [outer var] [1 references renamed to v]
+  uris [outer var] [1 references renamed to a]
+  readUri [outer function] [1 references renamed to vd]
+
+Function Expression "readUri" - starts at line 2047, col 18  
+  uriElement [argument] [1 references renamed to a]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "writeODataXmlDocument" - starts at line 2055, col 32  
+  data [argument] [4 references renamed to a]
+  PAYLOADTYPE_COMPLEXTYPE [outer var] [1 references renamed to db]
+  payloadTypeOf [outer function] [1 references renamed to I]
+  writeUri [outer function] [1 references renamed to Ef]
+
+Function Expression "writeUri" - starts at line 2068, col 19  
+  data [argument] [2 references renamed to a]
+  uri [local var] [2 references renamed to b]
+  odataXmlNs [outer var] [1 references renamed to v]
+  writeODataXmlNode [outer function] [1 references renamed to we]
+  xmlAppendPreserving [outer function] [1 references renamed to Db]
+
+Function Expression "writeODataXmlNode" - starts at line 2081, col 28  
+  name [argument] [2 references renamed to c]
+  nsURI [argument] [2 references renamed to b]
+  parent [argument] [2 references renamed to a]
+  xmlNewDocument [outer function] [1 references renamed to Yc]
+  xmlNewElement [outer function] [1 references renamed to k]
+
+Function Expression "xmlParser" - starts at line 2094, col 20  
+  handler [argument] [0 references renamed to c]
+  text [argument] [2 references renamed to b]
+  root [local var] [2 references renamed to a]
+  readODataXmlDocument [outer function] [1 references renamed to be]
+  xmlParse [outer function] [1 references renamed to pb]
+
+Function Expression "xmlSerializer" - starts at line 2110, col 24  
+  context [argument] [2 references renamed to b]
+  data [argument] [1 references renamed to f]
+  handler [argument] [0 references renamed to g]
+  cType [local var] [2 references renamed to e]
+  result [local var] [2 references renamed to c]
+  xmlDoc [local var] [2 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+  xmlMediaType [outer var] [2 references renamed to ob]
+  contentType [outer function] [1 references renamed to L]
+  writeODataXmlDocument [outer function] [1 references renamed to Wd]
+  xmlSerialize [outer function] [1 references renamed to ld]
+
+Function Expression "isExtensionNs" - starts at line 2158, col 24  
+  nsURI [argument] [1 references renamed to a]
+  nonExtensionNamepaces [outer var] [1 references renamed to Rd]
+  contains [outer function] [1 references renamed to td]
+
+Function Expression "propertyTypeDefaultConverter" - starts at line 2166, col 39  
+  propertyValue [argument] [1 references renamed to a]
+
+Function Expression "parseBool" - starts at line 2174, col 20  
+  propertyValue [argument] [1 references renamed to a]
+
+Function Expression "parseDateTimeMaybeOffset" - starts at line 2190, col 35  
+  value [argument] [1 references renamed to m]
+  withOffset [argument] [2 references renamed to h]
+  direction [local var] [2 references renamed to i]
+  hours [local var] [2 references renamed to k]
+  minutes [local var] [2 references renamed to j]
+  ms [local var] [8 references renamed to b]
+  offset [local var] [4 references renamed to d]
+  parts [local var] [10 references renamed to a]
+  result [local var] [6 references renamed to c]
+  seconds [local var] [1 references renamed to l]
+  timezone [local var] [3 references renamed to f]
+  year [local var] [3 references renamed to g]
+  parseDateTimeRE [outer var] [1 references renamed to He]
+  getCanonicalTimezone [outer function] [1 references renamed to lc]
+  parseInt10 [outer function] [7 references renamed to e]
+  parseTimezone [outer function] [1 references renamed to bd]
+
+Function Expression "parseDateTime" - starts at line 2258, col 24  
+  propertyValue [argument] [1 references renamed to a]
+  parseDateTimeMaybeOffset [outer function] [1 references renamed to bc]
+
+Function Expression "parseDateTimeOffset" - starts at line 2266, col 30  
+  propertyValue [argument] [1 references renamed to a]
+  parseDateTimeMaybeOffset [outer function] [1 references renamed to bc]
+
+Function Expression "formatToString" - starts at line 2299, col 25  
+  value [argument] [1 references renamed to a]
+
+Function Expression "isPrimitiveType" - starts at line 2326, col 26  
+  typeName [argument] [2 references renamed to b]
+  propertyTypeConverters [outer var] [1 references renamed to jc]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "convertFromAtomPropertyText" - starts at line 2336, col 38  
+  targetType [argument] [2 references renamed to b]
+  value [argument] [4 references renamed to a]
+  converter [local var] [2 references renamed to c]
+  propertyTypeConverters [outer var] [1 references renamed to jc]
+
+Function Expression "convertToAtomPropertyText" - starts at line 2352, col 36  
+  targetType [argument] [3 references renamed to b]
+  value [argument] [6 references renamed to a]
+  converter [local var] [2 references renamed to c]
+  propertyTypeFormatters [outer var] [1 references renamed to Nd]
+  isDate [outer function] [1 references renamed to xd]
+  isDateTimeOffset [outer function] [1 references renamed to Ec]
+
+Function Expression "readAtomDocument" - starts at line 2372, col 27  
+  atomElement [argument] [7 references renamed to a]
+  metadata [argument] [2 references renamed to b]
+  appXmlNs [outer var] [1 references renamed to ab]
+  atomXmlNs [outer var] [1 references renamed to f]
+  readAtomEntry [outer function] [1 references renamed to cd]
+  readAtomFeed [outer function] [1 references renamed to ef]
+  readAtomServiceDocument [outer function] [1 references renamed to Md]
+
+Function Expression "readAtomFeed" - starts at line 2396, col 23  
+  atomFeed [argument] [2 references renamed to c]
+  metadata [argument] [1 references renamed to d]
+  feed [local var] [4 references renamed to b]
+  feedMetadata [local var] [7 references renamed to a]
+  readAtomExtensionAttributes [outer function] [3 references renamed to R]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 2409, col 35  
+  feedChild [argument] [12 references renamed to c]
+  entry [local var] [1 references renamed to h]
+  extension [local var] [1 references renamed to g]
+  atomXmlNs [outer var] [1 references renamed to f]
+  feed [outer var] [3 references renamed to b]
+  feedMetadata [outer var] [5 references renamed to a]
+  metadata [outer var] [1 references renamed to d]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  normalizeURI [outer function] [1 references renamed to q]
+  parseInt10 [outer function] [1 references renamed to e]
+  readAtomEntry [outer function] [1 references renamed to cd]
+  readAtomExtensionAttributes [outer function] [2 references renamed to R]
+  readAtomExtensionElement [outer function] [1 references renamed to T]
+  readAtomFeedLink [outer function] [1 references renamed to Ae]
+  xmlInnerText [outer function] [3 references renamed to n]
+
+Function Expression "readAtomFeedLink" - starts at line 2445, col 27  
+  feed [argument] [2 references renamed to c]
+  feedLinkElement [argument] [1 references renamed to d]
+  feedMetadata [local var] [3 references renamed to b]
+  link [local var] [5 references renamed to a]
+  readAtomLink [outer function] [1 references renamed to hd]
+
+Function Expression "readAtomLink" - starts at line 2464, col 23  
+  linkElement [argument] [3 references renamed to b]
+  link [local var] [5 references renamed to a]
+  linkExtension [local var] [2 references renamed to c]
+  xmlAttributes [outer function] [1 references renamed to J]
+
+Function Expression "xmlAttributes" - starts at line 2472, col 35  
+  attribute [argument] [7 references renamed to d]
+  link [outer var] [3 references renamed to a]
+  linkElement [outer var] [1 references renamed to b]
+  linkExtension [outer var] [2 references renamed to c]
+  isExtensionNs [outer function] [1 references renamed to mb]
+  normalizeURI [outer function] [1 references renamed to q]
+  readAtomExtensionAttribute [outer function] [1 references renamed to S]
+
+Function Expression "readAtomExtensionElement" - starts at line 2498, col 35  
+  atomExtension [argument] [5 references renamed to a]
+  extension [local var] [4 references renamed to b]
+  text [local var] [2 references renamed to c]
+  readAtomExtensionAttributes [outer function] [1 references renamed to R]
+  xmlChildElements [outer function] [1 references renamed to l]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "xmlChildElements" - starts at line 2510, col 40  
+  child [argument] [1 references renamed to c]
+  childExtension [local var] [1 references renamed to a]
+  extension [outer var] [1 references renamed to b]
+  readAtomExtensionElement [outer function] [1 references renamed to T]
+
+Function Expression "readAtomExtensionAttributes" - starts at line 2525, col 38  
+  xmlElement [argument] [1 references renamed to b]
+  extensions [local var] [2 references renamed to a]
+  xmlAttributes [outer function] [1 references renamed to J]
+
+Function Expression "xmlAttributes" - starts at line 2531, col 34  
+  attribute [argument] [2 references renamed to b]
+  extension [local var] [1 references renamed to c]
+  extensions [outer var] [1 references renamed to a]
+  isExtensionNs [outer function] [1 references renamed to mb]
+  readAtomExtensionAttribute [outer function] [1 references renamed to S]
+
+Function Expression "readAtomExtensionAttribute" - starts at line 2541, col 37  
+  attribute [argument] [3 references renamed to a]
+
+Function Expression "getObjectValueByPath" - starts at line 2553, col 31  
+  item [argument] [7 references renamed to b]
+  path [argument] [3 references renamed to d]
+  i [local var] [4 references renamed to c]
+  len [local var] [2 references renamed to f]
+  parts [local var] [2 references renamed to e]
+  undefined [outer var] [2 references renamed to a]
+
+Function Expression "setObjectValueByPath" - starts at line 2581, col 31  
+  path [argument] [4 references renamed to g]
+  propertyType [argument] [2 references renamed to h]
+  target [argument] [7 references renamed to b]
+  value [argument] [2 references renamed to k]
+  i [local var] [6 references renamed to c]
+  len [local var] [2 references renamed to l]
+  metadata [local var] [2 references renamed to j]
+  next [local var] [5 references renamed to e]
+  parts [local var] [4 references renamed to f]
+  properties [local var] [2 references renamed to i]
+  property [local var] [1 references renamed to m]
+  propertyName [local var] [5 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "expandCustomizationPath" - starts at line 2622, col 34  
+  path [argument] [2 references renamed to a]
+  knownCustomizationPaths [outer var] [1 references renamed to Ld]
+
+Function Expression "getXmlPathValue" - starts at line 2630, col 26  
+  element [argument] [6 references renamed to b]
+  ns [argument] [2 references renamed to f]
+  readAsXml [argument] [1 references renamed to g]
+  xmlPath [argument] [1 references renamed to h]
+  i [local var] [6 references renamed to c]
+  len [local var] [2 references renamed to e]
+  parts [local var] [4 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+  getSingleElementByTagNameNS [outer function] [1 references renamed to s]
+  xmlInnerText [outer function] [1 references renamed to n]
+  xmlSerializeChildren [outer function] [1 references renamed to de]
+  xml_attribute [outer function] [1 references renamed to nb]
+
+Function Expression "setXmlPathValue" - starts at line 2662, col 26  
+  element [argument] [1 references renamed to j]
+  ns [argument] [4 references renamed to e]
+  nsPrefix [argument] [2 references renamed to h]
+  value [argument] [3 references renamed to g]
+  writeAsKind [argument] [3 references renamed to f]
+  xmlPath [argument] [1 references renamed to k]
+  i [local var] [8 references renamed to b]
+  len [local var] [2 references renamed to i]
+  next [local var] [7 references renamed to c]
+  parts [local var] [6 references renamed to d]
+  target [local var] [10 references renamed to a]
+  appendAsXml [outer function] [1 references renamed to gf]
+  getSingleElementByTagNameNS [outer function] [1 references renamed to s]
+  xmlAppendPreserving [outer function] [1 references renamed to Db]
+  xmlAttributeNode [outer function] [1 references renamed to Be]
+  xmlNewDomAttribute [outer function] [1 references renamed to vc]
+  xmlNewDomElement [outer function] [1 references renamed to Ce]
+
+Function Expression "isElementEmpty" - starts at line 2710, col 25  
+  element [argument] [2 references renamed to d]
+  attributeName [local var] [3 references renamed to a]
+  attributes [local var] [2 references renamed to c]
+  i [local var] [3 references renamed to b]
+  len [local var] [2 references renamed to e]
+
+Function Expression "removeXmlProperty" - starts at line 2741, col 28  
+  entryElement [argument] [2 references renamed to j]
+  propertyPath [argument] [1 references renamed to m]
+  candidate [local var] [5 references renamed to c]
+  contentElement [local var] [2 references renamed to h]
+  i [local var] [5 references renamed to d]
+  len [local var] [2 references renamed to l]
+  parent [local var] [2 references renamed to k]
+  parts [local var] [3 references renamed to e]
+  propertiesElement [local var] [5 references renamed to b]
+  propertyElement [local var] [2 references renamed to g]
+  propertyParentElement [local var] [6 references renamed to a]
+  atomXmlNs [outer var] [1 references renamed to f]
+  odataMetaXmlNs [outer var] [2 references renamed to i]
+  odataXmlNs [outer var] [2 references renamed to v]
+  getSingleElementByTagNameNS [outer function] [5 references renamed to s]
+  isElementEmpty [outer function] [1 references renamed to Me]
+
+Function Expression "applyEntryCustomizationToEntry" - starts at line 2783, col 41  
+  context [argument] [1 references renamed to n]
+  customization [argument] [5 references renamed to a]
+  entryElement [argument] [2 references renamed to d]
+  entryObject [argument] [1 references renamed to l]
+  propertyType [argument] [1 references renamed to j]
+  sourcePath [argument] [2 references renamed to e]
+  suffix [argument] [5 references renamed to b]
+  keepInContent [local var] [1 references renamed to i]
+  prefix [local var] [1 references renamed to o]
+  targetPath [local var] [2 references renamed to g]
+  value [local var] [4 references renamed to c]
+  writeAsKind [local var] [1 references renamed to m]
+  xmlNamespace [local var] [1 references renamed to k]
+  xmlPath [local var] [2 references renamed to h]
+  atomXmlNs [outer var] [1 references renamed to f]
+  assigned [outer function] [1 references renamed to A]
+  convertToAtomPropertyText [outer function] [1 references renamed to Zb]
+  expandCustomizationPath [outer function] [1 references renamed to fc]
+  getObjectValueByPath [outer function] [1 references renamed to mc]
+  removeXmlProperty [outer function] [1 references renamed to te]
+  setXmlPathValue [outer function] [1 references renamed to Je]
+
+Function Expression "applyEntryCustomizationToObject" - starts at line 2820, col 42  
+  customization [argument] [4 references renamed to b]
+  entryElement [argument] [1 references renamed to k]
+  entryObject [argument] [2 references renamed to g]
+  propertyType [argument] [2 references renamed to e]
+  sourcePath [argument] [2 references renamed to h]
+  suffix [argument] [4 references renamed to c]
+  readAsXhtml [local var] [1 references renamed to m]
+  targetPath [local var] [2 references renamed to i]
+  value [local var] [4 references renamed to d]
+  xmlNamespace [local var] [1 references renamed to l]
+  xmlPath [local var] [2 references renamed to j]
+  atomXmlNs [outer var] [1 references renamed to f]
+  undefined [outer var] [1 references renamed to a]
+  convertFromAtomPropertyText [outer function] [1 references renamed to Xb]
+  expandCustomizationPath [outer function] [1 references renamed to fc]
+  getObjectValueByPath [outer function] [1 references renamed to mc]
+  getXmlPathValue [outer function] [1 references renamed to Ee]
+  setObjectValueByPath [outer function] [1 references renamed to ce]
+
+Function Expression "lookupPropertyType" - starts at line 2858, col 29  
+  entityType [argument] [4 references renamed to b]
+  metadata [argument] [2 references renamed to g]
+  path [argument] [1 references renamed to j]
+  i [local var] [4 references renamed to c]
+  len [local var] [2 references renamed to i]
+  parts [local var] [2 references renamed to h]
+  properties [local var] [2 references renamed to f]
+  propertyFound [local var] [2 references renamed to e]
+  propertyType [local var] [4 references renamed to a]
+  traversedType [local var] [3 references renamed to d]
+  isPrimitiveType [outer function] [1 references renamed to Lb]
+  lookupComplexType [outer function] [1 references renamed to Hb]
+  lookupEntityType [outer function] [1 references renamed to H]
+  lookupProperty [outer function] [1 references renamed to Nb]
+
+Function Expression "applyMetadataToObject" - starts at line 2905, col 32  
+  entryElement [argument] [2 references renamed to l]
+  entryObject [argument] [3 references renamed to h]
+  metadata [argument] [5 references renamed to d]
+  entityType [local var] [7 references renamed to a]
+  i [local var] [4 references renamed to g]
+  len [local var] [2 references renamed to n]
+  properties [local var] [3 references renamed to i]
+  property [local var] [5 references renamed to e]
+  propertyType [local var] [5 references renamed to c]
+  source [local var] [7 references renamed to b]
+  sourcePath [local var] [2 references renamed to m]
+  suffix [local var] [4 references renamed to f]
+  suffixCounter [local var] [2 references renamed to k]
+  typeName [local var] [3 references renamed to j]
+  applyEntryCustomizationToObject [outer function] [2 references renamed to Vb]
+  lookupEntityType [outer function] [1 references renamed to H]
+  lookupPropertyType [outer function] [2 references renamed to Eb]
+
+Function Expression "readAtomEntry" - starts at line 2959, col 24  
+  atomEntry [argument] [3 references renamed to c]
+  metadata [argument] [2 references renamed to d]
+  entry [local var] [6 references renamed to b]
+  entryMetadata [local var] [6 references renamed to a]
+  etag [local var] [2 references renamed to e]
+  odataMetaXmlNs [outer var] [2 references renamed to i]
+  applyMetadataToObject [outer function] [1 references renamed to Qd]
+  xmlAttribute [outer function] [1 references renamed to K]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 2975, col 36  
+  entryChild [argument] [11 references renamed to c]
+  atomXmlNs [outer var] [1 references renamed to f]
+  entry [outer var] [4 references renamed to b]
+  entryMetadata [outer var] [4 references renamed to a]
+  metadata [outer var] [1 references renamed to d]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  normalizeURI [outer function] [1 references renamed to q]
+  readAtomEntryContent [outer function] [1 references renamed to ae]
+  readAtomEntryLink [outer function] [1 references renamed to re]
+  readAtomEntryStructuralObject [outer function] [1 references renamed to vb]
+  readAtomEntryType [outer function] [1 references renamed to se]
+  readAtomExtensionAttributes [outer function] [1 references renamed to R]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "readAtomEntryType" - starts at line 3005, col 28  
+  atomCategory [argument] [4 references renamed to c]
+  entry [argument] [1 references renamed to e]
+  entryMetadata [argument] [4 references renamed to a]
+  scheme [local var] [1 references renamed to d]
+  term [local var] [1 references renamed to f]
+  typeExtension [local var] [4 references renamed to b]
+  odataScheme [outer var] [1 references renamed to nd]
+  xmlAttribute [outer function] [2 references renamed to K]
+  xmlAttributes [outer function] [1 references renamed to J]
+
+Function Expression "xmlAttributes" - starts at line 3023, col 40  
+  attribute [argument] [6 references renamed to c]
+  entryMetadata [outer var] [2 references renamed to a]
+  typeExtension [outer var] [4 references renamed to b]
+  isExtensionNs [outer function] [1 references renamed to mb]
+  readAtomExtensionAttribute [outer function] [2 references renamed to S]
+
+Function Expression "readAtomEntryContent" - starts at line 3037, col 31  
+  atomEntryContent [argument] [6 references renamed to a]
+  entry [argument] [2 references renamed to d]
+  entryMetadata [local var] [3 references renamed to b]
+  src [local var] [3 references renamed to c]
+  type [local var] [2 references renamed to e]
+  normalizeURI [outer function] [1 references renamed to q]
+  xmlAttribute [outer function] [2 references renamed to K]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3055, col 43  
+  contentChild [argument] [3 references renamed to e]
+  atomEntryContent [outer var] [1 references renamed to a]
+  entry [outer var] [1 references renamed to d]
+  entryMetadata [outer var] [1 references renamed to b]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  src [outer var] [1 references renamed to c]
+  readAtomEntryStructuralObject [outer function] [1 references renamed to vb]
+
+Function Expression "readAtomEntryEditMediaLink" - starts at line 3066, col 37  
+  entry [argument] [0 references renamed to e]
+  entryMetadata [argument] [4 references renamed to c]
+  link [argument] [6 references renamed to b]
+  i [local var] [7 references renamed to a]
+  len [local var] [2 references renamed to d]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+
+Function Expression "readAtomEntryLink" - starts at line 3086, col 28  
+  atomEntryLink [argument] [2 references renamed to d]
+  entry [argument] [3 references renamed to c]
+  metadata [argument] [1 references renamed to e]
+  entryMetadata [local var] [5 references renamed to b]
+  link [local var] [8 references renamed to a]
+  odataRelatedPrefix [outer var] [1 references renamed to Fb]
+  readAtomEntryDeferredProperty [outer function] [1 references renamed to Ed]
+  readAtomEntryEditMediaLink [outer function] [1 references renamed to Gd]
+  readAtomLink [outer function] [1 references renamed to hd]
+
+Function Expression "readAtomEntryDeferredProperty" - starts at line 3114, col 40  
+  atomEntryLink [argument] [1 references renamed to f]
+  entry [argument] [4 references renamed to c]
+  link [argument] [3 references renamed to d]
+  metadata [argument] [1 references renamed to g]
+  inlineData [local var] [5 references renamed to b]
+  propertyName [local var] [2 references renamed to e]
+  odataRelatedPrefix [outer var] [1 references renamed to Fb]
+  undefined [outer var] [2 references renamed to a]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3128, col 40  
+  child [argument] [3 references renamed to a]
+  inlineRoot [local var] [2 references renamed to c]
+  inlineData [outer var] [2 references renamed to b]
+  metadata [outer var] [1 references renamed to g]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  readAtomDocument [outer function] [1 references renamed to Gc]
+  xmlFirstElement [outer function] [1 references renamed to Oc]
+
+Function Expression "readAtomEntryStructuralObject" - starts at line 3154, col 40  
+  parent [argument] [1 references renamed to c]
+  parentMetadata [argument] [3 references renamed to a]
+  propertiesElement [argument] [1 references renamed to b]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3163, col 44  
+  property [argument] [2 references renamed to b]
+  odataXmlNs [outer var] [1 references renamed to v]
+  parent [outer var] [1 references renamed to c]
+  parentMetadata [outer var] [3 references renamed to a]
+  readAtomEntryProperty [outer function] [1 references renamed to Vd]
+
+Function Expression "readAtomEntryProperty" - starts at line 3171, col 32  
+  metadata [argument] [1 references renamed to g]
+  parent [argument] [1 references renamed to h]
+  property [argument] [6 references renamed to b]
+  propertyExtensions [local var] [2 references renamed to d]
+  propertyMetadata [local var] [2 references renamed to f]
+  propertyNullValue [local var] [2 references renamed to e]
+  propertyTypeValue [local var] [5 references renamed to c]
+  propertyValue [local var] [6 references renamed to a]
+  convertFromAtomPropertyText [outer function] [1 references renamed to Xb]
+  isPrimitiveType [outer function] [1 references renamed to Lb]
+  readAtomEntryStructuralObject [outer function] [1 references renamed to vb]
+  xmlAttributes [outer function] [1 references renamed to J]
+  xmlFirstElement [outer function] [1 references renamed to Oc]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "xmlAttributes" - starts at line 3184, col 32  
+  attribute [argument] [6 references renamed to a]
+  extension [local var] [1 references renamed to b]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  propertyExtensions [outer var] [1 references renamed to d]
+  propertyNullValue [outer var] [1 references renamed to e]
+  propertyTypeValue [outer var] [1 references renamed to c]
+  isExtensionNs [outer function] [1 references renamed to mb]
+  readAtomExtensionAttribute [outer function] [1 references renamed to S]
+
+Function Expression "readAtomServiceDocument" - starts at line 3225, col 34  
+  atomServiceDoc [argument] [3 references renamed to b]
+  serviceDoc [local var] [4 references renamed to a]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3238, col 41  
+  child [argument] [3 references renamed to c]
+  serviceExtension [local var] [1 references renamed to d]
+  workspace [local var] [1 references renamed to e]
+  appXmlNs [outer var] [1 references renamed to ab]
+  atomServiceDoc [outer var] [1 references renamed to b]
+  serviceDoc [outer var] [2 references renamed to a]
+  readAtomExtensionElement [outer function] [1 references renamed to T]
+  readAtomServiceDocumentWorkspace [outer function] [1 references renamed to Ad]
+
+Function Expression "readAtomServiceDocumentWorkspace" - starts at line 3257, col 43  
+  atomWorkspace [argument] [3 references renamed to b]
+  workspace [local var] [7 references renamed to a]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3267, col 40  
+  child [argument] [7 references renamed to c]
+  collection [local var] [1 references renamed to d]
+  extension [local var] [1 references renamed to e]
+  appXmlNs [outer var] [1 references renamed to ab]
+  atomWorkspace [outer var] [2 references renamed to b]
+  atomXmlNs [outer var] [1 references renamed to f]
+  workspace [outer var] [4 references renamed to a]
+  readAtomExtensionElement [outer function] [1 references renamed to T]
+  readAtomServiceDocumentCollection [outer function] [1 references renamed to zd]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "readAtomServiceDocumentCollection" - starts at line 3292, col 44  
+  atomCollection [argument] [6 references renamed to b]
+  collection [local var] [8 references renamed to a]
+  normalizeURI [outer function] [1 references renamed to q]
+  xmlAttribute [outer function] [1 references renamed to K]
+  xmlChildElements [outer function] [1 references renamed to l]
+
+Function Expression "xmlChildElements" - starts at line 3308, col 41  
+  child [argument] [5 references renamed to c]
+  extension [local var] [1 references renamed to d]
+  appXmlNs [outer var] [1 references renamed to ab]
+  atomCollection [outer var] [1 references renamed to b]
+  atomXmlNs [outer var] [1 references renamed to f]
+  collection [outer var] [3 references renamed to a]
+  readAtomExtensionElement [outer function] [1 references renamed to T]
+  xmlInnerText [outer function] [1 references renamed to n]
+
+Function Expression "writeAtomDocument" - starts at line 3333, col 28  
+  context [argument] [2 references renamed to c]
+  data [argument] [3 references renamed to b]
+  docRoot [local var] [3 references renamed to a]
+  type [local var] [1 references renamed to d]
+  PAYLOADTYPE_COMPLEXTYPE [outer var] [1 references renamed to db]
+  PAYLOADTYPE_ENTRY [outer var] [1 references renamed to W]
+  PAYLOADTYPE_FEEDORLINKS [outer var] [1 references renamed to eb]
+  payloadTypeOf [outer function] [1 references renamed to I]
+  writeAtomEntry [outer function] [1 references renamed to Ob]
+  writeAtomFeed [outer function] [1 references renamed to dd]
+
+Function Expression "writeAtomRoot" - starts at line 3355, col 24  
+  name [argument] [2 references renamed to c]
+  parent [argument] [2 references renamed to b]
+  result [local var] [3 references renamed to a]
+  atomXmlNs [outer var] [2 references renamed to f]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  odataXmlNs [outer var] [1 references renamed to v]
+  xmlAddNamespaceAttribute [outer function] [2 references renamed to dc]
+  xmlNewDocument [outer function] [1 references renamed to Yc]
+  xmlNewElement [outer function] [1 references renamed to k]
+
+Function Expression "writeAtomFeed" - starts at line 3376, col 24  
+  context [argument] [1 references renamed to f]
+  data [argument] [3 references renamed to c]
+  parent [argument] [1 references renamed to g]
+  entries [local var] [3 references renamed to b]
+  feed [local var] [2 references renamed to d]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to e]
+  isArray [outer function] [1 references renamed to w]
+  writeAtomEntry [outer function] [1 references renamed to Ob]
+  writeAtomRoot [outer function] [1 references renamed to ed]
+
+Function Expression "writeAtomEntry" - starts at line 3395, col 25  
+  context [argument] [2 references renamed to d]
+  data [argument] [5 references renamed to b]
+  parent [argument] [1 references renamed to j]
+  author [local var] [1 references renamed to h]
+  content [local var] [2 references renamed to c]
+  entry [local var] [7 references renamed to a]
+  properties [local var] [1 references renamed to g]
+  propertiesMetadata [local var] [1 references renamed to e]
+  atomXmlNs [outer var] [4 references renamed to f]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  propertiesTag [outer var] [1 references renamed to We]
+  applyMetadataToEntry [outer function] [1 references renamed to Xd]
+  writeAtomEntryMetadata [outer function] [1 references renamed to Od]
+  writeAtomEntryProperties [outer function] [1 references renamed to cc]
+  writeAtomRoot [outer function] [1 references renamed to ed]
+  xmlNewAttribute [outer function] [1 references renamed to t]
+  xmlNewElement [outer function] [5 references renamed to k]
+
+Function Expression "applyMetadataToEntry" - starts at line 3425, col 31  
+  context [argument] [3 references renamed to i]
+  data [argument] [4 references renamed to e]
+  entry [argument] [2 references renamed to l]
+  entityType [local var] [7 references renamed to a]
+  i [local var] [4 references renamed to f]
+  len [local var] [2 references renamed to m]
+  metadata [local var] [3 references renamed to h]
+  properties [local var] [3 references renamed to g]
+  property [local var] [6 references renamed to b]
+  propertyType [local var] [2 references renamed to k]
+  source [local var] [6 references renamed to c]
+  suffix [local var] [5 references renamed to d]
+  suffixCounter [local var] [2 references renamed to j]
+  applyEntryCustomizationToEntry [outer function] [2 references renamed to Wb]
+  lookupEntityType [outer function] [2 references renamed to H]
+  lookupPropertyType [outer function] [1 references renamed to Eb]
+
+Function Expression "writeAtomEntryMetadata" - starts at line 3471, col 33  
+  entry [argument] [3 references renamed to b]
+  metadata [argument] [7 references renamed to a]
+  category [local var] [2 references renamed to c]
+  atomXmlNs [outer var] [2 references renamed to f]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  odataScheme [outer var] [1 references renamed to nd]
+  xmlNewAttribute [outer function] [3 references renamed to t]
+  xmlNewElement [outer function] [2 references renamed to k]
+
+Function Expression "writeAtomEntryLink" - starts at line 3496, col 29  
+  entry [argument] [1 references renamed to b]
+  href [argument] [1 references renamed to c]
+  rel [argument] [1 references renamed to d]
+  link [local var] [3 references renamed to a]
+  atomXmlNs [outer var] [1 references renamed to f]
+  xmlNewAttribute [outer function] [2 references renamed to t]
+  xmlNewElement [outer function] [1 references renamed to k]
+
+Function Expression "writeAtomEntryProperties" - starts at line 3509, col 35  
+  context [argument] [4 references renamed to f]
+  data [argument] [4 references renamed to h]
+  entry [argument] [1 references renamed to l]
+  parentElement [argument] [1 references renamed to k]
+  propertiesMetadata [argument] [2 references renamed to i]
+  contextMetadata [local var] [1 references renamed to j]
+  dataMetadataType [local var] [5 references renamed to e]
+  kind [local var] [9 references renamed to c]
+  name [local var] [8 references renamed to d]
+  propertyMetadata [local var] [10 references renamed to b]
+  value [local var] [4 references renamed to g]
+  PROPERTYKIND_COMPLEX [outer var] [2 references renamed to gb]
+  PROPERTYKIND_INLINE [outer var] [1 references renamed to Cb]
+  PROPERTYKIND_NONE [outer var] [1 references renamed to yc]
+  PROPERTYKIND_PRIMITIVE [outer var] [2 references renamed to yb]
+  undefined [outer var] [1 references renamed to a]
+  isPrimitiveType [outer function] [1 references renamed to Lb]
+  lookupComplexType [outer function] [1 references renamed to Hb]
+  lookupEntityType [outer function] [1 references renamed to H]
+  lookupProperty [outer function] [2 references renamed to Nb]
+  propertyKindOf [outer function] [1 references renamed to Pe]
+  writeAtomEntryDeferredProperty [outer function] [1 references renamed to Cd]
+  writeAtomEntryProperty [outer function] [1 references renamed to Pd]
+
+Function Expression "writeAtomEntryProperty" - starts at line 3563, col 33  
+  context [argument] [2 references renamed to h]
+  kind [argument] [1 references renamed to j]
+  name [argument] [1 references renamed to l]
+  parentElement [argument] [2 references renamed to g]
+  propertiesMetadata [argument] [4 references renamed to b]
+  value [argument] [4 references renamed to c]
+  property [local var] [5 references renamed to a]
+  propertyMetadata [local var] [2 references renamed to e]
+  propertyTagName [local var] [2 references renamed to f]
+  propertyType [local var] [3 references renamed to d]
+  odataMetaXmlNs [outer var] [2 references renamed to i]
+  odataXmlNs [outer var] [2 references renamed to v]
+  PROPERTYKIND_COMPLEX [outer var] [1 references renamed to gb]
+  propertyNullAttribute [outer var] [1 references renamed to Td]
+  propertyTypeAttribute [outer var] [1 references renamed to Ud]
+  convertToAtomPropertyText [outer function] [1 references renamed to Zb]
+  writeAtomEntryProperties [outer function] [1 references renamed to cc]
+  xmlNewAttribute [outer function] [2 references renamed to t]
+  xmlNewElement [outer function] [2 references renamed to k]
+  xmlQualifyXmlTagName [outer function] [1 references renamed to V]
+
+Function Expression "writeAtomEntryDeferredProperty" - starts at line 3602, col 41  
+  context [argument] [1 references renamed to h]
+  entry [argument] [1 references renamed to j]
+  kind [argument] [1 references renamed to l]
+  name [argument] [1 references renamed to m]
+  value [argument] [6 references renamed to b]
+  href [local var] [3 references renamed to d]
+  inlineContent [local var] [2 references renamed to e]
+  inlineRoot [local var] [1 references renamed to g]
+  inlineType [local var] [6 references renamed to a]
+  inlineWriter [local var] [5 references renamed to c]
+  link [local var] [2 references renamed to f]
+  rel [local var] [1 references renamed to n]
+  inlineTag [outer var] [1 references renamed to vf]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  odataRelatedPrefix [outer var] [1 references renamed to Fb]
+  PAYLOADTYPE_ENTRY [outer var] [2 references renamed to W]
+  PAYLOADTYPE_FEEDORLINKS [outer var] [1 references renamed to eb]
+  PAYLOADTYPE_NONE [outer var] [1 references renamed to Fc]
+  PROPERTYKIND_INLINE [outer var] [1 references renamed to Cb]
+  normalizeURI [outer function] [1 references renamed to q]
+  payloadTypeOf [outer function] [1 references renamed to I]
+  writeAtomEntry [outer function] [1 references renamed to Ob]
+  writeAtomEntryLink [outer function] [1 references renamed to oe]
+  writeAtomFeed [outer function] [1 references renamed to dd]
+  xmlNewAttribute [outer function] [1 references renamed to t]
+  xmlNewElement [outer function] [1 references renamed to k]
+
+Function Expression "atomParser" - starts at line 3649, col 21  
+  context [argument] [1 references renamed to c]
+  handler [argument] [0 references renamed to d]
+  text [argument] [2 references renamed to b]
+  atomRoot [local var] [2 references renamed to a]
+  readAtomDocument [outer function] [1 references renamed to Gc]
+  xmlParse [outer function] [1 references renamed to pb]
+
+Function Expression "atomSerializer" - starts at line 3664, col 25  
+  context [argument] [3 references renamed to b]
+  data [argument] [1 references renamed to f]
+  handler [argument] [0 references renamed to g]
+  atomDoc [local var] [1 references renamed to e]
+  cType [local var] [2 references renamed to d]
+  result [local var] [2 references renamed to c]
+  atomMediaType [outer var] [2 references renamed to Zc]
+  undefined [outer var] [1 references renamed to a]
+  contentType [outer function] [1 references renamed to L]
+  writeAtomDocument [outer function] [1 references renamed to ve]
+  xmlSerialize [outer function] [1 references renamed to ld]
+
+Function Expression "scriptCase" - starts at line 3801, col 21  
+  text [argument] [8 references renamed to a]
+  firstTwo [local var] [2 references renamed to b]
+
+Function Expression "getChildSchema" - starts at line 3823, col 25  
+  candidateName [argument] [2 references renamed to e]
+  parentSchema [argument] [1 references renamed to g]
+  elementName [local var] [7 references renamed to a]
+  elements [local var] [3 references renamed to c]
+  i [local var] [4 references renamed to b]
+  len [local var] [2 references renamed to f]
+  multipleElements [local var] [2 references renamed to d]
+  propertyName [local var] [1 references renamed to h]
+  scriptCase [outer function] [1 references renamed to qd]
+
+Function Expression "isEdmNamespace" - starts at line 3862, col 25  
+  nsURI [argument] [3 references renamed to a]
+  edmNs [outer var] [1 references renamed to Hf]
+  edmNs2 [outer var] [1 references renamed to Ff]
+  edmNs3 [outer var] [1 references renamed to Gf]
+
+Function Expression "parseConceptualModelElement" - starts at line 3870, col 38  
+  element [argument] [9 references renamed to a]
+  attributes [local var] [1 references renamed to e]
+  elementSchema [local var] [6 references renamed to c]
+  extensions [local var] [4 references renamed to d]
+  item [local var] [7 references renamed to b]
+  localName [local var] [1 references renamed to f]
+  schema [outer var] [1 references renamed to o]
+  isEdmNamespace [outer function] [2 references renamed to Vc]
+  xmlAttributes [outer function] [1 references renamed to J]
+  xmlChildElements [outer function] [1 references renamed to l]
+  xmlInnerText [outer function] [1 references renamed to n]
+  xml_wrapNode [outer function] [1 references renamed to u]
+
+Function Expression "xmlAttributes" - starts at line 3896, col 31  
+  wrappedAttribute [argument] [4 references renamed to c]
+  handled [local var] [2 references renamed to h]
+  localName [local var] [2 references renamed to g]
+  match [local var] [2 references renamed to j]
+  namespaceURI [local var] [4 references renamed to f]
+  node [local var] [1 references renamed to l]
+  schemaName [local var] [7 references renamed to a]
+  value [local var] [1 references renamed to k]
+  attributes [outer var] [1 references renamed to e]
+  extensions [outer var] [1 references renamed to d]
+  isFeedCustomizationNameRE [outer var] [1 references renamed to Hd]
+  item [outer var] [1 references renamed to b]
+  odataMetaXmlNs [outer var] [1 references renamed to i]
+  xmlnsNS [outer var] [1 references renamed to P]
+  contains [outer function] [1 references renamed to td]
+  createAttributeExtension [outer function] [1 references renamed to ac]
+  isEdmNamespace [outer function] [1 references renamed to Vc]
+  scriptCase [outer function] [1 references renamed to qd]
+
+Function Expression "xmlChildElements" - starts at line 3939, col 34  
+  child [argument] [4 references renamed to e]
+  arr [local var] [4 references renamed to f]
+  childSchema [local var] [5 references renamed to a]
+  elementSchema [outer var] [1 references renamed to c]
+  extensions [outer var] [1 references renamed to d]
+  item [outer var] [3 references renamed to b]
+  createElementExtension [outer function] [1 references renamed to hc]
+  getChildSchema [outer function] [1 references renamed to Le]
+  parseConceptualModelElement [outer function] [2 references renamed to wb]
+
+Function Expression "metadataParser" - starts at line 3968, col 25  
+  handler [argument] [0 references renamed to d]
+  text [argument] [1 references renamed to b]
+  doc [local var] [1 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+  parseConceptualModelElement [outer function] [1 references renamed to wb]
+  xmlParse [outer function] [1 references renamed to pb]
+
+Function Expression "normalizeServiceDocument" - starts at line 3984, col 35  
+  baseURI [argument] [1 references renamed to g]
+  data [argument] [2 references renamed to d]
+  collection [local var] [1 references renamed to f]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to e]
+  title [local var] [2 references renamed to c]
+  workspace [local var] [2 references renamed to b]
+  normalizeURI [outer function] [1 references renamed to q]
+
+Function Expression "minutesToOffset" - starts at line 4017, col 26  
+  minutes [argument] [7 references renamed to a]
+  hours [local var] [2 references renamed to c]
+  sign [local var] [3 references renamed to b]
+  formatNumberWidth [outer function] [2 references renamed to j]
+
+Function Expression "parseJsonDateString" - starts at line 4036, col 30  
+  value [argument] [2 references renamed to d]
+  arr [local var] [5 references renamed to b]
+  current [local var] [1 references renamed to f]
+  mins [local var] [4 references renamed to c]
+  result [local var] [6 references renamed to a]
+  jsonDateRE [outer var] [1 references renamed to qf]
+  minutesToOffset [outer function] [1 references renamed to Ge]
+  parseInt10 [outer function] [2 references renamed to e]
+
+Function Expression "traverseInternal" - starts at line 4072, col 27  
+  callback [argument] [2 references renamed to f]
+  item [argument] [7 references renamed to b]
+  name [local var] [4 references renamed to d]
+  result [local var] [4 references renamed to c]
+  value [local var] [3 references renamed to e]
+  undefined [outer var] [1 references renamed to a]
+  traverseInternal [outer function] [1 references renamed to Hc]
+
+Function Expression "traverse" - starts at line 4099, col 19  
+  callback [argument] [2 references renamed to a]
+  item [argument] [1 references renamed to b]
+  traverseInternal [outer function] [1 references renamed to Hc]
+
+Function Expression "jsonParser" - starts at line 4111, col 21  
+  context [argument] [5 references renamed to d]
+  handler [argument] [1 references renamed to h]
+  text [argument] [3 references renamed to e]
+  json [local var] [7 references renamed to c]
+  metadata [local var] [2 references renamed to f]
+  recognizeDates [local var] [1 references renamed to g]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [1 references renamed to b]
+  defined [outer function] [1 references renamed to B]
+  jsonNormalizeData [outer function] [1 references renamed to qe]
+  jsonUpdateDataFromVersion [outer function] [1 references renamed to Id]
+  traverse [outer function] [1 references renamed to Cf]
+
+Function Expression "traverse" - starts at line 4122, col 30  
+  value [argument] [11 references renamed to a]
+  _ [argument] [0 references renamed to m]
+  dataType [local var] [2 references renamed to j]
+  dataTypeName [local var] [2 references renamed to i]
+  i [local var] [4 references renamed to d]
+  len [local var] [2 references renamed to l]
+  name [local var] [2 references renamed to k]
+  properties [local var] [3 references renamed to h]
+  property [local var] [4 references renamed to c]
+  propertyName [local var] [3 references renamed to e]
+  propertyValue [local var] [10 references renamed to b]
+  metadata [outer var] [2 references renamed to f]
+  recognizeDates [outer var] [1 references renamed to g]
+  lookupComplexType [outer function] [1 references renamed to Hb]
+  lookupEntityType [outer function] [1 references renamed to H]
+  parseDuration [outer function] [1 references renamed to ad]
+  parseJsonDateString [outer function] [2 references renamed to tc]
+
+Function Expression "jsonSerializer" - starts at line 4167, col 25  
+  context [argument] [2 references renamed to c]
+  data [argument] [1 references renamed to g]
+  handler [argument] [0 references renamed to i]
+  cType [local var] [2 references renamed to e]
+  dateToJSON [local var] [1 references renamed to f]
+  json [local var] [1 references renamed to h]
+  result [local var] [2 references renamed to d]
+  jsonMediaType [outer var] [2 references renamed to Qb]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [1 references renamed to b]
+  contentType [outer function] [1 references renamed to L]
+  jsonReplacer [outer function] [1 references renamed to cf]
+
+Function Expression "toJSON" - starts at line 4183, col 40  
+  formatDateTimeOffset [outer function] [1 references renamed to Bb]
+
+Function Expression "jsonReplacer" - starts at line 4195, col 23  
+  value [argument] [4 references renamed to a]
+  _ [argument] [0 references renamed to b]
+  formatDuration [outer function] [1 references renamed to Qc]
+
+Function Expression "jsonNormalizeData" - starts at line 4211, col 28  
+  baseURI [argument] [1 references renamed to b]
+  data [argument] [3 references renamed to a]
+  PAYLOADTYPE_SVCDOC [outer var] [1 references renamed to uc]
+  normalizeServiceDocument [outer function] [1 references renamed to Jd]
+  payloadTypeOf [outer function] [1 references renamed to I]
+
+Function Expression "jsonUpdateDataFromVersion" - starts at line 4226, col 36  
+  data [argument] [6 references renamed to b]
+  dataVersion [argument] [10 references renamed to a]
+  isArray [outer function] [2 references renamed to w]
+
+Function Expression "hex16" - starts at line 4269, col 16  
+
+Function Expression "createBoundary" - starts at line 4278, col 25  
+  prefix [argument] [1 references renamed to a]
+  hex16 [outer function] [3 references renamed to Ub]
+
+Function Expression "partHandler" - starts at line 4288, col 22  
+  context [argument] [1 references renamed to a]
+
+Function Expression "currentBoundary" - starts at line 4298, col 26  
+  context [argument] [1 references renamed to b]
+  boundaries [local var] [2 references renamed to a]
+
+Function Expression "batchParser" - starts at line 4309, col 22  
+  context [argument] [2 references renamed to a]
+  handler [argument] [0 references renamed to d]
+  text [argument] [1 references renamed to c]
+  boundary [local var] [1 references renamed to b]
+  readBatch [outer function] [1 references renamed to sd]
+
+Function Expression "batchSerializer" - starts at line 4320, col 26  
+  context [argument] [3 references renamed to a]
+  data [argument] [1 references renamed to c]
+  handler [argument] [0 references renamed to d]
+  cType [local var] [1 references renamed to b]
+  batchMediaType [outer var] [2 references renamed to Z]
+  contentType [outer function] [1 references renamed to L]
+  writeBatch [outer function] [1 references renamed to tf]
+
+Function Expression "readBatch" - starts at line 4333, col 20  
+  context [argument] [17 references renamed to a]
+  text [argument] [11 references renamed to b]
+  changeResponses [local var] [2 references renamed to g]
+  delimiter [local var] [3 references renamed to e]
+  partContentType [local var] [5 references renamed to d]
+  partEnd [local var] [2 references renamed to h]
+  partHeaders [local var] [1 references renamed to i]
+  response [local var] [7 references renamed to c]
+  responses [local var] [3 references renamed to f]
+  batchMediaType [outer var] [1 references renamed to Z]
+  contentType [outer function] [1 references renamed to L]
+  currentBoundary [outer function] [2 references renamed to Lc]
+  partHandler [outer function] [1 references renamed to od]
+  readBatch [outer function] [1 references renamed to sd]
+  readHeaders [outer function] [1 references renamed to pd]
+  readLine [outer function] [3 references renamed to N]
+  readResponse [outer function] [1 references renamed to id]
+  readTo [outer function] [2 references renamed to qb]
+
+Catch Scope - starts at line 4361, col 25 
+  e [argument] [2 references renamed to j]
+  changeResponses [outer var] [1 references renamed to g]
+  context [outer var] [1 references renamed to a]
+  delimiter [outer var] [1 references renamed to e]
+  text [outer var] [1 references renamed to b]
+  readResponse [outer function] [1 references renamed to id]
+
+Catch Scope - starts at line 4383, col 25 
+  e [argument] [1 references renamed to j]
+  response [outer var] [1 references renamed to c]
+
+Function Expression "readHeaders" - starts at line 4398, col 22  
+  context [argument] [3 references renamed to b]
+  text [argument] [1 references renamed to f]
+  headers [local var] [3 references renamed to c]
+  line [local var] [3 references renamed to d]
+  parts [local var] [5 references renamed to a]
+  pos [local var] [2 references renamed to e]
+  responseHeaderRegex [outer var] [1 references renamed to ie]
+  normalizeHeaders [outer function] [1 references renamed to Jb]
+  readLine [outer function] [1 references renamed to N]
+
+Function Expression "readResponse" - starts at line 4431, col 23  
+  context [argument] [6 references renamed to a]
+  delimiter [argument] [1 references renamed to g]
+  text [argument] [4 references renamed to b]
+  headers [local var] [2 references renamed to f]
+  match [local var] [3 references renamed to c]
+  pos [local var] [1 references renamed to h]
+  statusCode [local var] [2 references renamed to d]
+  statusText [local var] [2 references renamed to e]
+  responseStatusRegex [outer var] [1 references renamed to je]
+  readHeaders [outer function] [1 references renamed to pd]
+  readLine [outer function] [2 references renamed to N]
+  readTo [outer function] [1 references renamed to qb]
+
+Function Expression "readLine" - starts at line 4465, col 19  
+  context [argument] [1 references renamed to a]
+  text [argument] [1 references renamed to b]
+  readTo [outer function] [1 references renamed to qb]
+
+Function Expression "readTo" - starts at line 4476, col 17  
+  context [argument] [3 references renamed to b]
+  str [argument] [3 references renamed to d]
+  text [argument] [3 references renamed to c]
+  end [local var] [5 references renamed to a]
+  start [local var] [2 references renamed to e]
+
+Function Expression "writeBatch" - starts at line 4500, col 21  
+  context [argument] [2 references renamed to e]
+  data [argument] [2 references renamed to f]
+  batch [local var] [3 references renamed to c]
+  batchBoundary [local var] [3 references renamed to b]
+  batchParts [local var] [2 references renamed to d]
+  contentTypeProperties [local var] [1 references renamed to i]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to h]
+  type [local var] [2 references renamed to g]
+  PAYLOADTYPE_BATCH [outer var] [1 references renamed to xc]
+  createBoundary [outer function] [1 references renamed to Pc]
+  payloadTypeOf [outer function] [1 references renamed to I]
+  writeBatchPart [outer function] [1 references renamed to Xc]
+  writeBatchPartDelimiter [outer function] [2 references renamed to fb]
+
+Function Expression "writeBatchPartDelimiter" - starts at line 4530, col 34  
+  boundary [argument] [1 references renamed to b]
+  close [argument] [1 references renamed to c]
+  result [local var] [2 references renamed to a]
+
+Function Expression "writeBatchPart" - starts at line 4546, col 25  
+  context [argument] [3 references renamed to e]
+  nested [argument] [1 references renamed to h]
+  part [argument] [3 references renamed to f]
+  changeSet [local var] [3 references renamed to d]
+  changeSetBoundary [local var] [3 references renamed to c]
+  i [local var] [4 references renamed to b]
+  len [local var] [2 references renamed to g]
+  result [local var] [6 references renamed to a]
+  batchMediaType [outer var] [1 references renamed to Z]
+  createBoundary [outer function] [1 references renamed to Pc]
+  isArray [outer function] [1 references renamed to w]
+  partHandler [outer function] [1 references renamed to od]
+  prepareRequest [outer function] [1 references renamed to Wc]
+  writeBatchPart [outer function] [1 references renamed to Xc]
+  writeBatchPartDelimiter [outer function] [2 references renamed to fb]
+  writeRequest [outer function] [1 references renamed to ff]
+
+Function Expression "writeRequest" - starts at line 4584, col 23  
+  request [argument] [8 references renamed to a]
+  name [local var] [3 references renamed to c]
+  result [local var] [5 references renamed to b]
+
+Function Expression "dispatchHandler" - starts at line 4613, col 26  
+  context [argument] [1 references renamed to e]
+  handlerMethod [argument] [1 references renamed to d]
+  requestOrResponse [argument] [1 references renamed to c]
+  i [local var] [5 references renamed to a]
+  len [local var] [3 references renamed to b]
+  handlers [outer var] [2 references renamed to ud]
+
+Function Expression "defaultSuccess" - starts at line 4628, col 27  
+  data [argument] [1 references renamed to a]
+  window [outer var] [2 references renamed to b]
+
+Function Expression "read" - starts at line 4638, col 14  
+  context [argument] [1 references renamed to b]
+  response [argument] [4 references renamed to a]
+  assigned [outer function] [1 references renamed to A]
+  dispatchHandler [outer function] [1 references renamed to Mc]
+
+Function Expression "write" - starts at line 4648, col 15  
+  context [argument] [1 references renamed to a]
+  request [argument] [1 references renamed to b]
+  dispatchHandler [outer function] [1 references renamed to Mc]
+
+Function Expression "read" - starts at line 4661, col 17  
+  error [argument] [1 references renamed to h]
+  handler [argument] [1 references renamed to f]
+  httpClient [argument] [1 references renamed to d]
+  metadata [argument] [1 references renamed to e]
+  success [argument] [1 references renamed to g]
+  urlOrRequest [argument] [4 references renamed to a]
+  request [local var] [3 references renamed to b]
+  odata [outer var] [1 references renamed to c]
+
+Function Expression "request" - starts at line 4680, col 20  
+  error [argument] [4 references renamed to d]
+  handler [argument] [4 references renamed to b]
+  httpClient [argument] [3 references renamed to e]
+  metadata [argument] [3 references renamed to f]
+  request [argument] [14 references renamed to a]
+  success [argument] [3 references renamed to g]
+  context [local var] [2 references renamed to h]
+  odata [outer var] [9 references renamed to c]
+  defined [outer function] [4 references renamed to B]
+  invokeRequest [outer function] [1 references renamed to Se]
+  prepareRequest [outer function] [1 references renamed to Wc]
+
+Catch Scope - starts at line 4727, col 17 
+  err [argument] [1 references renamed to i]
+  error [outer var] [1 references renamed to d]
+
+Function Expression "domStoreDateToJSON" - starts at line 4739, col 29  
+  name [local var] [2 references renamed to b]
+  newValue [local var] [2 references renamed to a]
+
+Function Expression "domStoreJSONToDate" - starts at line 4755, col 29  
+  value [argument] [7 references renamed to a]
+  _ [argument] [0 references renamed to d]
+  name [local var] [4 references renamed to b]
+  newValue [local var] [2 references renamed to c]
+
+Function Expression "qualifyDomStoreKey" - starts at line 4776, col 29  
+  key [argument] [1 references renamed to b]
+  store [argument] [1 references renamed to a]
+
+Function Expression "unqualifyDomStoreKey" - starts at line 4785, col 31  
+  key [argument] [1 references renamed to b]
+  store [argument] [1 references renamed to a]
+
+Function Expression "DomStore" - starts at line 4794, col 19  
+  name [argument] [1 references renamed to a]
+
+Function Expression "create" - starts at line 4800, col 22  
+  name [argument] [1 references renamed to a]
+  DomStore [outer function] [2 references renamed to g]
+
+Function Expression "isSupported" - starts at line 4812, col 27  
+  localStorage [outer var] [1 references renamed to p]
+
+Function Expression "add" - starts at line 4818, col 29  
+  error [argument] [5 references renamed to a]
+  key [argument] [3 references renamed to b]
+  success [argument] [1 references renamed to c]
+  value [argument] [1 references renamed to f]
+  store [local var] [1 references renamed to e]
+
+Function Expression "contains" - starts at line 4830, col 27  
+  contained [argument] [1 references renamed to g]
+  error [outer var] [2 references renamed to a]
+  key [outer var] [2 references renamed to b]
+  store [outer var] [1 references renamed to e]
+  success [outer var] [1 references renamed to c]
+  value [outer var] [1 references renamed to f]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "addOrUpdate" - starts at line 4839, col 37  
+  error [argument] [5 references renamed to c]
+  key [argument] [3 references renamed to g]
+  success [argument] [1 references renamed to j]
+  value [argument] [3 references renamed to f]
+  fullKey [local var] [1 references renamed to i]
+  oldDateToJSON [local var] [1 references renamed to h]
+  storedValue [local var] [3 references renamed to e]
+  localStorage [outer var] [1 references renamed to p]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [1 references renamed to b]
+  delay [outer function] [3 references renamed to d]
+  domStoreDateToJSON [outer function] [1 references renamed to ke]
+  qualifyDomStoreKey [outer function] [1 references renamed to ib]
+
+Catch Scope - starts at line 4867, col 19 
+  e [argument] [4 references renamed to k]
+  error [outer var] [2 references renamed to c]
+  delay [outer function] [2 references renamed to d]
+
+Function Expression "clear" - starts at line 4880, col 31  
+  error [argument] [3 references renamed to b]
+  success [argument] [1 references renamed to f]
+  fullKey [local var] [3 references renamed to a]
+  i [local var] [3 references renamed to e]
+  key [local var] [1 references renamed to g]
+  len [local var] [3 references renamed to c]
+  localStorage [outer var] [4 references renamed to p]
+  delay [outer function] [2 references renamed to d]
+  unqualifyDomStoreKey [outer function] [1 references renamed to rc]
+
+Catch Scope - starts at line 4903, col 15 
+  e [argument] [1 references renamed to h]
+  error [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "close" - starts at line 4908, col 31  
+
+Function Expression "contains" - starts at line 4912, col 34  
+  error [argument] [3 references renamed to a]
+  key [argument] [1 references renamed to f]
+  success [argument] [1 references renamed to c]
+  fullKey [local var] [1 references renamed to b]
+  value [local var] [1 references renamed to e]
+  localStorage [outer var] [1 references renamed to p]
+  delay [outer function] [2 references renamed to d]
+  qualifyDomStoreKey [outer function] [1 references renamed to ib]
+
+Catch Scope - starts at line 4922, col 17 
+  e [argument] [1 references renamed to g]
+  error [outer var] [1 references renamed to a]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "getAllKeys" - starts at line 4929, col 36  
+  error [argument] [3 references renamed to b]
+  success [argument] [1 references renamed to h]
+  fullKey [local var] [2 references renamed to c]
+  i [local var] [4 references renamed to a]
+  key [local var] [2 references renamed to f]
+  len [local var] [2 references renamed to g]
+  results [local var] [2 references renamed to e]
+  localStorage [outer var] [2 references renamed to p]
+  delay [outer function] [2 references renamed to d]
+  unqualifyDomStoreKey [outer function] [1 references renamed to rc]
+
+Catch Scope - starts at line 4949, col 15 
+  e [argument] [1 references renamed to i]
+  error [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "read" - starts at line 4957, col 30  
+  error [argument] [4 references renamed to e]
+  key [argument] [3 references renamed to f]
+  success [argument] [1 references renamed to h]
+  fullKey [local var] [1 references renamed to g]
+  value [local var] [6 references renamed to c]
+  localStorage [outer var] [1 references renamed to p]
+  undefined [outer var] [1 references renamed to a]
+  window [outer var] [1 references renamed to b]
+  delay [outer function] [2 references renamed to d]
+  domStoreJSONToDate [outer function] [1 references renamed to le]
+  qualifyDomStoreKey [outer function] [1 references renamed to ib]
+
+Catch Scope - starts at line 4978, col 21 
+  e [argument] [1 references renamed to i]
+  error [outer var] [1 references renamed to e]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "remove" - starts at line 4984, col 32  
+  error [argument] [4 references renamed to a]
+  key [argument] [2 references renamed to b]
+  success [argument] [1 references renamed to e]
+  fullKey [local var] [1 references renamed to c]
+  localStorage [outer var] [1 references renamed to p]
+  delay [outer function] [2 references renamed to d]
+  qualifyDomStoreKey [outer function] [1 references renamed to ib]
+
+Catch Scope - starts at line 4998, col 21 
+  e [argument] [1 references renamed to f]
+  error [outer var] [1 references renamed to a]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "update" - starts at line 5004, col 32  
+  error [argument] [5 references renamed to a]
+  key [argument] [3 references renamed to b]
+  success [argument] [1 references renamed to c]
+  value [argument] [1 references renamed to f]
+  store [local var] [1 references renamed to e]
+
+Function Expression "contains" - starts at line 5016, col 27  
+  contained [argument] [1 references renamed to g]
+  error [outer var] [2 references renamed to a]
+  key [outer var] [2 references renamed to b]
+  store [outer var] [1 references renamed to e]
+  success [outer var] [1 references renamed to c]
+  value [outer var] [1 references renamed to f]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "getError" - starts at line 5032, col 19  
+  defaultError [argument] [2 references renamed to a]
+  error [argument] [2 references renamed to b]
+
+Function Expression "return" - starts at line 5037, col 15  
+  e [argument] [5 references renamed to c]
+  defaultError [outer var] [2 references renamed to a]
+  error [outer var] [2 references renamed to b]
+
+Function Expression "openTransaction" - starts at line 5050, col 26  
+  error [argument] [2 references renamed to h]
+  mode [argument] [3 references renamed to e]
+  store [argument] [4 references renamed to c]
+  success [argument] [3 references renamed to d]
+  db [local var] [8 references renamed to a]
+  errorCallback [local var] [2 references renamed to f]
+  name [local var] [6 references renamed to b]
+  request [local var] [2 references renamed to g]
+  mozIndexedDB [outer var] [1 references renamed to gd]
+  getError [outer function] [2 references renamed to r]
+
+Function Expression "onsuccess" - starts at line 5064, col 32  
+  event [argument] [1 references renamed to h]
+  versionRequest [local var] [3 references renamed to g]
+  db [outer var] [6 references renamed to a]
+  errorCallback [outer var] [2 references renamed to f]
+  mode [outer var] [1 references renamed to e]
+  name [outer var] [4 references renamed to b]
+  store [outer var] [1 references renamed to c]
+  success [outer var] [1 references renamed to d]
+
+Function Expression "onsuccess" - starts at line 5068, col 47  
+  db [outer var] [2 references renamed to a]
+  mode [outer var] [1 references renamed to e]
+  name [outer var] [2 references renamed to b]
+  success [outer var] [1 references renamed to d]
+
+Function Expression "IndexedDBStore" - starts at line 5082, col 25  
+  name [argument] [1 references renamed to a]
+
+Function Expression "create" - starts at line 5089, col 28  
+  name [argument] [1 references renamed to a]
+  IndexedDBStore [outer function] [2 references renamed to h]
+
+Function Expression "isSupported" - starts at line 5100, col 33  
+  mozIndexedDB [outer var] [1 references renamed to gd]
+
+Function Expression "add" - starts at line 5106, col 35  
+  error [argument] [2 references renamed to f]
+  key [argument] [5 references renamed to c]
+  success [argument] [2 references renamed to e]
+  value [argument] [3 references renamed to d]
+  defaultError [local var] [1 references renamed to g]
+  keys [local var] [5 references renamed to b]
+  name [local var] [1 references renamed to h]
+  values [local var] [5 references renamed to a]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5125, col 57  
+  transaction [argument] [3 references renamed to j]
+  i [local var] [5 references renamed to i]
+  defaultError [outer var] [1 references renamed to g]
+  error [outer var] [1 references renamed to f]
+  keys [outer var] [2 references renamed to b]
+  name [outer var] [1 references renamed to h]
+  values [outer var] [2 references renamed to a]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5127, col 37  
+  key [outer var] [2 references renamed to c]
+  keys [outer var] [1 references renamed to b]
+  success [outer var] [2 references renamed to e]
+  value [outer var] [1 references renamed to d]
+  values [outer var] [1 references renamed to a]
+
+Function Expression "addOrUpdate" - starts at line 5141, col 43  
+  error [argument] [2 references renamed to f]
+  key [argument] [5 references renamed to c]
+  success [argument] [2 references renamed to e]
+  value [argument] [3 references renamed to d]
+  defaultError [local var] [1 references renamed to g]
+  keys [local var] [5 references renamed to b]
+  name [local var] [1 references renamed to h]
+  values [local var] [5 references renamed to a]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5160, col 57  
+  transaction [argument] [3 references renamed to j]
+  i [local var] [5 references renamed to i]
+  defaultError [outer var] [1 references renamed to g]
+  error [outer var] [1 references renamed to f]
+  keys [outer var] [2 references renamed to b]
+  name [outer var] [1 references renamed to h]
+  values [outer var] [2 references renamed to a]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5162, col 37  
+  key [outer var] [2 references renamed to c]
+  keys [outer var] [1 references renamed to b]
+  success [outer var] [2 references renamed to e]
+  value [outer var] [1 references renamed to d]
+  values [outer var] [1 references renamed to a]
+
+Function Expression "clear" - starts at line 5176, col 37  
+  error [argument] [2 references renamed to a]
+  success [argument] [1 references renamed to c]
+  defaultError [local var] [1 references renamed to b]
+  name [local var] [1 references renamed to d]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5182, col 57  
+  transaction [argument] [3 references renamed to e]
+  defaultError [outer var] [1 references renamed to b]
+  error [outer var] [1 references renamed to a]
+  name [outer var] [1 references renamed to d]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5184, col 37  
+  success [outer var] [1 references renamed to c]
+
+Function Expression "close" - starts at line 5192, col 37  
+
+Function Expression "contains" - starts at line 5200, col 40  
+  error [argument] [2 references renamed to b]
+  key [argument] [1 references renamed to f]
+  success [argument] [1 references renamed to d]
+  defaultError [local var] [1 references renamed to c]
+  name [local var] [1 references renamed to e]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5207, col 56  
+  transaction [argument] [3 references renamed to g]
+  request [local var] [1 references renamed to h]
+  defaultError [outer var] [1 references renamed to c]
+  error [outer var] [1 references renamed to b]
+  IDBKeyRange [outer var] [1 references renamed to md]
+  key [outer var] [1 references renamed to f]
+  name [outer var] [1 references renamed to e]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5209, col 37  
+  request [outer var] [1 references renamed to h]
+  success [outer var] [1 references renamed to d]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "getAllKeys" - starts at line 5218, col 42  
+  error [argument] [2 references renamed to a]
+  success [argument] [1 references renamed to c]
+  defaultError [local var] [1 references renamed to b]
+  name [local var] [1 references renamed to d]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5224, col 56  
+  transaction [argument] [2 references renamed to e]
+  request [local var] [2 references renamed to f]
+  results [local var] [2 references renamed to g]
+  defaultError [outer var] [1 references renamed to b]
+  error [outer var] [1 references renamed to a]
+  name [outer var] [1 references renamed to d]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5227, col 37  
+  results [outer var] [1 references renamed to g]
+  success [outer var] [1 references renamed to c]
+
+Function Expression "onsuccess" - starts at line 5234, col 32  
+  event [argument] [1 references renamed to b]
+  cursor [local var] [4 references renamed to a]
+  results [outer var] [1 references renamed to g]
+
+Function Expression "read" - starts at line 5248, col 36  
+  error [argument] [2 references renamed to d]
+  key [argument] [4 references renamed to b]
+  success [argument] [2 references renamed to c]
+  defaultError [local var] [1 references renamed to e]
+  keys [local var] [4 references renamed to a]
+  name [local var] [1 references renamed to f]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5258, col 57  
+  transaction [argument] [3 references renamed to g]
+  i [local var] [3 references renamed to i]
+  objectStore [local var] [2 references renamed to j]
+  request [local var] [1 references renamed to k]
+  values [local var] [3 references renamed to h]
+  defaultError [outer var] [1 references renamed to e]
+  error [outer var] [1 references renamed to d]
+  keys [outer var] [2 references renamed to a]
+  name [outer var] [1 references renamed to f]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5262, col 37  
+  key [outer var] [1 references renamed to b]
+  keys [outer var] [2 references renamed to a]
+  success [outer var] [2 references renamed to c]
+  values [outer var] [2 references renamed to h]
+
+Function Expression "onsuccess" - starts at line 5274, col 36  
+  event [argument] [1 references renamed to a]
+  values [outer var] [1 references renamed to h]
+
+Function Expression "remove" - starts at line 5281, col 38  
+  error [argument] [2 references renamed to b]
+  key [argument] [3 references renamed to a]
+  success [argument] [1 references renamed to e]
+  defaultError [local var] [1 references renamed to d]
+  keys [local var] [2 references renamed to c]
+  name [local var] [1 references renamed to f]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5290, col 57  
+  transaction [argument] [3 references renamed to a]
+  i [local var] [3 references renamed to g]
+  objectStore [local var] [2 references renamed to h]
+  defaultError [outer var] [1 references renamed to d]
+  error [outer var] [1 references renamed to b]
+  keys [outer var] [2 references renamed to c]
+  name [outer var] [1 references renamed to f]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5292, col 37  
+  success [outer var] [1 references renamed to e]
+
+Function Expression "update" - starts at line 5304, col 38  
+  error [argument] [2 references renamed to f]
+  key [argument] [5 references renamed to c]
+  success [argument] [2 references renamed to e]
+  value [argument] [3 references renamed to d]
+  defaultError [local var] [1 references renamed to g]
+  keys [local var] [6 references renamed to a]
+  name [local var] [1 references renamed to h]
+  values [local var] [5 references renamed to b]
+  IDBTransaction [outer var] [1 references renamed to z]
+  openTransaction [outer function] [1 references renamed to y]
+
+Function Expression "openTransaction" - starts at line 5323, col 57  
+  transaction [argument] [4 references renamed to j]
+  i [local var] [6 references renamed to i]
+  request [local var] [2 references renamed to k]
+  defaultError [outer var] [1 references renamed to g]
+  error [outer var] [1 references renamed to f]
+  IDBKeyRange [outer var] [1 references renamed to md]
+  keys [outer var] [3 references renamed to a]
+  name [outer var] [1 references renamed to h]
+  values [outer var] [2 references renamed to b]
+  getError [outer function] [1 references renamed to r]
+
+Function Expression "oncomplete" - starts at line 5325, col 37  
+  key [outer var] [2 references renamed to c]
+  keys [outer var] [1 references renamed to a]
+  success [outer var] [2 references renamed to e]
+  value [outer var] [1 references renamed to d]
+  values [outer var] [1 references renamed to b]
+
+Function Expression "onsuccess" - starts at line 5336, col 36  
+  event [argument] [2 references renamed to b]
+  cursor [local var] [2 references renamed to a]
+  transaction [outer var] [1 references renamed to j]
+
+Function Expression "MemoryStore" - starts at line 5350, col 22  
+  name [argument] [1 references renamed to h]
+  holes [local var] [5 references renamed to g]
+  items [local var] [8 references renamed to c]
+  keys [local var] [10 references renamed to b]
+  getErrorCallback [local function] [5 references renamed to e]
+  validateKeyInput [local function] [5 references renamed to f]
+
+Function Expression "getErrorCallback" - starts at line 5360, col 31  
+  error [argument] [1 references renamed to a]
+
+Function Expression "validateKeyInput" - starts at line 5364, col 31  
+  error [argument] [1 references renamed to e]
+  key [argument] [3 references renamed to c]
+  messageString [local var] [4 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "add" - starts at line 5387, col 19  
+  error [argument] [5 references renamed to a]
+  key [argument] [4 references renamed to c]
+  success [argument] [1 references renamed to d]
+  value [argument] [1 references renamed to g]
+  keys [outer var] [1 references renamed to b]
+  getErrorCallback [outer function] [1 references renamed to e]
+  validateKeyInput [outer function] [1 references renamed to f]
+
+Function Expression "addOrUpdate" - starts at line 5408, col 27  
+  error [argument] [3 references renamed to j]
+  key [argument] [4 references renamed to i]
+  success [argument] [1 references renamed to l]
+  value [argument] [2 references renamed to k]
+  index [local var] [5 references renamed to h]
+  holes [outer var] [2 references renamed to g]
+  items [outer var] [2 references renamed to c]
+  keys [outer var] [2 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+  delay [outer function] [1 references renamed to d]
+  getErrorCallback [outer function] [1 references renamed to e]
+  validateKeyInput [outer function] [1 references renamed to f]
+
+Function Expression "clear" - starts at line 5435, col 21  
+  success [argument] [1 references renamed to a]
+  holes [outer var] [1 references renamed to g]
+  items [outer var] [1 references renamed to c]
+  keys [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "contains" - starts at line 5446, col 24  
+  key [argument] [1 references renamed to e]
+  success [argument] [1 references renamed to c]
+  contained [local var] [1 references renamed to a]
+  keys [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "getAllKeys" - starts at line 5455, col 26  
+  success [argument] [1 references renamed to c]
+  name [local var] [1 references renamed to e]
+  results [local var] [2 references renamed to a]
+  keys [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+
+Function Expression "read" - starts at line 5466, col 20  
+  error [argument] [3 references renamed to a]
+  key [argument] [3 references renamed to g]
+  success [argument] [1 references renamed to h]
+  index [local var] [1 references renamed to i]
+  items [outer var] [1 references renamed to c]
+  keys [outer var] [1 references renamed to b]
+  delay [outer function] [1 references renamed to d]
+  getErrorCallback [outer function] [1 references renamed to e]
+  validateKeyInput [outer function] [1 references renamed to f]
+
+Function Expression "remove" - starts at line 5479, col 22  
+  error [argument] [3 references renamed to i]
+  key [argument] [3 references renamed to j]
+  success [argument] [1 references renamed to k]
+  index [local var] [4 references renamed to h]
+  holes [outer var] [2 references renamed to g]
+  items [outer var] [4 references renamed to c]
+  keys [outer var] [2 references renamed to b]
+  undefined [outer var] [2 references renamed to a]
+  delay [outer function] [1 references renamed to d]
+  getErrorCallback [outer function] [1 references renamed to e]
+  validateKeyInput [outer function] [1 references renamed to f]
+
+Function Expression "update" - starts at line 5507, col 22  
+  error [argument] [5 references renamed to a]
+  key [argument] [4 references renamed to c]
+  success [argument] [1 references renamed to d]
+  value [argument] [1 references renamed to g]
+  keys [outer var] [1 references renamed to b]
+  getErrorCallback [outer function] [1 references renamed to e]
+  validateKeyInput [outer function] [1 references renamed to f]
+
+Function Expression "create" - starts at line 5528, col 25  
+  name [argument] [1 references renamed to a]
+  MemoryStore [outer function] [1 references renamed to E]
+
+Function Expression "isSupported" - starts at line 5535, col 30  
+
+Function Expression "close" - starts at line 5541, col 34  
+
+Function Expression "createStore" - starts at line 5560, col 25  
+  mechanism [argument] [6 references renamed to a]
+  name [argument] [2 references renamed to c]
+  factory [local var] [2 references renamed to b]
+  datajs [outer var] [1 references renamed to bb]
+  mechanisms [outer var] [1 references renamed to sf]
+  DomStore [outer function] [1 references renamed to g]
+
+Function Expression "forwardCall" - starts at line 5585, col 22  
+  name [argument] [1 references renamed to c]
+  returnValue [argument] [1 references renamed to b]
+  thisValue [argument] [2 references renamed to a]
+
+Function Expression "return" - starts at line 5592, col 15  
+  arguments [arguments array] 
+  name [outer var] [1 references renamed to c]
+  returnValue [outer var] [1 references renamed to b]
+  thisValue [outer var] [2 references renamed to a]
+
+Function Expression "DjsDeferred" - starts at line 5598, col 22  
+  undefined [outer var] [3 references renamed to a]
+
+Function Expression "then" - starts at line 5631, col 14  
+  errorHandler [argument] [3 references renamed to b]
+  fulfilledHandler [argument] [3 references renamed to a]
+
+Function Expression "resolve" - starts at line 5668, col 17  
+  arguments [arguments array] 
+  i [local var] [4 references renamed to b]
+  len [local var] [2 references renamed to c]
+  undefined [outer var] [2 references renamed to a]
+
+Function Expression "reject" - starts at line 5694, col 16  
+  arguments [arguments array] 
+  i [local var] [4 references renamed to b]
+  len [local var] [2 references renamed to c]
+  undefined [outer var] [2 references renamed to a]
+
+Function Expression "promise" - starts at line 5712, col 17  
+  result [local var] [3 references renamed to a]
+  forwardCall [outer function] [1 references renamed to kf]
+
+Function Expression "createDeferred" - starts at line 5722, col 25  
+  window [outer var] [3 references renamed to b]
+  DjsDeferred [outer function] [1 references renamed to M]
+
+Function Expression "appendQueryOption" - starts at line 5738, col 28  
+  queryOption [argument] [1 references renamed to b]
+  uri [argument] [2 references renamed to a]
+  separator [local var] [1 references renamed to c]
+
+Function Expression "appendSegment" - starts at line 5746, col 24  
+  segment [argument] [1 references renamed to d]
+  uri [argument] [8 references renamed to a]
+  index [local var] [3 references renamed to b]
+  queryPortion [local var] [2 references renamed to c]
+
+Function Expression "buildODataRequest" - starts at line 5765, col 28  
+  options [argument] [5 references renamed to a]
+  uri [argument] [1 references renamed to b]
+
+Function Expression "findQueryOptionStart" - starts at line 5781, col 31  
+  name [argument] [3 references renamed to c]
+  uri [argument] [3 references renamed to d]
+  queryIndex [local var] [3 references renamed to b]
+  result [local var] [2 references renamed to e]
+  start [local var] [4 references renamed to a]
+
+Function Expression "queryForData" - starts at line 5801, col 23  
+  error [argument] [1 references renamed to d]
+  options [argument] [1 references renamed to a]
+  success [argument] [1 references renamed to c]
+  uri [argument] [1 references renamed to e]
+  request [local var] [1 references renamed to b]
+  queryForDataInternal [outer function] [1 references renamed to pc]
+
+Function Expression "queryForDataInternal" - starts at line 5813, col 31  
+  data [argument] [4 references renamed to d]
+  error [argument] [2 references renamed to g]
+  options [argument] [4 references renamed to b]
+  success [argument] [2 references renamed to f]
+  uri [argument] [1 references renamed to i]
+  currentRequest [local var] [2 references renamed to e]
+  request [local var] [1 references renamed to h]
+  odata [outer var] [1 references renamed to c]
+  undefined [outer var] [1 references renamed to a]
+  buildODataRequest [outer function] [1 references renamed to wc]
+
+Function Expression "request" - starts at line 5823, col 52  
+  newData [argument] [2 references renamed to a]
+  next [local var] [2 references renamed to c]
+  results [local var] [1 references renamed to h]
+  currentRequest [outer var] [1 references renamed to e]
+  data [outer var] [4 references renamed to d]
+  error [outer var] [1 references renamed to g]
+  options [outer var] [1 references renamed to b]
+  success [outer var] [2 references renamed to f]
+  queryForDataInternal [outer function] [1 references renamed to pc]
+
+Function Expression "abort" - starts at line 5837, col 19  
+  currentRequest [outer var] [1 references renamed to e]
+
+Function Expression "ODataCacheSource" - starts at line 5843, col 27  
+  options [argument] [2 references renamed to f]
+  that [local var] [7 references renamed to b]
+  uri [local var] [3 references renamed to d]
+  normalizeURICase [outer function] [1 references renamed to xe]
+
+Function Expression "count" - starts at line 5854, col 21  
+  error [argument] [2 references renamed to g]
+  success [argument] [1 references renamed to h]
+  options [local var] [3 references renamed to f]
+  odata [outer var] [1 references renamed to c]
+  that [outer var] [1 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+  uri [outer var] [1 references renamed to d]
+  appendSegment [outer function] [1 references renamed to Re]
+  buildODataRequest [outer function] [1 references renamed to wc]
+
+Function Expression "request" - starts at line 5863, col 16  
+  data [argument] [1 references renamed to b]
+  count [local var] [3 references renamed to a]
+  error [outer var] [1 references renamed to g]
+  success [outer var] [1 references renamed to h]
+  parseInt10 [outer function] [1 references renamed to e]
+
+Function Expression "read" - starts at line 5873, col 20  
+  count [argument] [1 references renamed to e]
+  error [argument] [1 references renamed to f]
+  index [argument] [1 references renamed to g]
+  success [argument] [1 references renamed to c]
+  queryOptions [local var] [1 references renamed to a]
+  that [outer var] [1 references renamed to b]
+  uri [outer var] [1 references renamed to d]
+  appendQueryOption [outer function] [1 references renamed to pe]
+  queryForData [outer function] [1 references renamed to df]
+
+Function Expression "appendPage" - starts at line 5890, col 21  
+  operation [argument] [5 references renamed to a]
+  page [argument] [3 references renamed to b]
+  end [local var] [1 references renamed to e]
+  intersection [local var] [2 references renamed to c]
+  start [local var] [2 references renamed to d]
+  intersectRanges [outer function] [1 references renamed to Fe]
+
+Function Expression "intersectRanges" - starts at line 5903, col 26  
+  x [argument] [4 references renamed to a]
+  y [argument] [4 references renamed to b]
+  result [local var] [2 references renamed to e]
+  resultIndex [local var] [3 references renamed to c]
+  resultLast [local var] [2 references renamed to d]
+  xLast [local var] [2 references renamed to f]
+  yLast [local var] [2 references renamed to g]
+
+Function Expression "checkZeroGreater" - starts at line 5921, col 27  
+  name [argument] [2 references renamed to c]
+  val [argument] [5 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "checkUndefinedGreaterThanZero" - starts at line 5935, col 40  
+  name [argument] [2 references renamed to c]
+  val [argument] [5 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "checkUndefinedOrNumber" - starts at line 5951, col 33  
+  name [argument] [1 references renamed to c]
+  val [argument] [4 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "removeFromArray" - starts at line 5960, col 26  
+  arr [argument] [3 references renamed to b]
+  item [argument] [1 references renamed to d]
+  i [local var] [5 references renamed to a]
+  len [local var] [2 references renamed to c]
+
+Function Expression "extend" - starts at line 5977, col 17  
+  target [argument] [2 references renamed to a]
+  values [argument] [2 references renamed to b]
+  name [local var] [2 references renamed to c]
+
+Function Expression "estimateSize" - starts at line 5990, col 23  
+  obj [argument] [5 references renamed to a]
+  name [local var] [2 references renamed to c]
+  size [local var] [4 references renamed to b]
+  type [local var] [2 references renamed to d]
+  estimateSize [outer function] [1 references renamed to fd]
+
+Function Expression "snapToPageBoundaries" - starts at line 6009, col 31  
+  highIndex [argument] [3 references renamed to c]
+  lowIndex [argument] [4 references renamed to a]
+  pageSize [argument] [4 references renamed to b]
+
+Function Expression "DataCacheOperation" - starts at line 6053, col 29  
+  count [argument] [1 references renamed to j]
+  data [argument] [1 references renamed to l]
+  index [argument] [1 references renamed to k]
+  isCancelable [argument] [1 references renamed to g]
+  pending [argument] [1 references renamed to h]
+  promise [argument] [1 references renamed to i]
+  stateMachine [argument] [6 references renamed to c]
+  cacheState [local var] [2 references renamed to e]
+  stateData [local var] [4 references renamed to d]
+  that [local var] [35 references renamed to a]
+  operationStateMachine [local function] [1 references renamed to f]
+  transition [local function] [7 references renamed to b]
+  OPERATION_STATE_START [outer var] [2 references renamed to C]
+
+Function Expression "cancel" - starts at line 6087, col 22  
+  state [local var] [3 references renamed to c]
+  isCancelable [outer var] [1 references renamed to g]
+  OPERATION_STATE_CANCEL [outer var] [2 references renamed to U]
+  OPERATION_STATE_END [outer var] [1 references renamed to x]
+  OPERATION_STATE_ERROR [outer var] [1 references renamed to zb]
+  stateData [outer var] [1 references renamed to d]
+  that [outer var] [2 references renamed to a]
+  transition [outer function] [1 references renamed to b]
+
+Function Expression "complete" - starts at line 6102, col 24  
+  OPERATION_STATE_END [outer var] [1 references renamed to x]
+  stateData [outer var] [1 references renamed to d]
+  transition [outer function] [1 references renamed to b]
+
+Function Expression "error" - starts at line 6108, col 21  
+  err [argument] [1 references renamed to c]
+  OPERATION_STATE_ERROR [outer var] [1 references renamed to zb]
+  that [outer var] [1 references renamed to a]
+  transition [outer function] [1 references renamed to b]
+
+Function Expression "run" - starts at line 6115, col 19  
+  state [argument] [1 references renamed to b]
+  cacheState [outer var] [1 references renamed to e]
+  stateData [outer var] [1 references renamed to d]
+  that [outer var] [2 references renamed to a]
+
+Function Expression "wait" - starts at line 6123, col 20  
+  data [argument] [1 references renamed to a]
+  OPERATION_STATE_WAIT [outer var] [1 references renamed to oc]
+  transition [outer function] [1 references renamed to b]
+
+Function Expression "operationStateMachine" - starts at line 6129, col 36  
+  cacheState [argument] [7 references renamed to e]
+  data [argument] [7 references renamed to f]
+  opTargetState [argument] [7 references renamed to d]
+  CACHE_STATE_INIT [outer var] [1 references renamed to Bc]
+  OPERATION_STATE_CANCEL [outer var] [1 references renamed to U]
+  OPERATION_STATE_END [outer var] [3 references renamed to x]
+  OPERATION_STATE_ERROR [outer var] [1 references renamed to zb]
+  OPERATION_STATE_START [outer var] [1 references renamed to C]
+  OPERATION_STATE_WAIT [outer var] [1 references renamed to oc]
+  stateMachine [outer var] [6 references renamed to c]
+  that [outer var] [14 references renamed to a]
+  transition [outer function] [2 references renamed to b]
+
+Function Expression "transition" - starts at line 6181, col 25  
+  data [argument] [2 references renamed to c]
+  state [argument] [2 references renamed to b]
+  cacheState [outer var] [1 references renamed to e]
+  stateData [outer var] [1 references renamed to d]
+  that [outer var] [1 references renamed to a]
+  operationStateMachine [outer function] [1 references renamed to f]
+
+Function Expression "fireResolved" - starts at line 6196, col 48  
+  p [local var] [2 references renamed to a]
+
+Function Expression "fireRejected" - starts at line 6207, col 48  
+  reason [argument] [1 references renamed to b]
+  p [local var] [2 references renamed to a]
+
+Function Expression "fireCanceled" - starts at line 6218, col 48  
+
+Function Expression "DataCache" - starts at line 6225, col 20  
+  options [argument] [9 references renamed to j]
+  actualCacheSize [local var] [5 references renamed to u]
+  allDataLocal [local var] [8 references renamed to m]
+  cacheFailure [local var] [13 references renamed to g]
+  cacheSize [local var] [6 references renamed to t]
+  clearOperations [local var] [8 references renamed to k]
+  collectionCount [local var] [8 references renamed to l]
+  highestSavedPage [local var] [9 references renamed to i]
+  highestSavedPageSize [local var] [6 references renamed to r]
+  overflowed [local var] [5 references renamed to v]
+  pageSize [local var] [18 references renamed to c]
+  pendingOperations [local var] [3 references renamed to z]
+  prefetchOperations [local var] [7 references renamed to n]
+  prefetchSize [local var] [3 references renamed to E]
+  readOperations [local var] [6 references renamed to s]
+  source [local var] [7 references renamed to o]
+  state [local var] [4 references renamed to y]
+  stats [local var] [7 references renamed to p]
+  store [local var] [7 references renamed to q]
+  that [local var] [16 references renamed to f]
+  version [local var] [2 references renamed to P]
+  cacheFailureCallback [local function] [4 references renamed to w]
+  cancelStateMachine [local function] [2 references renamed to K]
+  changeState [local function] [10 references renamed to h]
+  clearStore [local function] [2 references renamed to N]
+  dequeueOperation [local function] [1 references renamed to T]
+  destroyStateMachine [local function] [1 references renamed to S]
+  fetchPage [local function] [1 references renamed to W]
+  filter [local function] [2 references renamed to Q]
+  fireOnIdle [local function] [2 references renamed to O]
+  prefetch [local function] [1 references renamed to Z]
+  prefetchStateMachine [local function] [1 references renamed to R]
+  queueAndStart [local function] [3 references renamed to B]
+  readPage [local function] [1 references renamed to ab]
+  readSaveStateMachine [local function] [2 references renamed to I]
+  readStateMachine [local function] [1 references renamed to V]
+  savePage [local function] [1 references renamed to cb]
+  saveSettings [local function] [3 references renamed to H]
+  storeFailureCallback [local function] [2 references renamed to J]
+  updateSettings [local function] [2 references renamed to L]
+  CACHE_STATE_INIT [outer var] [1 references renamed to Bc]
+  datajs [outer var] [1 references renamed to bb]
+  ODataCacheSource [outer function] [1 references renamed to ye]
+  undefinedDefault [outer function] [3 references renamed to Kb]
+
+Function Expression "count" - starts at line 6269, col 21  
+  canceled [local var] [2 references renamed to c]
+  deferred [local var] [5 references renamed to a]
+  request [local var] [5 references renamed to b]
+  allDataLocal [outer var] [1 references renamed to m]
+  cacheFailure [outer var] [2 references renamed to g]
+  source [outer var] [1 references renamed to o]
+  createDeferred [outer function] [1 references renamed to lb]
+  delay [outer function] [1 references renamed to d]
+  extend [outer function] [1 references renamed to F]
+
+Function Expression "delay" - starts at line 6281, col 22  
+  collectionCount [outer var] [1 references renamed to l]
+  deferred [outer var] [1 references renamed to a]
+
+Function Expression "count" - starts at line 6289, col 39  
+  count [argument] [1 references renamed to c]
+  deferred [outer var] [1 references renamed to a]
+  request [outer var] [1 references renamed to b]
+  stats [outer var] [1 references renamed to p]
+
+Function Expression "count" - starts at line 6293, col 15  
+  err [argument] [1 references renamed to d]
+  canceled [outer var] [1 references renamed to c]
+  deferred [outer var] [1 references renamed to a]
+  request [outer var] [1 references renamed to b]
+  extend [outer function] [1 references renamed to F]
+
+Function Expression "cancel" - starts at line 6299, col 24  
+  canceled [outer var] [1 references renamed to c]
+  request [outer var] [3 references renamed to b]
+
+Function Expression "clear" - starts at line 6310, col 21  
+  deferred [local var] [2 references renamed to a]
+  op [local var] [1 references renamed to b]
+  cacheFailure [outer var] [2 references renamed to g]
+  clearOperations [outer var] [3 references renamed to k]
+  createDeferred [outer function] [1 references renamed to lb]
+  DataCacheOperation [outer function] [1 references renamed to G]
+  destroyStateMachine [outer function] [1 references renamed to S]
+  queueAndStart [outer function] [1 references renamed to B]
+
+Function Expression "filterForward" - starts at line 6331, col 29  
+  count [argument] [1 references renamed to b]
+  index [argument] [1 references renamed to c]
+  predicate [argument] [1 references renamed to a]
+  filter [outer function] [1 references renamed to Q]
+
+Function Expression "filterBack" - starts at line 6343, col 26  
+  count [argument] [1 references renamed to b]
+  index [argument] [1 references renamed to c]
+  predicate [argument] [1 references renamed to a]
+  filter [outer function] [1 references renamed to Q]
+
+Function Expression "readRange" - starts at line 6355, col 25  
+  count [argument] [2 references renamed to b]
+  index [argument] [2 references renamed to c]
+  deferred [local var] [2 references renamed to a]
+  op [local var] [2 references renamed to d]
+  cacheFailure [outer var] [2 references renamed to g]
+  readOperations [outer var] [1 references renamed to s]
+  checkZeroGreater [outer function] [2 references renamed to Cc]
+  createDeferred [outer function] [1 references renamed to lb]
+  DataCacheOperation [outer function] [1 references renamed to G]
+  extend [outer function] [1 references renamed to F]
+  queueAndStart [outer function] [1 references renamed to B]
+  readStateMachine [outer function] [1 references renamed to V]
+
+Function Expression "cancel" - starts at line 6382, col 24  
+  op [outer var] [1 references renamed to d]
+
+Function Expression "toObservable" - starts at line 6389, col 48  
+  cacheFailure [outer var] [2 references renamed to g]
+  window [outer var] [3 references renamed to b]
+
+Function Expression "CreateWithDisposable" - starts at line 6400, col 61  
+  obs [argument] [3 references renamed to d]
+  disposed [local var] [3 references renamed to a]
+  index [local var] [3 references renamed to b]
+  errorCallback [local function] [2 references renamed to g]
+  successCallback [local function] [2 references renamed to e]
+  pageSize [outer var] [1 references renamed to c]
+  that [outer var] [1 references renamed to f]
+
+Function Expression "errorCallback" - starts at line 6404, col 36  
+  error [argument] [1 references renamed to b]
+  disposed [outer var] [1 references renamed to a]
+  obs [outer var] [1 references renamed to d]
+
+Function Expression "successCallback" - starts at line 6410, col 38  
+  data [argument] [3 references renamed to i]
+  i [local var] [4 references renamed to h]
+  len [local var] [2 references renamed to j]
+  disposed [outer var] [1 references renamed to a]
+  index [outer var] [2 references renamed to b]
+  obs [outer var] [2 references renamed to d]
+  pageSize [outer var] [3 references renamed to c]
+  that [outer var] [1 references renamed to f]
+  errorCallback [outer function] [1 references renamed to g]
+  successCallback [outer function] [1 references renamed to e]
+
+Function Expression "Dispose" - starts at line 6430, col 34  
+  disposed [outer var] [1 references renamed to a]
+
+Function Expression "cacheFailureCallback" - starts at line 6434, col 35  
+  message [argument] [1 references renamed to a]
+
+Function Expression "return" - starts at line 6443, col 19  
+  error [argument] [1 references renamed to d]
+  i [local var] [8 references renamed to b]
+  len [local var] [4 references renamed to c]
+  cacheFailure [outer var] [3 references renamed to g]
+  clearOperations [outer var] [3 references renamed to k]
+  message [outer var] [1 references renamed to a]
+  readOperations [outer var] [3 references renamed to s]
+
+Function Expression "changeState" - starts at line 6463, col 26  
+  newState [argument] [2 references renamed to c]
+  i [local var] [4 references renamed to a]
+  len [local var] [2 references renamed to d]
+  operations [local var] [2 references renamed to b]
+  clearOperations [outer var] [1 references renamed to k]
+  prefetchOperations [outer var] [1 references renamed to n]
+  readOperations [outer var] [1 references renamed to s]
+  state [outer var] [3 references renamed to y]
+
+Function Expression "clearStore" - starts at line 6478, col 25  
+  deferred [local var] [3 references renamed to a]
+  store [outer var] [2 references renamed to q]
+  DjsDeferred [outer function] [1 references renamed to M]
+
+Function Expression "clear" - starts at line 6483, col 24  
+  actualCacheSize [outer var] [1 references renamed to u]
+  allDataLocal [outer var] [1 references renamed to m]
+  cacheSize [outer var] [1 references renamed to t]
+  collectionCount [outer var] [1 references renamed to l]
+  deferred [outer var] [1 references renamed to a]
+  highestSavedPage [outer var] [1 references renamed to i]
+  highestSavedPageSize [outer var] [1 references renamed to r]
+  overflowed [outer var] [1 references renamed to v]
+  stats [outer var] [2 references renamed to p]
+  store [outer var] [1 references renamed to q]
+  that [outer var] [1 references renamed to f]
+
+Function Expression "clear" - starts at line 6501, col 15  
+  err [argument] [1 references renamed to b]
+  deferred [outer var] [1 references renamed to a]
+
+Function Expression "dequeueOperation" - starts at line 6507, col 31  
+  operation [argument] [3 references renamed to a]
+  removed [local var] [3 references renamed to b]
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  clearOperations [outer var] [1 references renamed to k]
+  pendingOperations [outer var] [1 references renamed to z]
+  prefetchOperations [outer var] [1 references renamed to n]
+  readOperations [outer var] [1 references renamed to s]
+  changeState [outer function] [1 references renamed to h]
+  removeFromArray [outer function] [3 references renamed to Mb]
+
+Function Expression "fetchPage" - starts at line 6524, col 24  
+  start [argument] [2 references renamed to d]
+  canceled [local var] [1 references renamed to e]
+  deferred [local var] [3 references renamed to a]
+  request [local var] [3 references renamed to b]
+  pageSize [outer var] [1 references renamed to c]
+  source [outer var] [1 references renamed to o]
+  DjsDeferred [outer function] [1 references renamed to M]
+  extend [outer function] [1 references renamed to F]
+
+Function Expression "read" - starts at line 6533, col 55  
+  data [argument] [2 references renamed to b]
+  page [local var] [1 references renamed to c]
+  deferred [outer var] [1 references renamed to a]
+  start [outer var] [1 references renamed to d]
+
+Function Expression "read" - starts at line 6536, col 15  
+  err [argument] [1 references renamed to b]
+  deferred [outer var] [1 references renamed to a]
+
+Function Expression "cancel" - starts at line 6541, col 24  
+  canceled [outer var] [1 references renamed to e]
+  request [outer var] [3 references renamed to b]
+
+Function Expression "filter" - starts at line 6551, col 21  
+  backwards [argument] [7 references renamed to d]
+  count [argument] [8 references renamed to b]
+  index [argument] [11 references renamed to a]
+  predicate [argument] [1 references renamed to p]
+  arr [local var] [6 references renamed to h]
+  canceled [local var] [2 references renamed to l]
+  deferred [local var] [4 references renamed to j]
+  initialCount [local var] [1 references renamed to n]
+  initialIndex [local var] [1 references renamed to o]
+  initialPage [local var] [4 references renamed to i]
+  pendingReadRange [local var] [3 references renamed to k]
+  readMore [local function] [2 references renamed to m]
+  cacheFailure [outer var] [2 references renamed to g]
+  pageSize [outer var] [1 references renamed to c]
+  createDeferred [outer function] [1 references renamed to lb]
+  extend [outer function] [1 references renamed to F]
+  parseInt10 [outer function] [2 references renamed to e]
+  snapToPageBoundaries [outer function] [1 references renamed to qc]
+
+Function Expression "readMore" - starts at line 6582, col 27  
+  readCount [argument] [3 references renamed to e]
+  readIndex [argument] [5 references renamed to a]
+  arr [outer var] [6 references renamed to h]
+  canceled [outer var] [1 references renamed to l]
+  count [outer var] [4 references renamed to b]
+  deferred [outer var] [3 references renamed to j]
+  pendingReadRange [outer var] [1 references renamed to k]
+  that [outer var] [1 references renamed to f]
+
+Function Expression "then" - starts at line 6587, col 85  
+  data [argument] [3 references renamed to g]
+  dataIndex [local var] [2 references renamed to i]
+  element [local var] [2 references renamed to k]
+  i [local var] [4 references renamed to f]
+  item [local var] [2 references renamed to n]
+  length [local var] [2 references renamed to l]
+  nextIndex [local var] [1 references renamed to o]
+  arr [outer var] [4 references renamed to h]
+  backwards [outer var] [5 references renamed to d]
+  count [outer var] [2 references renamed to b]
+  deferred [outer var] [1 references renamed to j]
+  pageSize [outer var] [2 references renamed to c]
+  predicate [outer var] [1 references renamed to p]
+  readCount [outer var] [2 references renamed to e]
+  readIndex [outer var] [4 references renamed to a]
+  readMore [outer function] [1 references renamed to m]
+
+Function Expression "then" - starts at line 6608, col 27  
+  err [argument] [1 references renamed to a]
+  deferred [outer var] [1 references renamed to j]
+
+Function Expression "cancel" - starts at line 6622, col 24  
+  canceled [outer var] [1 references renamed to l]
+  pendingReadRange [outer var] [2 references renamed to k]
+
+Function Expression "fireOnIdle" - starts at line 6632, col 25  
+  pendingOperations [outer var] [1 references renamed to z]
+  that [outer var] [2 references renamed to f]
+
+Function Expression "prefetch" - starts at line 6640, col 23  
+  start [argument] [1 references renamed to a]
+  op [local var] [1 references renamed to b]
+  allDataLocal [outer var] [1 references renamed to m]
+  overflowed [outer var] [1 references renamed to v]
+  prefetchOperations [outer var] [4 references renamed to n]
+  prefetchSize [outer var] [3 references renamed to E]
+  DataCacheOperation [outer function] [1 references renamed to G]
+  prefetchStateMachine [outer function] [1 references renamed to R]
+  queueAndStart [outer function] [1 references renamed to B]
+
+Function Expression "queueAndStart" - starts at line 6663, col 28  
+  op [argument] [3 references renamed to a]
+  queue [argument] [1 references renamed to b]
+  pendingOperations [outer var] [1 references renamed to z]
+  state [outer var] [1 references renamed to y]
+  dequeueOperation [outer function] [1 references renamed to T]
+
+Function Expression "readPage" - starts at line 6674, col 23  
+  key [argument] [2 references renamed to e]
+  canceled [local var] [3 references renamed to c]
+  deferred [local var] [4 references renamed to b]
+  error [local var] [2 references renamed to d]
+  store [outer var] [2 references renamed to q]
+  DjsDeferred [outer function] [1 references renamed to M]
+  extend [outer function] [1 references renamed to F]
+  storeFailureCallback [outer function] [1 references renamed to J]
+
+Function Expression "cancel" - starts at line 6682, col 24  
+  canceled [outer var] [1 references renamed to c]
+
+Function Expression "contains" - starts at line 6690, col 32  
+  contained [argument] [1 references renamed to f]
+  canceled [outer var] [2 references renamed to c]
+  deferred [outer var] [1 references renamed to b]
+  error [outer var] [1 references renamed to d]
+  key [outer var] [1 references renamed to e]
+  store [outer var] [1 references renamed to q]
+
+Function Expression "read" - starts at line 6695, col 36  
+  data [argument] [2 references renamed to d]
+  _ [argument] [0 references renamed to e]
+  canceled [outer var] [1 references renamed to c]
+  deferred [outer var] [1 references renamed to b]
+  undefined [outer var] [1 references renamed to a]
+
+Function Expression "savePage" - starts at line 6707, col 23  
+  key [argument] [1 references renamed to g]
+  page [argument] [5 references renamed to a]
+  canceled [local var] [1 references renamed to f]
+  deferred [local var] [3 references renamed to b]
+  error [local var] [3 references renamed to d]
+  pageBytes [local var] [2 references renamed to e]
+  resolve [local function] [3 references renamed to c]
+  actualCacheSize [outer var] [1 references renamed to u]
+  cacheSize [outer var] [2 references renamed to t]
+  overflowed [outer var] [2 references renamed to v]
+  store [outer var] [1 references renamed to q]
+  DjsDeferred [outer function] [1 references renamed to M]
+  estimateSize [outer function] [1 references renamed to fd]
+  extend [outer function] [1 references renamed to F]
+  saveSettings [outer function] [1 references renamed to H]
+  storeFailureCallback [outer function] [1 references renamed to J]
+  updateSettings [outer function] [1 references renamed to L]
+
+Function Expression "cancel" - starts at line 6717, col 24  
+  canceled [outer var] [1 references renamed to f]
+
+Function Expression "resolve" - starts at line 6725, col 26  
+  deferred [outer var] [1 references renamed to b]
+
+Function Expression "addOrUpdate" - starts at line 6734, col 49  
+  error [outer var] [1 references renamed to d]
+  page [outer var] [1 references renamed to a]
+  pageBytes [outer var] [1 references renamed to e]
+  resolve [outer function] [1 references renamed to c]
+  saveSettings [outer function] [1 references renamed to H]
+  updateSettings [outer function] [1 references renamed to L]
+
+Function Expression "saveSettings" - starts at line 6748, col 27  
+  error [argument] [1 references renamed to d]
+  success [argument] [1 references renamed to b]
+  settings [local var] [1 references renamed to a]
+  actualCacheSize [outer var] [1 references renamed to u]
+  allDataLocal [outer var] [1 references renamed to m]
+  cacheSize [outer var] [1 references renamed to t]
+  collectionCount [outer var] [1 references renamed to l]
+  highestSavedPage [outer var] [1 references renamed to i]
+  highestSavedPageSize [outer var] [1 references renamed to r]
+  pageSize [outer var] [1 references renamed to c]
+  source [outer var] [1 references renamed to o]
+  store [outer var] [1 references renamed to q]
+  version [outer var] [1 references renamed to P]
+
+Function Expression "storeFailureCallback" - starts at line 6768, col 35  
+  deferred [argument] [1 references renamed to a]
+
+Function Expression "return" - starts at line 6777, col 19  
+  deferred [outer var] [1 references renamed to a]
+
+Function Expression "updateSettings" - starts at line 6787, col 29  
+  page [argument] [2 references renamed to d]
+  pageBytes [argument] [1 references renamed to e]
+  pageCount [local var] [4 references renamed to a]
+  pageIndex [local var] [4 references renamed to b]
+  actualCacheSize [outer var] [1 references renamed to u]
+  allDataLocal [outer var] [2 references renamed to m]
+  collectionCount [outer var] [4 references renamed to l]
+  highestSavedPage [outer var] [6 references renamed to i]
+  highestSavedPageSize [outer var] [3 references renamed to r]
+  pageSize [outer var] [2 references renamed to c]
+
+Function Expression "cancelStateMachine" - starts at line 6817, col 33  
+  cacheState [argument] [0 references renamed to e]
+  data [argument] [3 references renamed to a]
+  operation [argument] [1 references renamed to d]
+  opTargetState [argument] [2 references renamed to b]
+  canceled [local var] [2 references renamed to c]
+  OPERATION_STATE_CANCEL [outer var] [1 references renamed to U]
+  OPERATION_STATE_END [outer var] [1 references renamed to x]
+
+Function Expression "destroyStateMachine" - starts at line 6840, col 34  
+  cacheState [argument] [1 references renamed to c]
+  operation [argument] [3 references renamed to a]
+  opTargetState [argument] [1 references renamed to b]
+  transition [local var] [1 references renamed to d]
+  CACHE_STATE_DESTROY [outer var] [2 references renamed to hb]
+  DESTROY_STATE_CLEAR [outer var] [2 references renamed to sc]
+  OPERATION_STATE_END [outer var] [1 references renamed to x]
+  OPERATION_STATE_START [outer var] [1 references renamed to C]
+  changeState [outer function] [1 references renamed to h]
+  clearStore [outer function] [1 references renamed to N]
+  fireOnIdle [outer function] [1 references renamed to O]
+
+Function Expression "then" - starts at line 6871, col 38  
+  operation [outer var] [1 references renamed to a]
+
+Function Expression "prefetchStateMachine" - starts at line 6885, col 35  
+  cacheState [argument] [5 references renamed to b]
+  data [argument] [5 references renamed to e]
+  operation [argument] [9 references renamed to a]
+  opTargetState [argument] [4 references renamed to f]
+  pending [local var] [5 references renamed to d]
+  transition [local var] [2 references renamed to g]
+  allDataLocal [outer var] [1 references renamed to m]
+  CACHE_STATE_DESTROY [outer var] [1 references renamed to hb]
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  CACHE_STATE_PREFETCH [outer var] [2 references renamed to Ab]
+  OPERATION_STATE_CANCEL [outer var] [1 references renamed to U]
+  OPERATION_STATE_START [outer var] [1 references renamed to C]
+  overflowed [outer var] [1 references renamed to v]
+  pageSize [outer var] [2 references renamed to c]
+  prefetchOperations [outer var] [1 references renamed to n]
+  READ_STATE_DONE [outer var] [1 references renamed to Y]
+  READ_STATE_LOCAL [outer var] [2 references renamed to X]
+  cancelStateMachine [outer function] [1 references renamed to K]
+  changeState [outer function] [1 references renamed to h]
+  readSaveStateMachine [outer function] [1 references renamed to I]
+
+Function Expression "readStateMachine" - starts at line 6953, col 31  
+  cacheState [argument] [7 references renamed to b]
+  data [argument] [7 references renamed to d]
+  operation [argument] [12 references renamed to a]
+  opTargetState [argument] [5 references renamed to e]
+  len [local var] [1 references renamed to i]
+  range [local var] [1 references renamed to g]
+  transition [local var] [3 references renamed to f]
+  CACHE_STATE_DESTROY [outer var] [1 references renamed to hb]
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  CACHE_STATE_PREFETCH [outer var] [1 references renamed to Ab]
+  CACHE_STATE_READ [outer var] [3 references renamed to Ib]
+  CACHE_STATE_WRITE [outer var] [1 references renamed to Gb]
+  OPERATION_STATE_START [outer var] [3 references renamed to C]
+  pageSize [outer var] [3 references renamed to c]
+  READ_STATE_DONE [outer var] [2 references renamed to Y]
+  READ_STATE_LOCAL [outer var] [2 references renamed to X]
+  stats [outer var] [1 references renamed to p]
+  appendPage [outer function] [1 references renamed to nf]
+  cancelStateMachine [outer function] [1 references renamed to K]
+  changeState [outer function] [2 references renamed to h]
+  prefetch [outer function] [1 references renamed to Z]
+  readSaveStateMachine [outer function] [1 references renamed to I]
+  snapToPageBoundaries [outer function] [1 references renamed to qc]
+
+Function Expression "readSaveStateMachine" - starts at line 7032, col 35  
+  cacheState [argument] [1 references renamed to g]
+  data [argument] [6 references renamed to c]
+  isPrefetch [argument] [2 references renamed to f]
+  operation [argument] [9 references renamed to a]
+  opTargetState [argument] [2 references renamed to e]
+  error [local var] [1 references renamed to i]
+  request [local var] [6 references renamed to b]
+  transition [local var] [4 references renamed to d]
+  wait [local var] [1 references renamed to j]
+  CACHE_STATE_WRITE [outer var] [2 references renamed to Gb]
+  OPERATION_STATE_END [outer var] [1 references renamed to x]
+  READ_STATE_LOCAL [outer var] [1 references renamed to X]
+  READ_STATE_SAVE [outer var] [1 references renamed to Nc]
+  READ_STATE_SOURCE [outer var] [1 references renamed to zc]
+  changeState [outer function] [2 references renamed to h]
+  fetchPage [outer function] [1 references renamed to W]
+  fireOnIdle [outer function] [1 references renamed to O]
+  readPage [outer function] [1 references renamed to ab]
+  savePage [outer function] [1 references renamed to cb]
+
+Function Expression "then" - starts at line 7057, col 50  
+  found [argument] [1 references renamed to b]
+  page [argument] [1 references renamed to e]
+  data [outer var] [1 references renamed to c]
+  operation [outer var] [1 references renamed to a]
+  READ_STATE_DONE [outer var] [1 references renamed to Y]
+  READ_STATE_SOURCE [outer var] [1 references renamed to zc]
+  transition [outer var] [2 references renamed to d]
+
+Function Expression "then" - starts at line 7074, col 51  
+  page [argument] [1 references renamed to b]
+  isPrefetch [outer var] [1 references renamed to f]
+  operation [outer var] [1 references renamed to a]
+  READ_STATE_SAVE [outer var] [1 references renamed to Nc]
+  stats [outer var] [2 references renamed to p]
+  transition [outer var] [1 references renamed to d]
+
+Function Expression "then" - starts at line 7094, col 62  
+  saved [argument] [1 references renamed to b]
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  data [outer var] [1 references renamed to c]
+  isPrefetch [outer var] [1 references renamed to f]
+  operation [outer var] [2 references renamed to a]
+  READ_STATE_DONE [outer var] [1 references renamed to Y]
+  transition [outer var] [1 references renamed to d]
+  changeState [outer function] [1 references renamed to h]
+
+Function Expression "read" - starts at line 7126, col 33  
+  settings [argument] [10 references renamed to a]
+  _ [argument] [0 references renamed to d]
+  settingsVersion [local var] [4 references renamed to b]
+  actualCacheSize [outer var] [1 references renamed to u]
+  allDataLocal [outer var] [1 references renamed to m]
+  cacheSize [outer var] [1 references renamed to t]
+  CACHE_STATE_IDLE [outer var] [2 references renamed to D]
+  collectionCount [outer var] [1 references renamed to l]
+  highestSavedPage [outer var] [1 references renamed to i]
+  highestSavedPageSize [outer var] [1 references renamed to r]
+  pageSize [outer var] [1 references renamed to c]
+  source [outer var] [1 references renamed to o]
+  version [outer var] [1 references renamed to P]
+  assigned [outer function] [1 references renamed to A]
+  cacheFailureCallback [outer function] [3 references renamed to w]
+  changeState [outer function] [2 references renamed to h]
+  clearStore [outer function] [1 references renamed to N]
+  saveSettings [outer function] [1 references renamed to H]
+
+Function Expression "then" - starts at line 7136, col 38  
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  changeState [outer function] [1 references renamed to h]
+
+Function Expression "saveSettings" - starts at line 7155, col 29  
+  CACHE_STATE_IDLE [outer var] [1 references renamed to D]
+  changeState [outer function] [1 references renamed to h]
+
+Function Expression "createDataCache" - starts at line 7165, col 29  
+  options [argument] [8 references renamed to a]
+  assigned [outer function] [2 references renamed to A]
+  checkUndefinedGreaterThanZero [outer function] [1 references renamed to Dd]
+  checkUndefinedOrNumber [outer function] [2 references renamed to gc]
+  DataCache [outer function] [1 references renamed to uf]
+
+Original Size: 312893 bytes; reduced size: 57128 bytes (81.7% minification)
+Gzip of output approximately 21960 bytes (61.6% compression)
+

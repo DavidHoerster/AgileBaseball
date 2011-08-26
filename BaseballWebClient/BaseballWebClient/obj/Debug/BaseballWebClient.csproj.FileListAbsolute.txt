@@ -1,0 +1,9 @@
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\bin\BaseballWebClient.dll
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\bin\BaseballWebClient.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\bin\EntityFramework.dll
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\bin\EntityFramework.xml
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\obj\Debug\BaseballWebClient.dll
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\obj\Debug\BaseballWebClient.pdb
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\obj\Debug\Decl\BaseballWebClient.dll
+C:\Code4X\AgileWays\AgileWays.Baseball4\BaseballWebClient\BaseballWebClient\obj\Debug\Decl\BaseballWebClient.pdb

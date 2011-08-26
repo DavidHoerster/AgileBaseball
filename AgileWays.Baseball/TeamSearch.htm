@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/jquery-ui-1.8.15.custom.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/Baseball.css" type="text/css" rel="Stylesheet" />
+</head>
+<body>
+    <div id='searchAreaContainer' class='searchContainer ui-widget'>
+        <label class='searchItem' id='lblTag' for='txtTag'>Team Name:</label><input class='searchItem' type="text" id='txtTag' />
+        <label class='searchItem' id='lblYear' for='lstYear'>Year:</label><select class='searchItem' id='lstYear'></select>
+        <br />
+        <button class='searchButton' id='btnSearch'>Go!</button>
+    </div>
+    <div id='items' class='ui-widget-content'>
+    </div>
+
+    <script type="text/javascript" src="Scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.15.custom.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandleGetYearsSuccess,
+                url: "Services/AgileWays.Baseball.Service.svc/GetTeamYears?startingYear='1980'"
+            });
+            $('button').button();
+            $('h3').live('hover', (function (e) {
+                $(this).toggleClass('ui-state-hover');
+            }));
+            $('#btnSearch').click(DoTeamSearch);
+        });
+
+        function HandleGetYearsSuccess(data, textStatus) {
+            for (var i = 0; i < data.d.length; i++) {
+                $('#lstYear').append("<option value='" + data.d[i] + "'>" + data.d[i] + "</option>");
+            }
+        }
+
+        function DoTeamSearch() {
+            $('#items').empty();
+
+            //alert($('#lstYear :selected').text());
+            //alert($('#txtTag').val());
+
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                data: {
+                    year: "'" + $('#lstYear :selected').text() + "'",
+                    name: "'" + $('#txtTag').val() + "'"
+                },
+                success: HandleTeamSearchSuccess,
+                url: "Services/AgileWays.Baseball.Service.svc/GetTeamsForYearAndSearchString"
+            });
+        }
+
+        function HandleTeamSearchSuccess(data, textStatus) {
+            var itemElement = $('#items');
+            $.each(data.d.results, function (index, item) {
+                $(itemElement).append('<h3 id="' + item.teamID + '">' + item.name + ' [' + item.W + ' - ' + item.L + ']</h3>');
+            });
+            if (data.d.__next) {
+                $(itemElement).append('<br/><br/><h2><a class="nextLink" nurl="' + data.d.__next + '">NEXT...</a></h2>');
+            }
+        }
+
+    </script>
+</body>
+</html>

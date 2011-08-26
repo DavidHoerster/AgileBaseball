@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel=Stylesheet type="text/css" href="Styles/jquery-ui-1.8.15.custom.css" />
+    <style type="text/css">
+    span.salaryLabel
+    {
+        width: 150px;
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+
+    <div id='templates' style='display:none;'>
+        <div id='searchResultTemplate'>
+            <p>
+                <span id='year'></span>
+                <span id='name' class=''>First Last Name</span>
+                <span class=''>Hits: <span id='hits'></span> Doubles: <span id='doubs'></span> Triples: <span id='trips'></span> HRs: <span id='hrs'></span> Salary: <span id='sal'></span></span>
+                <span id='moreInfoSpan' style='display:none;'><button>More Info</button></span>
+            </p>
+        </div>
+    </div>
+    <div class='ui-widget ui-widget-header'>
+        <span class='salaryLabel'><label for="playerName">Name:</label></span><input type="text" id='playerName' name='playerName' /><br />
+        <span class='salaryLabel'><label for="maxSalary">Max Salary:</label></span><input type="text" id="maxSalary" name="maxSalary" /><br />
+        <span class='salaryLabel'><label for="minYear">Min Year:</label></span><input type="text" id="minYear" name="minYear" value="1980" /><br />
+        <span class='salaryLabel'><label for="minHR">Min HR's:</label></span><input type="text" id="minHR" /><br />
+        <span class='salaryLabel'><label for="min2B">Min 2B's:</label></span><input type="text" id="min2B" />
+        <button id="doSearch">Run Search</button>
+        <button id="doSearchJS">Run Search (datajs)</button>
+    </div>
+    <br />
+    <p id='urlPath'></p>
+    <br /><br />
+    <div id='nextButtonDiv' style='display:none;'><button id='nextButton'>Next Result Set</button><input type='hidden' id='nextUrl' /></div>
+    <div id='searchResults' class='ui-widget ui-widget-content'>
+    </div>
+
+    <script type="text/javascript" src="Scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.15.custom.min.js"></script>
+    <script type="text/javascript" src="Scripts/datajs-1.0.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('button').button();
+            $('#nextButton').click(function (e) {
+                e.preventDefault();
+                PerformSearch($('#nextUrl').val());
+            });
+            $('#doSearch').click(function (e) {
+                var url = GenerateSearchURL();
+                PerformSearch(url);
+            });
+            $('#doSearchJS').click(function (e) {
+                var url = GenerateSearchURL();
+                PerformSearchWithDataJS(url);
+            });
+        });
+
+        function GenerateSearchURL() {
+            //run my query against WCF Data Service
+            var url = '/services/agileways.baseball.service.svc/BatterDetails?',
+                    filter = '',
+                    $name = $('#playerName'),
+                    $salary = $('#maxSalary'),
+                    $minYear = $('#minYear'),
+                    $minHR = $('#minHR'),
+                    $min2B = $('#min2B');
+
+            if ($name.val().length > 0) {
+                filter = filter + "(startswith(nameLast,'" + $name.val() + "') eq true)";
+            }
+            if ($salary.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(salary le " + $salary.val() + ")";
+            }
+            if ($minHR.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(HR ge " + $minHR.val() + ")";
+            }
+            if ($min2B.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(Doubles ge " + $min2B.val() + ")";
+            }
+            if ($minYear.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(yearID ge " + $minYear.val() + ")";
+            }
+
+            if (filter.length > 0) {
+                url = url + '$filter=' + filter + '&';
+            }
+
+            url = url + '$orderby=salary,nameLast';
+
+            return url;
+        }
+
+        function PerformSearch(url) {
+            $('#searchResults').empty();
+
+            $('#urlPath').text(url);
+
+            $.ajax({
+                url: url,
+                type: 'GET',
+                dataType: 'json',
+                cache: false,
+                success: function (data) { HandleSalarySearchResults(data.d) },
+                error: function () { alert('boo : ' + url); }
+            });
+        }
+
+        function PerformSearchWithDataJS(url) {
+            $('#searchResults').empty();
+
+            $('#urlPath').text(url);
+
+            OData.read(url, function (data) { HandleSalarySearchResults(data); });
+        }
+
+        function HandleSalarySearchResults(data) {
+            var nextUrl,
+                resultTemplate = $('#searchResultTemplate'),
+                clonedTemplate;
+            if (data) {
+                if (data.__next) {
+                    nextUrl = data.__next;
+                    $('#nextUrl').val(nextUrl);
+                    $('#nextButtonDiv').show();
+                } else {
+                    $('#nextButtonDiv').hide();
+                }
+                $.each(data.results, function (i, val) {
+                    clonedTemplate = resultTemplate.clone();
+                    clonedTemplate.find('#name').text(val.nameFirst + ' ' + val.nameLast);
+                    clonedTemplate.find('#year').text(val.yearID);
+                    clonedTemplate.find('#hits').text(val.H);
+                    clonedTemplate.find('#doubs').text(val.Doubles);
+                    clonedTemplate.find('#trips').text(val.Triples);
+                    clonedTemplate.find('#hrs').text(val.HR);
+                    clonedTemplate.find('#sal').text(val.salary);
+                    if (val.PlayerInfo && val.PlayerInfo.__deferred) {
+                        clonedTemplate.find('#moreInfoSpan')
+                            .css('display', 'inline-block')
+                            .find('button')
+                            .click(function () { alert(val.PlayerInfo.__deferred.uri); });
+                    }
+                    $('#searchResults').append(clonedTemplate);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

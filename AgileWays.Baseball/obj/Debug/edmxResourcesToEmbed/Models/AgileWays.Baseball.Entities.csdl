@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AgileWays.Baseball.Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BaseballEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="All_Time_HR_Leaders" EntityType="AgileWays.Baseball.Model.All_Time_HR_Leader" />
+    <EntitySet Name="Battings" EntityType="AgileWays.Baseball.Model.Batting" />
+    <EntitySet Name="Birthday_Buddies" EntityType="AgileWays.Baseball.Model.Birthday_Buddy" />
+    <EntitySet Name="HallOfFames" EntityType="AgileWays.Baseball.Model.HallOfFame" />
+    <EntitySet Name="Pitchings" EntityType="AgileWays.Baseball.Model.Pitching" />
+    <EntitySet Name="Salaries" EntityType="AgileWays.Baseball.Model.Salary" />
+    <EntitySet Name="Teams" EntityType="AgileWays.Baseball.Model.Team" />
+    <EntitySet Name="TeamsFranchises" EntityType="AgileWays.Baseball.Model.TeamsFranchis" />
+    <EntitySet Name="PlayerData" EntityType="AgileWays.Baseball.Model.PlayerInfo" />
+    <AssociationSet Name="FK_Salaries_Teams" Association="AgileWays.Baseball.Model.FK_Salaries_Teams">
+      <End Role="Teams" EntitySet="Teams" />
+      <End Role="Salaries" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Teams_TeamsFranchises" Association="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises">
+      <End Role="TeamsFranchises" EntitySet="TeamsFranchises" />
+      <End Role="Teams" EntitySet="Teams" />
+    </AssociationSet>
+    <AssociationSet Name="vwPlayerBatting" Association="AgileWays.Baseball.Model.vwPlayerBatting">
+      <End Role="vwPlayer" EntitySet="PlayerData" />
+      <End Role="Batting" EntitySet="Battings" />
+    </AssociationSet>
+    <AssociationSet Name="PlayerInfoPitching" Association="AgileWays.Baseball.Model.PlayerInfoPitching">
+      <End Role="PlayerInfo" EntitySet="PlayerData" />
+      <End Role="Pitching" EntitySet="Pitchings" />
+    </AssociationSet>
+    <AssociationSet Name="PlayerInfoSalary" Association="AgileWays.Baseball.Model.PlayerInfoSalary">
+      <End Role="PlayerInfo" EntitySet="PlayerData" />
+      <End Role="Salary" EntitySet="Salaries" />
+    </AssociationSet>
+    <EntitySet Name="BatterDetails" EntityType="AgileWays.Baseball.Model.BatterDetail" />
+    <AssociationSet Name="PlayerInfoBatterDetail" Association="AgileWays.Baseball.Model.PlayerInfoBatterDetail">
+      <End Role="PlayerInfo" EntitySet="PlayerData" />
+      <End Role="BatterDetail" EntitySet="BatterDetails" />
+    </AssociationSet>
+    <EntitySet Name="PitcherDetails" EntityType="AgileWays.Baseball.Model.PitcherDetail" />
+    <AssociationSet Name="PlayerInfoPitcherDetail" Association="AgileWays.Baseball.Model.PlayerInfoPitcherDetail">
+      <End Role="PlayerInfo" EntitySet="PlayerData" />
+      <End Role="PitcherDetail" EntitySet="PitcherDetails" />
+    </AssociationSet>
+    <EntitySet Name="Allstars" EntityType="AgileWays.Baseball.Model.Allstar" />
+    <AssociationSet Name="PlayerInfoAllstar" Association="AgileWays.Baseball.Model.PlayerInfoAllstar">
+      <End Role="PlayerInfo" EntitySet="PlayerData" />
+      <End Role="Allstar" EntitySet="Allstars" />
+    </AssociationSet>
+    <EntitySet Name="AllstarWithNames" EntityType="AgileWays.Baseball.Model.AllstarWithName" />
+  </EntityContainer>
+  <EntityType Name="All_Time_HR_Leader">
+    <Key>
+      <PropertyRef Name="nameFirst" />
+      <PropertyRef Name="nameLast" />
+    </Key>
+    <Property Name="nameFirst" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nameLast" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SumOfHR" Type="Double" />
+    <Property Name="MaxOfyearID" Type="Int16" />
+  </EntityType>
+  <EntityType Name="Batting">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="stint" />
+    </Key>
+    <Property Name="playerID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="yearID" Type="Int16" Nullable="false" />
+    <Property Name="stint" Type="Int16" Nullable="false" />
+    <Property Name="teamID" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="lgID" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="G" Type="Int16" />
+    <Property Name="G_batting" Type="Int16" />
+    <Property Name="AB" Type="Int16" />
+    <Property Name="R" Type="Int16" />
+    <Property Name="H" Type="Int16" />
+    <Property Name="C2B" Type="Int16" />
+    <Property Name="C3B" Type="Int16" />
+    <Property Name="HR" Type="Int16" />
+    <Property Name="RBI" Type="Int16" />
+    <Property Name="SB" Type="Int16" />
+    <Property Name="CS" Type="Int16" />
+    <Property Name="BB" Type="Int16" />
+    <Property Name="SO" Type="Int16" />
+    <Property Name="IBB" Type="Int16" />
+    <Property Name="HBP" Type="Int16" />
+    <Property Name="SH" Type="Int16" />
+    <Property Name="SF" Type="Int16" />
+    <Property Name="GIDP" Type="Int16" />
+    <Property Name="G_old" Type="Int16" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.vwPlayerBatting" FromRole="Batting" ToRole="vwPlayer" />
+  </EntityType>
+  <EntityType Name="Birthday_Buddy">
+    <Key>
+      <PropertyRef Name="birthYear" />
+      <PropertyRef Name="birthMonth" />
+      <PropertyRef Name="birthDay" />
+      <PropertyRef Name="nameFirst" />
+      <PropertyRef Name="nameLast" />
+    </Key>
+    <Property Name="birthYear" Type="Int16" Nullable="false" />
+    <Property Name="birthMonth" Type="Int16" Nullable="false" />
+    <Property Name="birthDay" Type="Int16" Nullable="false" />
+    <Property Name="nameFirst" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nameLast" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HallOfFame">
+    <Key>
+      <PropertyRef Name="hofID" />
+      <PropertyRef Name="yearid" />
+    </Key>
+    <Property Name="hofID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="yearid" Type="Int16" Nullable="false" />
+    <Property Name="votedBy" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ballots" Type="Int16" />
+    <Property Name="needed" Type="Int16" />
+    <Property Name="votes" Type="Int16" />
+    <Property Name="inducted" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="category" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Pitching">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="stint" />
+    </Key>
+    <Property Name="playerID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="yearID" Type="Int16" Nullable="false" />
+    <Property Name="stint" Type="Int16" Nullable="false" />
+    <Property Name="teamID" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="lgID" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="W" Type="Int16" />
+    <Property Name="L" Type="Int16" />
+    <Property Name="G" Type="Int16" />
+    <Property Name="GS" Type="Int16" />
+    <Property Name="CG" Type="Int16" />
+    <Property Name="SHO" Type="Int16" />
+    <Property Name="SV" Type="Int16" />
+    <Property Name="IPouts" Type="Int32" />
+    <Property Name="H" Type="Int16" />
+    <Property Name="ER" Type="Int16" />
+    <Property Name="HR" Type="Int16" />
+    <Property Name="BB" Type="Int16" />
+    <Property Name="SO" Type="Int16" />
+    <Property Name="BAOpp" Type="Double" />
+    <Property Name="ERA" Type="Double" />
+    <Property Name="IBB" Type="Int16" />
+    <Property Name="WP" Type="Int16" />
+    <Property Name="HBP" Type="Int16" />
+    <Property Name="BK" Type="Int16" />
+    <Property Name="BFP" Type="Int16" />
+    <Property Name="GF" Type="Int16" />
+    <Property Name="R" Type="Int16" />
+    <Property Name="SH" Type="Int16" />
+    <Property Name="SF" Type="Int16" />
+    <Property Name="GIDP" Type="Int16" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitching" FromRole="Pitching" ToRole="PlayerInfo" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="teamID" />
+      <PropertyRef Name="lgID" />
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="yearID" Type="Int16" Nullable="false" />
+    <Property Name="teamID" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="lgID" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="playerID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="salary1" Type="Double" />
+    <NavigationProperty Name="Team" Relationship="AgileWays.Baseball.Model.FK_Salaries_Teams" FromRole="Salaries" ToRole="Teams" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoSalary" FromRole="Salary" ToRole="PlayerInfo" />
+  </EntityType>
+  <EntityType Name="Team">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="lgID" />
+      <PropertyRef Name="teamID" />
+    </Key>
+    <Property Name="yearID" Type="Int16" Nullable="false" />
+    <Property Name="lgID" Type="String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="teamID" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="franchID" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="divID" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Rank" Type="Int16" />
+    <Property Name="G" Type="Int16" />
+    <Property Name="Ghome" Type="Int16" />
+    <Property Name="W" Type="Int16" />
+    <Property Name="L" Type="Int16" />
+    <Property Name="DivWin" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="WCWin" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="LgWin" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="WSWin" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="R" Type="Int16" />
+    <Property Name="AB" Type="Int16" />
+    <Property Name="H" Type="Int16" />
+    <Property Name="C2B" Type="Int16" />
+    <Property Name="C3B" Type="Int16" />
+    <Property Name="HR" Type="Int16" />
+    <Property Name="BB" Type="Int16" />
+    <Property Name="SO" Type="Int16" />
+    <Property Name="SB" Type="Int16" />
+    <Property Name="CS" Type="Int16" />
+    <Property Name="HBP" Type="Int16" />
+    <Property Name="SF" Type="Int16" />
+    <Property Name="RA" Type="Int16" />
+    <Property Name="ER" Type="Int16" />
+    <Property Name="ERA" Type="Double" />
+    <Property Name="CG" Type="Int16" />
+    <Property Name="SHO" Type="Int16" />
+    <Property Name="SV" Type="Int16" />
+    <Property Name="IPouts" Type="Int32" />
+    <Property Name="HA" Type="Int16" />
+    <Property Name="HRA" Type="Int16" />
+    <Property Name="BBA" Type="Int16" />
+    <Property Name="SOA" Type="Int16" />
+    <Property Name="E" Type="Int32" />
+    <Property Name="DP" Type="Int32" />
+    <Property Name="FP" Type="Double" />
+    <Property Name="name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="park" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="attendance" Type="Int32" />
+    <Property Name="BPF" Type="Int32" />
+    <Property Name="PPF" Type="Int32" />
+    <Property Name="teamIDBR" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="teamIDlahman45" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="teamIDretro" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Salaries" Relationship="AgileWays.Baseball.Model.FK_Salaries_Teams" FromRole="Teams" ToRole="Salaries" />
+    <NavigationProperty Name="TeamsFranchis" Relationship="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises" FromRole="Teams" ToRole="TeamsFranchises" />
+  </EntityType>
+  <EntityType Name="TeamsFranchis">
+    <Key>
+      <PropertyRef Name="franchID" />
+    </Key>
+    <Property Name="franchID" Type="String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="franchName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="active" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="NAassoc" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Teams" Relationship="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises" FromRole="TeamsFranchises" ToRole="Teams" />
+  </EntityType>
+  <EntityType Name="PlayerInfo">
+    <Key>
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Name="bbrefID" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="holtzID" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="retroID" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="lahman45ID" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="lahman40ID" Type="String" MaxLength="9" Unicode="true" FixedLength="false" />
+    <Property Name="college" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="finalGame" Type="DateTime" />
+    <Property Name="debut" Type="DateTime" />
+    <Property Name="throws" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="bats" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="height" Type="Double" />
+    <Property Name="weight" Type="Int16" />
+    <Property Name="nameNick" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="nameGiven" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="nameNote" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="nameLast" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="nameFirst" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="deathCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="deathState" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="deathCountry" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="deathDay" Type="Int16" />
+    <Property Name="deathMonth" Type="Int16" />
+    <Property Name="deathYear" Type="Int16" />
+    <Property Name="birthCity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="birthState" Type="String" MaxLength="2" Unicode="true" FixedLength="false" />
+    <Property Name="birthCountry" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="birthDay" Type="Int16" />
+    <Property Name="birthMonth" Type="Int16" />
+    <Property Name="birthYear" Type="Int16" />
+    <Property Name="hofID" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="playerID" Type="String" MaxLength="10" Unicode="true" FixedLength="false" Nullable="false" />
+    <Property Name="lahmanID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BattingInfo" Relationship="AgileWays.Baseball.Model.vwPlayerBatting" FromRole="vwPlayer" ToRole="Batting" />
+    <NavigationProperty Name="PitchingInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitching" FromRole="PlayerInfo" ToRole="Pitching" />
+    <NavigationProperty Name="SalaryInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoSalary" FromRole="PlayerInfo" ToRole="Salary" />
+    <NavigationProperty Name="BatterDetails" Relationship="AgileWays.Baseball.Model.PlayerInfoBatterDetail" FromRole="PlayerInfo" ToRole="BatterDetail" />
+    <NavigationProperty Name="PitcherDetails" Relationship="AgileWays.Baseball.Model.PlayerInfoPitcherDetail" FromRole="PlayerInfo" ToRole="PitcherDetail" />
+    <NavigationProperty Name="Allstars" Relationship="AgileWays.Baseball.Model.PlayerInfoAllstar" FromRole="PlayerInfo" ToRole="Allstar" />
+  </EntityType>
+  <Association Name="FK_Salaries_Teams">
+    <End Role="Teams" Type="AgileWays.Baseball.Model.Team" Multiplicity="1" />
+    <End Role="Salaries" Type="AgileWays.Baseball.Model.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Teams">
+        <PropertyRef Name="yearID" />
+        <PropertyRef Name="lgID" />
+        <PropertyRef Name="teamID" />
+      </Principal>
+      <Dependent Role="Salaries">
+        <PropertyRef Name="yearID" />
+        <PropertyRef Name="lgID" />
+        <PropertyRef Name="teamID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Teams_TeamsFranchises">
+    <End Role="TeamsFranchises" Type="AgileWays.Baseball.Model.TeamsFranchis" Multiplicity="0..1" />
+    <End Role="Teams" Type="AgileWays.Baseball.Model.Team" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TeamsFranchises">
+        <PropertyRef Name="franchID" />
+      </Principal>
+      <Dependent Role="Teams">
+        <PropertyRef Name="franchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="vwPlayerBatting">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="vwPlayer" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.Batting" Role="Batting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="vwPlayer">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="Batting">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlayerInfoPitching">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="PlayerInfo" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.Pitching" Role="Pitching" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlayerInfo">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="Pitching">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlayerInfoSalary">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="PlayerInfo" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.Salary" Role="Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlayerInfo">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="BatterDetail">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+    </Key>
+    <Property Type="String" Name="playerID" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="String" Name="nameFirst" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nameLast" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="yearID" Nullable="false" />
+    <Property Type="String" Name="teamID" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="String" Name="TeamName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="salary" />
+    <Property Type="Int16" Name="G" />
+    <Property Type="Int16" Name="AB" />
+    <Property Type="Int16" Name="R" />
+    <Property Type="Int16" Name="H" />
+    <Property Type="Int16" Name="Doubles" />
+    <Property Type="Int16" Name="Triples" />
+    <Property Type="Int16" Name="HR" />
+    <Property Type="Int16" Name="RBI" />
+    <Property Type="Int16" Name="SB" />
+    <Property Type="Int16" Name="BB" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoBatterDetail" FromRole="BatterDetail" ToRole="PlayerInfo" />
+  </EntityType>
+  <Association Name="PlayerInfoBatterDetail">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="PlayerInfo" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.BatterDetail" Role="BatterDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlayerInfo">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="BatterDetail">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PitcherDetail">
+    <Key>
+      <PropertyRef Name="yearID" />
+      <PropertyRef Name="playerID" />
+    </Key>
+    <Property Type="String" Name="playerID" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Type="String" Name="nameFirst" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nameLast" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="yearID" Nullable="false" />
+    <Property Type="String" Name="teamID" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TeamName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="salary" />
+    <Property Type="Int16" Name="G" />
+    <Property Type="Int32" Name="IP" />
+    <Property Type="Int16" Name="W" />
+    <Property Type="Int16" Name="L" />
+    <Property Type="Int16" Name="SV" />
+    <Property Type="Int16" Name="CG" />
+    <Property Type="Int16" Name="SO" />
+    <Property Type="Int16" Name="SHO" />
+    <Property Type="Int16" Name="BB" />
+    <Property Type="Double" Name="ERA" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitcherDetail" FromRole="PitcherDetail" ToRole="PlayerInfo" />
+  </EntityType>
+  <Association Name="PlayerInfoPitcherDetail">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="PlayerInfo" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.PitcherDetail" Role="PitcherDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlayerInfo">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="PitcherDetail">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Allstar">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+    </Key>
+    <Property Type="String" Name="playerID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="yearID" Nullable="false" />
+    <Property Type="String" Name="lgID" MaxLength="2" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoAllstar" FromRole="Allstar" ToRole="PlayerInfo" />
+  </EntityType>
+  <Association Name="PlayerInfoAllstar">
+    <End Type="AgileWays.Baseball.Model.PlayerInfo" Role="PlayerInfo" Multiplicity="1" />
+    <End Type="AgileWays.Baseball.Model.Allstar" Role="Allstar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PlayerInfo">
+        <PropertyRef Name="playerID" />
+      </Principal>
+      <Dependent Role="Allstar">
+        <PropertyRef Name="playerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="AllstarWithName">
+    <Key>
+      <PropertyRef Name="playerID" />
+      <PropertyRef Name="yearID" />
+    </Key>
+    <Property Type="String" Name="playerID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nameFirst" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nameLast" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="yearID" Nullable="false" />
+    <Property Type="String" Name="lgID" MaxLength="2" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

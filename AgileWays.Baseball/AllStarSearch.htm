@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/jqueryUI.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/Baseball.css" type="text/css" rel="Stylesheet" />
+</head>
+<body>
+    <div id='searchAreaContainer' class='ui-widget'>
+        <label class='searchItem' id='lblYear' for='lstYear'>Year:</label><select class='searchItem' id='lstYear'></select>
+        <br />
+        <button class='searchButton' id='btnSearch'>Go!</button>
+    </div>
+    <div id='items' class='ui-widget-content'>
+    </div>
+    <div id='dialogForm'>
+        <input type="hidden" id="hidPID" />
+        <label class='searchItem' id='lblNewLeague' for='txtLg'>New League:</label><input type="text" id='txtLg' />
+    </div>
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.ui.1.8.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/datajs-1.0.1.js"></script>
+    <script type="text/javascript">
+
+        //document ready which prepares the form
+        //  sets up the modal dialog, gets team years from 1980 and sets up live events
+
+        //var resultsData;
+        $(document).ready(function () {
+            var dialog = $("#dialogForm").dialog({
+                autoOpen: false,
+                height: 300,
+                width: 450,
+                modal: true,
+                title: "Change AllStar League",
+                buttons: {
+                    'Close': function () { $(this).dialog('close'); },
+                    'Change': function () { StartChangeLeagueWithDataJS($('#hidPID').val(), $('#txtLg').val()); }
+                }
+            });
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandleGetYearsSuccess,
+                url: "Services/AgileWays.Baseball.Service.svc/GetTeamYears?startingYear=1980"
+            });
+            $('#btnSearch').click(DoTagSearch);
+            $('.listButton-AllStar').live('click', function () { ChangeLeague($(this).attr('id')); });
+            $('.nextLink').live('click', function (e) { e.preventDefault(); RunAllStarSearch($(this).attr('nurl')); });
+        });
+
+
+        //function called when the ajax call from getting team years succeeds
+        //   populates a list box, that's all.
+        function HandleGetYearsSuccess(data, textStatus) {
+            for (var i = 0; i < data.d.length; i++) {
+                $('#lstYear').append("<option value='" + data.d[i] + "'>" + data.d[i] + "</option>");
+            }
+        }
+
+
+        //shows the dialog when the user clicks on the 'change league' button
+        function ShowChanger(e) {
+            e.preventDefault();
+            $('#dialogForm').dialog('open');
+        }
+
+
+        //performs the search for allstars when the user clicks the GO button
+        function DoTagSearch(e) {
+            e.preventDefault();
+            RunAllStarSearch("Services/AgileWays.Baseball.Service.svc/AllstarWithNames?$orderby=lgID&$filter=yearID eq " + $('#lstYear :selected').text());
+        }
+
+
+        //central search function that performs the ajax call for getting allstars for a certain year
+        function RunAllStarSearch(url) {
+            $('#items').empty();
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandleSearchSuccess,
+                url: url
+            });
+        }
+
+        //function called when allstar search succeeds and the grid is built
+        function HandleSearchSuccess(data, textStatus) {
+            //resultsData = data;
+            var itemElement = $('#items'),
+                allstarData = {};
+            $.each(data.d.results, function (index, item) {
+                $(itemElement).append('<h3 id="' + item.playerID + '">' + item.lgID + ' :: ' + item.nameFirst + ' ' + item.nameLast + '<button class="listButton listButton-AllStar" id="' + item.playerID + '">Change League</button></h3>');
+            });
+            if (data.d.__next) {
+                $(itemElement).append('<br/><br/><h2><button class="nextLink" nurl="' + data.d.__next + '">NEXT...</button></h2>');
+            }
+        }
+
+
+        //opens the change league dialog modal
+        function ChangeLeague(pID) {
+            $('#hidPID').val(pID);
+            var dialog = $('#dialogForm').dialog('open');
+        }
+
+
+        //called when the user clicks 'change' on the modal to change the league the all star is associated with
+        function StartChangeLeague(pID, newLgID) {
+            var editUrl = "Services/AgileWays.Baseball.Service.svc/Allstars(playerID='" + pID + "',yearID=" + $('#lstYear :selected').text() + ")";
+
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                type: 'PUT',    //MERGE not supported here!
+                contentType: 'application/json',
+                processData: false,
+                error: function (x, t, e) { alert("Error -- " + x.status + " " + x.responseText); },
+                data: '{"yearID": ' + $('#lstYear :selected').text() + ',"lgID": "' + newLgID + '","playerID":"' + pID + '"}',
+                url: editUrl,
+                success: HandleChangeLeagueSuccess
+            });
+        }
+
+        function StartChangeLeagueWithDataJS(pID, newLgID) {
+            var editUrl = "Services/AgileWays.Baseball.Service.svc/Allstars(playerID='" + pID + "',yearID=" + $('#lstYear :selected').text() + ")";
+            OData.request({
+                requestUri: editUrl,
+                method: 'MERGE',
+                data: { yearID: $('#lstYear :selected').text(),
+                    lgID: newLgID,
+                    playerID: pID
+                }
+            },
+            HandleChangeLeagueSuccess,
+            function (x, t, e) { alert("Error -- " + x.message + " " + x.responseText); });
+        }
+
+        //re-runs the allstar search for a league once the league change event happens.
+        // calls the central search function again
+        function HandleChangeLeagueSuccess(data, textStatus) {
+            $('#dialogForm').dialog('close');
+            RunAllStarSearch("Services/AgileWays.Baseball.Service.svc/AllstarWithNames?$orderby=lgID&$filter=yearID eq " + $('#lstYear :selected').text());
+        }
+    </script>
+</body>
+</html>

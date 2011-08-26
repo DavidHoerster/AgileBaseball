@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/jqueryUI.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/Baseball.css" type="text/css" rel="Stylesheet" />
+</head>
+<body>
+
+    <div id='searchAreaContainer' class='ui-widget'>
+        <label id='lblTag' for='txtTag'>Player Name:</label><input type="text" id='txtTag' /><button id='btnSearch'>Go!</button>
+    </div>
+    <div id='items' class='ui-widget-content'>
+    </div>
+
+    <div id='dialogBatter'>
+    </div>
+
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.ui.1.8.1.min.js"></script>
+    <script type="text/javascript">
+
+        //document.ready -- prepare the form
+        $(document).ready(function () {
+            $('#btnSearch').click(DoTagSearch);
+            $('.listButton-Batting').live('click', function () { GetBatterDetails($(this).attr('url')); });
+            $('.listButton-Pitching').live('click', function () { GetPitcherDetails($(this).attr('url')); });
+            $('.listButton-HOF').live('click', function() { GetHOFDetails($(this).attr('hof')); });
+            $('.nextLink').live('click', function (e) { e.preventDefault(); RunSearch($(this).attr('nurl')); });
+        });
+
+
+        //perform the Player Name Search...calls central function
+        function DoTagSearch(e) {
+            e.preventDefault();
+            RunSearch("Services/AgileWays.Baseball.Service.svc/DoPlayerSearch?name='" + $('#txtTag').val() + "'&$orderby=birthYear");
+        }
+
+        //central player search ajax call...on success it goes to HandleSearchSuccess
+        function RunSearch(url) {
+            $('#items').empty();
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandleSearchSuccess,
+                url: url
+            });
+        }
+
+
+        //function that gets the search results, clears the grid and builds the results
+        //  also adds a NEXT button and pulls the next url if it exists
+        function HandleSearchSuccess(data, textStatus) {
+            var itemElement = $('#items'),
+                lineItem;
+            $.each(data.d.results, function (index, item) {
+                lineItem = '<h3 id="' + item.playerID + '">' + item.nameGiven + ' ' + item.nameLast + '<button class="listButton listButton-Batting" id="bat_' + item.playerID + '" url="' + item.BatterDetails.__deferred.uri + '">Batting</button><button class="listButton listButton-Pitching" id="pit_' + item.playerID + '" url="' + item.PitcherDetails.__deferred.uri + '">Pitching</button>';
+                if (item.hofID) {
+                    lineItem += '<button id="hof_' + item.hofID + '" hof="' + item.hofID + '" class="listButton listButton-HOF">Hall Of Fame</button>';
+                }
+                lineItem += '</h3>';
+                $(itemElement).append(lineItem);
+            });
+            if (data.d.__next) {
+                $(itemElement).append('<br/><br/><h2><button class="nextLink" nurl="' + data.d.__next + '">NEXT...</button></h2>');
+            }
+        }
+
+
+        //this is called when the user clicks the 'Batting' button, which calls the service method
+        //  on success calls HandleBatterDetailsSuccess, which displays the modal
+        function GetBatterDetails(url) {
+            $('#dialogBatter').empty();
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandleBatterDetailsSuccess,
+                url: url
+            });
+        }
+
+        //this is called when the user clicks the 'Pitching' button, which calls the service method
+        //  on success calls HandlePitcherDetailsSuccess, which displays the modal
+        function GetPitcherDetails(url) {
+            $('#dialogBatter').empty();
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                success: HandlePitcherDetailsSuccess,
+                url: url
+            });
+        }
+
+
+        //this is called when the user clicks the 'Hall Of Fame' button, which calls the service method
+        //  on success calls HandleHOFDetailsSuccess, which displays the modal
+        function GetHOFDetails(hofID) {
+            $('#dialogBatter').empty();
+            $.ajax({
+                cache: false,
+                dataType: 'json',
+                error: function (x, t, e) { alert("Error -- " + t); },
+                type: 'GET',
+                data: {
+                    hofID: "'" + hofID + "'"
+                },
+                success: HandleHOFDetailsSuccess,
+                url: 'Services/AgileWays.Baseball.Service.svc/GetHOFInfo'
+            });
+        }
+
+
+        //displays the modal with batter information by year
+        function HandleBatterDetailsSuccess(data, textStatus) {
+            var msg = $('<table><thead><td>Team</td><td>Year</td><td>G</td><td>AB</td><td>H</td><td>HR</td><td>RBI</td><td>Salary</td></thead></table>'),
+                fullName;
+            $('#dialogBatter').dialog('destroy');
+            $.each(data.d.results, function (index, item) {
+                $(msg).append("<tr><td>" + item.TeamName + "</td><td>" + item.yearID + "</td><td>" + item.G + "</td><td>" + item.AB + "</td><td>" + item.H + "</td><td>" + item.HR + "</td><td>" + item.RBI + "</td><td>" + item.salary + "</td></tr>");
+                fullName = item.nameFirst + " " + item.nameLast;
+            });
+            $('#dialogBatter').append('<table>' + $(msg).html() + '</table>');
+            $('#dialogBatter').dialog({
+                buttons: { "Close": function () { $(this).dialog('close'); } },
+                title: "Batting Details for " + fullName,
+                width: 600,
+                height: 500
+            }); 
+        }
+
+        //displays the modal with pitcher information by year
+        function HandlePitcherDetailsSuccess(data, textStatus) {
+            var msg = $('<table><thead><td>Team</td><td>Year</td><td>G</td><td>IP</td><td>W</td><td>L</td><td>SV</td><td>ERA</td><td>Salary</td></thead></table>'),
+                fullName;
+            $('#dialogBatter').dialog('destroy');
+            $.each(data.d.results, function (index, item) {
+                $(msg).append("<tr><td>" + item.TeamName + "</td><td>" + item.yearID + "</td><td>" + item.G + "</td><td>" + item.IP + "</td><td>" + item.W + "</td><td>" + item.L + "</td><td>" + item.SV + "</td><td>" + item.ERA + "</td><td>" + item.salary + "</td></tr>");
+                fullName = item.nameFirst + " " + item.nameLast;
+            });
+            $('#dialogBatter').append('<table>' + $(msg).html() + '</table>');
+            $('#dialogBatter').dialog({
+                buttons: { "Close": function () { $(this).dialog('close'); } },
+                title: "Pitching Details for " + fullName,
+                width: 600,
+                height: 500
+            });
+        }
+
+        //displays the modal with HOF information by year of voting
+        function HandleHOFDetailsSuccess(data, textStatus) {
+            var msg = $('<table><thead><td>Year</td><td>Ballots</td><td>Needed</td><td>Votes</td><td>Inducted</td></thead></table>');
+            $('#dialogBatter').dialog('destroy');
+            $.each(data.d.results, function (index, item) {
+                $(msg).append("<tr><td>" + item.yearid + "</td><td>" + item.ballots + "</td><td>" + item.needed + "</td><td>" + item.votes + "</td><td>" + item.inducted + "</td></tr>");
+            });
+            $('#dialogBatter').append('<table>' + $(msg).html() + '</table>');
+            $('#dialogBatter').dialog({
+                buttons: { "Close": function () { $(this).dialog('close'); } },
+                title: "Hall of Fame Voting Details",
+                width: 600,
+                height: 500
+            });
+        }
+    </script>
+</body>
+</html>

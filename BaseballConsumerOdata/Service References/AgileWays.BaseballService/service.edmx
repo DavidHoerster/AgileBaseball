@@ -1,0 +1,479 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="AgileWays.Baseball.Model" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityType Name="All_Time_HR_Leader">
+        <Key>
+          <PropertyRef Name="nameFirst" />
+          <PropertyRef Name="nameLast" />
+        </Key>
+        <Property Name="nameFirst" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="SumOfHR" Type="Edm.Double" Nullable="true" />
+        <Property Name="MaxOfyearID" Type="Edm.Int16" Nullable="true" />
+      </EntityType>
+      <EntityType Name="Batting">
+        <Key>
+          <PropertyRef Name="playerID" />
+          <PropertyRef Name="yearID" />
+          <PropertyRef Name="stint" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="stint" Type="Edm.Int16" Nullable="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="G" Type="Edm.Int16" Nullable="true" />
+        <Property Name="G_batting" Type="Edm.Int16" Nullable="true" />
+        <Property Name="AB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="R" Type="Edm.Int16" Nullable="true" />
+        <Property Name="H" Type="Edm.Int16" Nullable="true" />
+        <Property Name="C2B" Type="Edm.Int16" Nullable="true" />
+        <Property Name="C3B" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HR" Type="Edm.Int16" Nullable="true" />
+        <Property Name="RBI" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="CS" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="IBB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HBP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SH" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SF" Type="Edm.Int16" Nullable="true" />
+        <Property Name="GIDP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="G_old" Type="Edm.Int16" Nullable="true" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.vwPlayerBatting" FromRole="Batting" ToRole="vwPlayer" />
+      </EntityType>
+      <EntityType Name="Birthday_Buddy">
+        <Key>
+          <PropertyRef Name="birthYear" />
+          <PropertyRef Name="birthMonth" />
+          <PropertyRef Name="birthDay" />
+          <PropertyRef Name="nameFirst" />
+          <PropertyRef Name="nameLast" />
+        </Key>
+        <Property Name="birthYear" Type="Edm.Int16" Nullable="false" />
+        <Property Name="birthMonth" Type="Edm.Int16" Nullable="false" />
+        <Property Name="birthDay" Type="Edm.Int16" Nullable="false" />
+        <Property Name="nameFirst" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="HallOfFame">
+        <Key>
+          <PropertyRef Name="hofID" />
+          <PropertyRef Name="yearid" />
+        </Key>
+        <Property Name="hofID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="yearid" Type="Edm.Int16" Nullable="false" />
+        <Property Name="votedBy" Type="Edm.String" Nullable="true" MaxLength="64" Unicode="true" FixedLength="false" />
+        <Property Name="ballots" Type="Edm.Int16" Nullable="true" />
+        <Property Name="needed" Type="Edm.Int16" Nullable="true" />
+        <Property Name="votes" Type="Edm.Int16" Nullable="true" />
+        <Property Name="inducted" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="category" Type="Edm.String" Nullable="true" MaxLength="20" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <EntityType Name="Pitching">
+        <Key>
+          <PropertyRef Name="playerID" />
+          <PropertyRef Name="yearID" />
+          <PropertyRef Name="stint" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="stint" Type="Edm.Int16" Nullable="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="W" Type="Edm.Int16" Nullable="true" />
+        <Property Name="L" Type="Edm.Int16" Nullable="true" />
+        <Property Name="G" Type="Edm.Int16" Nullable="true" />
+        <Property Name="GS" Type="Edm.Int16" Nullable="true" />
+        <Property Name="CG" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SHO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SV" Type="Edm.Int16" Nullable="true" />
+        <Property Name="IPouts" Type="Edm.Int32" Nullable="true" />
+        <Property Name="H" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ER" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HR" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BAOpp" Type="Edm.Double" Nullable="true" />
+        <Property Name="ERA" Type="Edm.Double" Nullable="true" />
+        <Property Name="IBB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="WP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HBP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BK" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BFP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="GF" Type="Edm.Int16" Nullable="true" />
+        <Property Name="R" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SH" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SF" Type="Edm.Int16" Nullable="true" />
+        <Property Name="GIDP" Type="Edm.Int16" Nullable="true" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitching" FromRole="Pitching" ToRole="PlayerInfo" />
+      </EntityType>
+      <EntityType Name="Salary">
+        <Key>
+          <PropertyRef Name="yearID" />
+          <PropertyRef Name="teamID" />
+          <PropertyRef Name="lgID" />
+          <PropertyRef Name="playerID" />
+        </Key>
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="salary1" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="Team" Relationship="AgileWays.Baseball.Model.FK_Salaries_Teams" FromRole="Salaries" ToRole="Teams" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoSalary" FromRole="Salary" ToRole="PlayerInfo" />
+      </EntityType>
+      <EntityType Name="Team">
+        <Key>
+          <PropertyRef Name="yearID" />
+          <PropertyRef Name="lgID" />
+          <PropertyRef Name="teamID" />
+        </Key>
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="false" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="franchID" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="divID" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="Rank" Type="Edm.Int16" Nullable="true" />
+        <Property Name="G" Type="Edm.Int16" Nullable="true" />
+        <Property Name="Ghome" Type="Edm.Int16" Nullable="true" />
+        <Property Name="W" Type="Edm.Int16" Nullable="true" />
+        <Property Name="L" Type="Edm.Int16" Nullable="true" />
+        <Property Name="DivWin" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="WCWin" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="LgWin" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="WSWin" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="R" Type="Edm.Int16" Nullable="true" />
+        <Property Name="AB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="H" Type="Edm.Int16" Nullable="true" />
+        <Property Name="C2B" Type="Edm.Int16" Nullable="true" />
+        <Property Name="C3B" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HR" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="CS" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HBP" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SF" Type="Edm.Int16" Nullable="true" />
+        <Property Name="RA" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ER" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ERA" Type="Edm.Double" Nullable="true" />
+        <Property Name="CG" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SHO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SV" Type="Edm.Int16" Nullable="true" />
+        <Property Name="IPouts" Type="Edm.Int32" Nullable="true" />
+        <Property Name="HA" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HRA" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BBA" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SOA" Type="Edm.Int16" Nullable="true" />
+        <Property Name="E" Type="Edm.Int32" Nullable="true" />
+        <Property Name="DP" Type="Edm.Int32" Nullable="true" />
+        <Property Name="FP" Type="Edm.Double" Nullable="true" />
+        <Property Name="name" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="park" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="attendance" Type="Edm.Int32" Nullable="true" />
+        <Property Name="BPF" Type="Edm.Int32" Nullable="true" />
+        <Property Name="PPF" Type="Edm.Int32" Nullable="true" />
+        <Property Name="teamIDBR" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="teamIDlahman45" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="teamIDretro" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="Salaries" Relationship="AgileWays.Baseball.Model.FK_Salaries_Teams" FromRole="Teams" ToRole="Salaries" />
+        <NavigationProperty Name="TeamsFranchis" Relationship="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises" FromRole="Teams" ToRole="TeamsFranchises" />
+      </EntityType>
+      <EntityType Name="TeamsFranchis">
+        <Key>
+          <PropertyRef Name="franchID" />
+        </Key>
+        <Property Name="franchID" Type="Edm.String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="franchName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="active" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="NAassoc" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="Teams" Relationship="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises" FromRole="TeamsFranchises" ToRole="Teams" />
+      </EntityType>
+      <EntityType Name="PlayerInfo">
+        <Key>
+          <PropertyRef Name="playerID" />
+        </Key>
+        <Property Name="bbrefID" Type="Edm.String" Nullable="true" MaxLength="9" Unicode="true" FixedLength="false" />
+        <Property Name="holtzID" Type="Edm.String" Nullable="true" MaxLength="9" Unicode="true" FixedLength="false" />
+        <Property Name="retroID" Type="Edm.String" Nullable="true" MaxLength="9" Unicode="true" FixedLength="false" />
+        <Property Name="lahman45ID" Type="Edm.String" Nullable="true" MaxLength="9" Unicode="true" FixedLength="false" />
+        <Property Name="lahman40ID" Type="Edm.String" Nullable="true" MaxLength="9" Unicode="true" FixedLength="false" />
+        <Property Name="college" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="finalGame" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="debut" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="throws" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="bats" Type="Edm.String" Nullable="true" MaxLength="1" Unicode="true" FixedLength="false" />
+        <Property Name="height" Type="Edm.Double" Nullable="true" />
+        <Property Name="weight" Type="Edm.Int16" Nullable="true" />
+        <Property Name="nameNick" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="nameGiven" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="nameNote" Type="Edm.String" Nullable="true" MaxLength="255" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameFirst" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="deathCity" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="deathState" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="deathCountry" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="deathDay" Type="Edm.Int16" Nullable="true" />
+        <Property Name="deathMonth" Type="Edm.Int16" Nullable="true" />
+        <Property Name="deathYear" Type="Edm.Int16" Nullable="true" />
+        <Property Name="birthCity" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="birthState" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <Property Name="birthCountry" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="birthDay" Type="Edm.Int16" Nullable="true" />
+        <Property Name="birthMonth" Type="Edm.Int16" Nullable="true" />
+        <Property Name="birthYear" Type="Edm.Int16" Nullable="true" />
+        <Property Name="hofID" Type="Edm.String" Nullable="true" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="lahmanID" Type="Edm.Int32" Nullable="false" />
+        <NavigationProperty Name="BattingInfo" Relationship="AgileWays.Baseball.Model.vwPlayerBatting" FromRole="vwPlayer" ToRole="Batting" />
+        <NavigationProperty Name="PitchingInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitching" FromRole="PlayerInfo" ToRole="Pitching" />
+        <NavigationProperty Name="SalaryInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoSalary" FromRole="PlayerInfo" ToRole="Salary" />
+        <NavigationProperty Name="BatterDetails" Relationship="AgileWays.Baseball.Model.PlayerInfoBatterDetail" FromRole="PlayerInfo" ToRole="BatterDetail" />
+        <NavigationProperty Name="PitcherDetails" Relationship="AgileWays.Baseball.Model.PlayerInfoPitcherDetail" FromRole="PlayerInfo" ToRole="PitcherDetail" />
+        <NavigationProperty Name="Allstars" Relationship="AgileWays.Baseball.Model.PlayerInfoAllstar" FromRole="PlayerInfo" ToRole="Allstar" />
+      </EntityType>
+      <EntityType Name="BatterDetail">
+        <Key>
+          <PropertyRef Name="playerID" />
+          <PropertyRef Name="yearID" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="nameFirst" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="false" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="TeamName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="salary" Type="Edm.Double" Nullable="true" />
+        <Property Name="G" Type="Edm.Int16" Nullable="true" />
+        <Property Name="AB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="R" Type="Edm.Int16" Nullable="true" />
+        <Property Name="H" Type="Edm.Int16" Nullable="true" />
+        <Property Name="Doubles" Type="Edm.Int16" Nullable="true" />
+        <Property Name="Triples" Type="Edm.Int16" Nullable="true" />
+        <Property Name="HR" Type="Edm.Int16" Nullable="true" />
+        <Property Name="RBI" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BB" Type="Edm.Int16" Nullable="true" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoBatterDetail" FromRole="BatterDetail" ToRole="PlayerInfo" />
+      </EntityType>
+      <EntityType Name="PitcherDetail">
+        <Key>
+          <PropertyRef Name="yearID" />
+          <PropertyRef Name="playerID" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="nameFirst" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="teamID" Type="Edm.String" Nullable="true" MaxLength="3" Unicode="true" FixedLength="false" />
+        <Property Name="TeamName" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="salary" Type="Edm.Double" Nullable="true" />
+        <Property Name="G" Type="Edm.Int16" Nullable="true" />
+        <Property Name="IP" Type="Edm.Int32" Nullable="true" />
+        <Property Name="W" Type="Edm.Int16" Nullable="true" />
+        <Property Name="L" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SV" Type="Edm.Int16" Nullable="true" />
+        <Property Name="CG" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="SHO" Type="Edm.Int16" Nullable="true" />
+        <Property Name="BB" Type="Edm.Int16" Nullable="true" />
+        <Property Name="ERA" Type="Edm.Double" Nullable="true" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoPitcherDetail" FromRole="PitcherDetail" ToRole="PlayerInfo" />
+      </EntityType>
+      <EntityType Name="Allstar">
+        <Key>
+          <PropertyRef Name="playerID" />
+          <PropertyRef Name="yearID" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+        <NavigationProperty Name="PlayerInfo" Relationship="AgileWays.Baseball.Model.PlayerInfoAllstar" FromRole="Allstar" ToRole="PlayerInfo" />
+      </EntityType>
+      <EntityType Name="AllstarWithName">
+        <Key>
+          <PropertyRef Name="playerID" />
+          <PropertyRef Name="yearID" />
+        </Key>
+        <Property Name="playerID" Type="Edm.String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        <Property Name="nameFirst" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="nameLast" Type="Edm.String" Nullable="true" MaxLength="50" Unicode="true" FixedLength="false" />
+        <Property Name="yearID" Type="Edm.Int16" Nullable="false" />
+        <Property Name="lgID" Type="Edm.String" Nullable="true" MaxLength="2" Unicode="true" FixedLength="false" />
+      </EntityType>
+      <Association Name="FK_Salaries_Teams">
+        <End Role="Teams" Type="AgileWays.Baseball.Model.Team" Multiplicity="1" />
+        <End Role="Salaries" Type="AgileWays.Baseball.Model.Salary" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="Teams">
+            <PropertyRef Name="yearID" />
+            <PropertyRef Name="lgID" />
+            <PropertyRef Name="teamID" />
+          </Principal>
+          <Dependent Role="Salaries">
+            <PropertyRef Name="yearID" />
+            <PropertyRef Name="lgID" />
+            <PropertyRef Name="teamID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="FK_Teams_TeamsFranchises">
+        <End Role="TeamsFranchises" Type="AgileWays.Baseball.Model.TeamsFranchis" Multiplicity="0..1" />
+        <End Role="Teams" Type="AgileWays.Baseball.Model.Team" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="TeamsFranchises">
+            <PropertyRef Name="franchID" />
+          </Principal>
+          <Dependent Role="Teams">
+            <PropertyRef Name="franchID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="vwPlayerBatting">
+        <End Role="vwPlayer" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="Batting" Type="AgileWays.Baseball.Model.Batting" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="vwPlayer">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="Batting">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerInfoPitching">
+        <End Role="PlayerInfo" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="Pitching" Type="AgileWays.Baseball.Model.Pitching" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PlayerInfo">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="Pitching">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerInfoSalary">
+        <End Role="PlayerInfo" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="Salary" Type="AgileWays.Baseball.Model.Salary" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PlayerInfo">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="Salary">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerInfoBatterDetail">
+        <End Role="PlayerInfo" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="BatterDetail" Type="AgileWays.Baseball.Model.BatterDetail" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PlayerInfo">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="BatterDetail">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerInfoPitcherDetail">
+        <End Role="PlayerInfo" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="PitcherDetail" Type="AgileWays.Baseball.Model.PitcherDetail" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PlayerInfo">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="PitcherDetail">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="PlayerInfoAllstar">
+        <End Role="PlayerInfo" Type="AgileWays.Baseball.Model.PlayerInfo" Multiplicity="1" />
+        <End Role="Allstar" Type="AgileWays.Baseball.Model.Allstar" Multiplicity="*" />
+        <ReferentialConstraint>
+          <Principal Role="PlayerInfo">
+            <PropertyRef Name="playerID" />
+          </Principal>
+          <Dependent Role="Allstar">
+            <PropertyRef Name="playerID" />
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+    <Schema Namespace="AgileWays.Baseball.Models" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="BaseballEntities" p7:LazyLoadingEnabled="true" m:IsDefaultEntityContainer="true" xmlns:p7="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <FunctionImport Name="DoPlayerSearch" EntitySet="PlayerData" ReturnType="Collection(AgileWays.Baseball.Model.PlayerInfo)" m:HttpMethod="GET">
+          <Parameter Name="name" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetHOFInfo" EntitySet="HallOfFames" ReturnType="Collection(AgileWays.Baseball.Model.HallOfFame)" m:HttpMethod="GET">
+          <Parameter Name="hofID" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetTeamYears" ReturnType="Collection(Edm.String)" m:HttpMethod="GET">
+          <Parameter Name="startingYear" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetTeamsForYearAndSearchString" EntitySet="Teams" ReturnType="Collection(AgileWays.Baseball.Model.Team)" m:HttpMethod="GET">
+          <Parameter Name="year" Type="Edm.String" Mode="In" />
+          <Parameter Name="name" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetAllTimeHomerLeaders" EntitySet="All_Time_HR_Leaders" ReturnType="Collection(AgileWays.Baseball.Model.All_Time_HR_Leader)" m:HttpMethod="GET">
+          <Parameter Name="count" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetBatterDetails" EntitySet="BatterDetails" ReturnType="Collection(AgileWays.Baseball.Model.BatterDetail)" m:HttpMethod="GET">
+          <Parameter Name="playerID" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <FunctionImport Name="GetPitcherDetails" EntitySet="PitcherDetails" ReturnType="Collection(AgileWays.Baseball.Model.PitcherDetail)" m:HttpMethod="GET">
+          <Parameter Name="playerID" Type="Edm.String" Mode="In" />
+        </FunctionImport>
+        <EntitySet Name="All_Time_HR_Leaders" EntityType="AgileWays.Baseball.Model.All_Time_HR_Leader" />
+        <EntitySet Name="Battings" EntityType="AgileWays.Baseball.Model.Batting" />
+        <EntitySet Name="Birthday_Buddies" EntityType="AgileWays.Baseball.Model.Birthday_Buddy" />
+        <EntitySet Name="HallOfFames" EntityType="AgileWays.Baseball.Model.HallOfFame" />
+        <EntitySet Name="Pitchings" EntityType="AgileWays.Baseball.Model.Pitching" />
+        <EntitySet Name="Salaries" EntityType="AgileWays.Baseball.Model.Salary" />
+        <EntitySet Name="Teams" EntityType="AgileWays.Baseball.Model.Team" />
+        <EntitySet Name="TeamsFranchises" EntityType="AgileWays.Baseball.Model.TeamsFranchis" />
+        <EntitySet Name="PlayerData" EntityType="AgileWays.Baseball.Model.PlayerInfo" />
+        <EntitySet Name="BatterDetails" EntityType="AgileWays.Baseball.Model.BatterDetail" />
+        <EntitySet Name="PitcherDetails" EntityType="AgileWays.Baseball.Model.PitcherDetail" />
+        <EntitySet Name="Allstars" EntityType="AgileWays.Baseball.Model.Allstar" />
+        <EntitySet Name="AllstarWithNames" EntityType="AgileWays.Baseball.Model.AllstarWithName" />
+        <AssociationSet Name="FK_Salaries_Teams" Association="AgileWays.Baseball.Model.FK_Salaries_Teams">
+          <End Role="Teams" EntitySet="Teams" />
+          <End Role="Salaries" EntitySet="Salaries" />
+        </AssociationSet>
+        <AssociationSet Name="FK_Teams_TeamsFranchises" Association="AgileWays.Baseball.Model.FK_Teams_TeamsFranchises">
+          <End Role="TeamsFranchises" EntitySet="TeamsFranchises" />
+          <End Role="Teams" EntitySet="Teams" />
+        </AssociationSet>
+        <AssociationSet Name="vwPlayerBatting" Association="AgileWays.Baseball.Model.vwPlayerBatting">
+          <End Role="vwPlayer" EntitySet="PlayerData" />
+          <End Role="Batting" EntitySet="Battings" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerInfoPitching" Association="AgileWays.Baseball.Model.PlayerInfoPitching">
+          <End Role="PlayerInfo" EntitySet="PlayerData" />
+          <End Role="Pitching" EntitySet="Pitchings" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerInfoSalary" Association="AgileWays.Baseball.Model.PlayerInfoSalary">
+          <End Role="PlayerInfo" EntitySet="PlayerData" />
+          <End Role="Salary" EntitySet="Salaries" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerInfoBatterDetail" Association="AgileWays.Baseball.Model.PlayerInfoBatterDetail">
+          <End Role="PlayerInfo" EntitySet="PlayerData" />
+          <End Role="BatterDetail" EntitySet="BatterDetails" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerInfoPitcherDetail" Association="AgileWays.Baseball.Model.PlayerInfoPitcherDetail">
+          <End Role="PlayerInfo" EntitySet="PlayerData" />
+          <End Role="PitcherDetail" EntitySet="PitcherDetails" />
+        </AssociationSet>
+        <AssociationSet Name="PlayerInfoAllstar" Association="AgileWays.Baseball.Model.PlayerInfoAllstar">
+          <End Role="PlayerInfo" EntitySet="PlayerData" />
+          <End Role="Allstar" EntitySet="Allstars" />
+        </AssociationSet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

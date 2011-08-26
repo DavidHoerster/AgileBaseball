@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgileWaysBaseballModelStoreContainer" CdmEntityContainer="BaseballEntities">
+    <EntitySetMapping Name="All_Time_HR_Leaders">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.All_Time_HR_Leader">
+        <MappingFragment StoreEntitySet="All Time HR Leaders">
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="SumOfHR" ColumnName="SumOfHR" />
+          <ScalarProperty Name="MaxOfyearID" ColumnName="MaxOfyearID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Battings">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Batting">
+        <MappingFragment StoreEntitySet="Batting">
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="stint" ColumnName="stint" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="G_batting" ColumnName="G_batting" />
+          <ScalarProperty Name="AB" ColumnName="AB" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="H" ColumnName="H" />
+          <ScalarProperty Name="C2B" ColumnName="2B" />
+          <ScalarProperty Name="C3B" ColumnName="3B" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="RBI" ColumnName="RBI" />
+          <ScalarProperty Name="SB" ColumnName="SB" />
+          <ScalarProperty Name="CS" ColumnName="CS" />
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="IBB" ColumnName="IBB" />
+          <ScalarProperty Name="HBP" ColumnName="HBP" />
+          <ScalarProperty Name="SH" ColumnName="SH" />
+          <ScalarProperty Name="SF" ColumnName="SF" />
+          <ScalarProperty Name="GIDP" ColumnName="GIDP" />
+          <ScalarProperty Name="G_old" ColumnName="G_old" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Birthday_Buddies">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Birthday_Buddy">
+        <MappingFragment StoreEntitySet="Birthday Buddies">
+          <ScalarProperty Name="birthYear" ColumnName="birthYear" />
+          <ScalarProperty Name="birthMonth" ColumnName="birthMonth" />
+          <ScalarProperty Name="birthDay" ColumnName="birthDay" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HallOfFames">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.HallOfFame">
+        <MappingFragment StoreEntitySet="HallOfFame">
+          <ScalarProperty Name="hofID" ColumnName="hofID" />
+          <ScalarProperty Name="yearid" ColumnName="yearid" />
+          <ScalarProperty Name="votedBy" ColumnName="votedBy" />
+          <ScalarProperty Name="ballots" ColumnName="ballots" />
+          <ScalarProperty Name="needed" ColumnName="needed" />
+          <ScalarProperty Name="votes" ColumnName="votes" />
+          <ScalarProperty Name="inducted" ColumnName="inducted" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pitchings">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Pitching">
+        <MappingFragment StoreEntitySet="Pitching">
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="stint" ColumnName="stint" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="W" ColumnName="W" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="GS" ColumnName="GS" />
+          <ScalarProperty Name="CG" ColumnName="CG" />
+          <ScalarProperty Name="SHO" ColumnName="SHO" />
+          <ScalarProperty Name="SV" ColumnName="SV" />
+          <ScalarProperty Name="IPouts" ColumnName="IPouts" />
+          <ScalarProperty Name="H" ColumnName="H" />
+          <ScalarProperty Name="ER" ColumnName="ER" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="BAOpp" ColumnName="BAOpp" />
+          <ScalarProperty Name="ERA" ColumnName="ERA" />
+          <ScalarProperty Name="IBB" ColumnName="IBB" />
+          <ScalarProperty Name="WP" ColumnName="WP" />
+          <ScalarProperty Name="HBP" ColumnName="HBP" />
+          <ScalarProperty Name="BK" ColumnName="BK" />
+          <ScalarProperty Name="BFP" ColumnName="BFP" />
+          <ScalarProperty Name="GF" ColumnName="GF" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="SH" ColumnName="SH" />
+          <ScalarProperty Name="SF" ColumnName="SF" />
+          <ScalarProperty Name="GIDP" ColumnName="GIDP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Salary">
+        <MappingFragment StoreEntitySet="Salaries">
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+          <ScalarProperty Name="salary1" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Team">
+        <MappingFragment StoreEntitySet="Teams">
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="franchID" ColumnName="franchID" />
+          <ScalarProperty Name="divID" ColumnName="divID" />
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="Ghome" ColumnName="Ghome" />
+          <ScalarProperty Name="W" ColumnName="W" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="DivWin" ColumnName="DivWin" />
+          <ScalarProperty Name="WCWin" ColumnName="WCWin" />
+          <ScalarProperty Name="LgWin" ColumnName="LgWin" />
+          <ScalarProperty Name="WSWin" ColumnName="WSWin" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="AB" ColumnName="AB" />
+          <ScalarProperty Name="H" ColumnName="H" />
+          <ScalarProperty Name="C2B" ColumnName="2B" />
+          <ScalarProperty Name="C3B" ColumnName="3B" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="SB" ColumnName="SB" />
+          <ScalarProperty Name="CS" ColumnName="CS" />
+          <ScalarProperty Name="HBP" ColumnName="HBP" />
+          <ScalarProperty Name="SF" ColumnName="SF" />
+          <ScalarProperty Name="RA" ColumnName="RA" />
+          <ScalarProperty Name="ER" ColumnName="ER" />
+          <ScalarProperty Name="ERA" ColumnName="ERA" />
+          <ScalarProperty Name="CG" ColumnName="CG" />
+          <ScalarProperty Name="SHO" ColumnName="SHO" />
+          <ScalarProperty Name="SV" ColumnName="SV" />
+          <ScalarProperty Name="IPouts" ColumnName="IPouts" />
+          <ScalarProperty Name="HA" ColumnName="HA" />
+          <ScalarProperty Name="HRA" ColumnName="HRA" />
+          <ScalarProperty Name="BBA" ColumnName="BBA" />
+          <ScalarProperty Name="SOA" ColumnName="SOA" />
+          <ScalarProperty Name="E" ColumnName="E" />
+          <ScalarProperty Name="DP" ColumnName="DP" />
+          <ScalarProperty Name="FP" ColumnName="FP" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="park" ColumnName="park" />
+          <ScalarProperty Name="attendance" ColumnName="attendance" />
+          <ScalarProperty Name="BPF" ColumnName="BPF" />
+          <ScalarProperty Name="PPF" ColumnName="PPF" />
+          <ScalarProperty Name="teamIDBR" ColumnName="teamIDBR" />
+          <ScalarProperty Name="teamIDlahman45" ColumnName="teamIDlahman45" />
+          <ScalarProperty Name="teamIDretro" ColumnName="teamIDretro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeamsFranchises">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.TeamsFranchis">
+        <MappingFragment StoreEntitySet="TeamsFranchises">
+          <ScalarProperty Name="franchID" ColumnName="franchID" />
+          <ScalarProperty Name="franchName" ColumnName="franchName" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="NAassoc" ColumnName="NAassoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlayerData">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.PlayerInfo">
+        <MappingFragment StoreEntitySet="vwPlayers">
+          <ScalarProperty Name="bbrefID" ColumnName="bbrefID" />
+          <ScalarProperty Name="holtzID" ColumnName="holtzID" />
+          <ScalarProperty Name="retroID" ColumnName="retroID" />
+          <ScalarProperty Name="lahman45ID" ColumnName="lahman45ID" />
+          <ScalarProperty Name="lahman40ID" ColumnName="lahman40ID" />
+          <ScalarProperty Name="college" ColumnName="college" />
+          <ScalarProperty Name="finalGame" ColumnName="finalGame" />
+          <ScalarProperty Name="debut" ColumnName="debut" />
+          <ScalarProperty Name="throws" ColumnName="throws" />
+          <ScalarProperty Name="bats" ColumnName="bats" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="nameNick" ColumnName="nameNick" />
+          <ScalarProperty Name="nameGiven" ColumnName="nameGiven" />
+          <ScalarProperty Name="nameNote" ColumnName="nameNote" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="deathCity" ColumnName="deathCity" />
+          <ScalarProperty Name="deathState" ColumnName="deathState" />
+          <ScalarProperty Name="deathCountry" ColumnName="deathCountry" />
+          <ScalarProperty Name="deathDay" ColumnName="deathDay" />
+          <ScalarProperty Name="deathMonth" ColumnName="deathMonth" />
+          <ScalarProperty Name="deathYear" ColumnName="deathYear" />
+          <ScalarProperty Name="birthCity" ColumnName="birthCity" />
+          <ScalarProperty Name="birthState" ColumnName="birthState" />
+          <ScalarProperty Name="birthCountry" ColumnName="birthCountry" />
+          <ScalarProperty Name="birthDay" ColumnName="birthDay" />
+          <ScalarProperty Name="birthMonth" ColumnName="birthMonth" />
+          <ScalarProperty Name="birthYear" ColumnName="birthYear" />
+          <ScalarProperty Name="hofID" ColumnName="hofID" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+          <ScalarProperty Name="lahmanID" ColumnName="lahmanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BatterDetails">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.BatterDetail">
+        <MappingFragment StoreEntitySet="BatterDetail">
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="SB" ColumnName="SB" />
+          <ScalarProperty Name="RBI" ColumnName="RBI" />
+          <ScalarProperty Name="HR" ColumnName="HR" />
+          <ScalarProperty Name="Triples" ColumnName="3B" />
+          <ScalarProperty Name="Doubles" ColumnName="2B" />
+          <ScalarProperty Name="H" ColumnName="H" />
+          <ScalarProperty Name="R" ColumnName="R" />
+          <ScalarProperty Name="AB" ColumnName="AB" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PitcherDetails">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.PitcherDetail">
+        <MappingFragment StoreEntitySet="PitcherDetail">
+          <ScalarProperty Name="ERA" ColumnName="ERA" />
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="SHO" ColumnName="SHO" />
+          <ScalarProperty Name="SO" ColumnName="SO" />
+          <ScalarProperty Name="CG" ColumnName="CG" />
+          <ScalarProperty Name="SV" ColumnName="SV" />
+          <ScalarProperty Name="L" ColumnName="L" />
+          <ScalarProperty Name="W" ColumnName="W" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="G" ColumnName="G" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+          <ScalarProperty Name="teamID" ColumnName="teamID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Allstars">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.Allstar">
+        <MappingFragment StoreEntitySet="Allstar">
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AllstarWithNames">
+      <EntityTypeMapping TypeName="AgileWays.Baseball.Model.AllstarWithName">
+        <MappingFragment StoreEntitySet="AllstarWithName">
+          <ScalarProperty Name="lgID" ColumnName="lgID" />
+          <ScalarProperty Name="yearID" ColumnName="yearID" />
+          <ScalarProperty Name="nameLast" ColumnName="nameLast" />
+          <ScalarProperty Name="nameFirst" ColumnName="nameFirst" />
+          <ScalarProperty Name="playerID" ColumnName="playerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

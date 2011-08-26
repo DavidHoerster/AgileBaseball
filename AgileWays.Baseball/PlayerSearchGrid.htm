@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Styles/jquery-ui-1.8.15.custom.css" rel="Stylesheet" type="text/css" />
+    <link href="Styles/ui.jqgrid.css" rel="Stylesheet" type="text/css" />
+    <style type="text/css">
+    span.salaryLabel
+    {
+        width: 150px;
+        display: inline-block;
+    }
+    </style>
+</head>
+<body>
+    <div class='ui-widget ui-widget-header'>
+        <span class='salaryLabel'><label for="playerName">Name:</label></span><input type="text" id='playerName' name='playerName' /><br />
+        <span class='salaryLabel'><label for="maxSalary">Max Salary:</label></span><input type="text" id="maxSalary" name="maxSalary" /><br />
+        <span class='salaryLabel'><label for="minYear">Min Year:</label></span><input type="text" id="minYear" name="minYear" value="1980" /><br />
+        <span class='salaryLabel'><label for="minHR">Min HR's:</label></span><input type="text" id="minHR" /><br />
+        <span class='salaryLabel'><label for="min2B">Min 2B's:</label></span><input type="text" id="min2B" />
+        <button id="doSearch">Run Search</button>
+    </div>
+    <br />
+    <p id='urlPath'></p>
+    <br /><br />
+
+    <table id='grid'></table>
+    <div id='pager'></div>
+    
+
+    <script type="text/javascript" src="Scripts/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.15.custom.min.js"></script>
+    <script type="text/javascript" src="Scripts/grid.locale-en.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.jqGrid.src.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('button').button();
+            $('#doSearch').click(function (e) {
+                var url = GenerateSearchURL();
+                InitGrid(url);
+            });
+        });
+
+        function InitGrid(url) {
+            $("#grid").jqGrid({
+                url: url,
+                datatype: 'json',
+                mtype: 'GET',
+                colNames: ['playerID', 'year', 'name', 'hits', 'doubles', 'triples', 'hrs', 'salary'],
+                colModel: [
+                          { name: 'playerID', index: 'playerID', width: 50, align: 'left', searchoptions: { sopt: ['eq']} },
+                          { name: 'year', index: 'year', width: 50, align: 'left', searchoptions: {sopt: ['eq']}},
+                          { name: 'name', index: 'name', width: 180, align: 'left', searchoptions: { sopt: ['eq', 'ne', 'cn']} },
+                          { name: 'hits', index: 'hits', width: 50, align: 'left', searchoptions: { sopt: ['eq', 'gt', 'ge', 'lt', 'le']} },
+                          { name: 'doubles', index: 'doubles', width: 50, align: 'left', searchoptions: { sopt: ['eq', 'gt', 'ge', 'lt', 'le']} },
+                          { name: 'triples', index: 'triples', width: 50, align: 'left', searchoptions: { sopt: ['eq', 'gt', 'ge', 'lt', 'le']} },
+                          { name: 'hrs', index: 'hrs', width: 50, align: 'left', searchoptions: { sopt: ['eq', 'gt', 'ge', 'lt', 'le']} },
+                          { name: 'salary', index: 'salary', width: 100, align: 'left', searchoptions: { sopt: ['eq', 'gt', 'ge', 'lt', 'le']} }
+                          ],
+                pager: $('#pager'),
+                rowNum: 5,
+                rowList: [5, 20, 50, 100],
+                sortname: 'playerID',
+                sortorder: 'desc',
+                width: 1000,
+                viewrecords: true,
+                //  autowidth: true, 
+                rownumbers: true,
+                caption: 'Players'
+            });
+            $("#grid").jqGrid('navGrid', "#pager", { edit: false, add: false, del: false, refresh: true });
+        }
+
+        function GenerateSearchURL() {
+            //run my query against WCF Data Service
+            var url = '/Grid/GetPlayers?',
+                    filter = '',
+                    $name = $('#playerName'),
+                    $salary = $('#maxSalary'),
+                    $minYear = $('#minYear'),
+                    $minHR = $('#minHR'),
+                    $min2B = $('#min2B');
+
+            if ($name.val().length > 0) {
+                filter = filter + "(startswith(nameLast,'" + $name.val() + "') eq true)";
+            }
+            if ($salary.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(salary le " + $salary.val() + ")";
+            }
+            if ($minHR.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(HR ge " + $minHR.val() + ")";
+            }
+            if ($min2B.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(Doubles ge " + $min2B.val() + ")";
+            }
+            if ($minYear.val().length > 0) {
+                if (filter.length > 0) {
+                    filter = filter + ' and ';
+                }
+                filter = filter + "(yearID ge " + $minYear.val() + ")";
+            }
+
+            if (filter.length > 0) {
+                url = url + '$filter=' + filter + '&';
+            }
+
+            url = url + '$orderby=salary,nameLast';
+
+            return url;
+        }
+    </script>
+</body>
+</html>
